@@ -1,6 +1,6 @@
 "use client"; // This is a special comment that tells Tina to use the client from the generated file
 
-import { PageQuery, PageQueryVariables } from "@/tina/__generated__/types";
+import { ImpressumQuery, ImpressumQueryVariables } from "@/tina/__generated__/types";
 import { useTina, tinaField } from "tinacms/dist/react";
 
 
@@ -9,8 +9,8 @@ import { TinaMarkdown } from "tinacms/dist/rich-text";
 
 
 export default function ImpressumPage(props: {
-    data: PageQuery;
-    variables: PageQueryVariables;
+    data: ImpressumQuery;
+    variables: ImpressumQueryVariables;
     query: string;
     }) {
 
