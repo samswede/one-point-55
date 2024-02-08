@@ -2,6 +2,9 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { IBM_Plex_Sans } from 'next/font/google';
 
+import { NavigationMenuDemo } from "@/components/shared/navbar/NavigationMenuDemo";
+import { NavBarMenu } from '@/components/shared/navbar/NavBarMenu';
+
 const ibmPlexSans = IBM_Plex_Sans({
   display: 'swap',
   subsets: ['latin'],
@@ -22,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={ibmPlexSans.className}>
         <header>
-          
+          <NavBarMenu />
         </header>
         {children}
         <footer className="mt-auto bg-violet-900 py-6 text-lg text-white">
