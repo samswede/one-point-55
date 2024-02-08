@@ -49,6 +49,27 @@ export default defineConfig({
         ]
       
       },
+
+      {
+        label: 'Impressum Page',
+        name: 'impressum',
+        path: 'content/impressum',
+        format: 'md',
+        fields: [
+          {
+            type: 'string',
+            label: 'Title',
+            name: 'title',
+          },
+          {
+            type: 'rich-text',
+            label: 'Post Body',
+            name: 'body',
+            isBody: true,
+          },
+        ],
+      },
+
       {
         name: "post",
         label: "Posts",

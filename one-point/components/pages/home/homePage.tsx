@@ -3,6 +3,8 @@
 import { PageQuery, PageQueryVariables } from "@/tina/__generated__/types";
 import { useTina, tinaField } from "tinacms/dist/react";
 
+import FAQ from "@/components/pages/home/FAQ/FAQ";
+
 export default function HomePage(props: {
     data: PageQuery;
     variables: PageQueryVariables;
@@ -16,7 +18,7 @@ export default function HomePage(props: {
     });
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 
+    <main className="flex min-h-screen flex-col  justify-between p-24 
     bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
 
         <h1 
@@ -29,6 +31,11 @@ export default function HomePage(props: {
             {data.page?.subtitle}
         </p>
       
+        <FAQ 
+            data={props.data} 
+            query={props.query}
+            variables={props.variables}
+        />
     </main>
   );
 }
