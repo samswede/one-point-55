@@ -20,7 +20,7 @@ const components: { title: string; href: string; description: string }[] = [
     title: "Mission",
     href: "/about/mission",
     description:
-      "Learn about our goals and values.",
+      "Learn about our purpose.",
   },
   
   {
@@ -39,7 +39,7 @@ const components: { title: string; href: string; description: string }[] = [
   {
     title: "Itineraries",
     href: "/about/itineraries",
-    description: "Read about what we offer.",
+    description: "Details for what to expect.",
   },
   
 ]

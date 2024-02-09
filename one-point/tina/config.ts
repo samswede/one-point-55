@@ -1,11 +1,21 @@
 import { defineConfig } from "tinacms";
 
+
+import {
+  heroBlock,
+  featureBlock,
+  contentBlock,
+
+  accordionBlock,
+  } from "./templates";
+
 // Your hosting provider likely exposes this as an environment variable
 const branch =
   process.env.GITHUB_BRANCH ||
   process.env.VERCEL_GIT_COMMIT_REF ||
   process.env.HEAD ||
   "main";
+
 
 export default defineConfig({
   branch,
@@ -28,6 +38,89 @@ export default defineConfig({
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
     collections: [
+
+      {
+        label: 'Global',
+        name: 'global',
+        path: 'content/global',
+
+        ui: {
+          // Don't allow editors to create new items
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+
+        fields: [
+          {
+            type: 'object',
+            list: true,
+            name: 'blocks',
+            label: 'Sections',
+            templates: [heroBlock, featureBlock, contentBlock],
+          },
+        ],
+      },
+      
+      {
+        label: 'Home Page',
+        name: 'home',
+        path: 'content/home',
+
+        ui: {
+          // Don't allow editors to create new items
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+
+        fields: [
+          {
+            type: 'object',
+            list: true,
+            name: 'blocks',
+            label: 'Sections',
+            templates: [  heroBlock, 
+                          featureBlock, 
+                          contentBlock, 
+                          accordionBlock,
+                        ],
+          },
+        ],
+      },
+      
+      {
+        label: 'Upcoming Trips',
+        name: 'tripupcoming',
+        path: 'content/tripsupcoming',
+        fields: [
+          {
+            type: 'object',
+            list: true,
+            name: 'blocks',
+            label: 'Sections',
+            templates: [heroBlock, featureBlock, contentBlock],
+          },
+        ],
+      },
+
+      {
+        label: 'Past Trips',
+        name: 'trippast',
+        path: 'content/tripspast',
+        fields: [
+          {
+            type: 'object',
+            list: true,
+            name: 'blocks',
+            label: 'Sections',
+            templates: [heroBlock, featureBlock, contentBlock],
+          },
+        ],
+      },
+
       {
         name: 'page',
         label: 'Pages',
@@ -51,10 +144,43 @@ export default defineConfig({
       },
 
       {
-        label: 'Impressum Page',
+        label: 'About',
+        name: 'about',
+        path: 'content/about',
+
+        ui: {
+          // Don't allow editors to create new items
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+
+        fields: [
+          {
+            type: 'object',
+            list: true,
+            name: 'blocks',
+            label: 'Sections',
+            templates: [heroBlock, featureBlock, contentBlock],
+          },
+        ],
+      },
+
+      {
+        label: 'Impressum',
         name: 'impressum',
         path: 'content/impressum',
         format: 'md',
+
+        ui: {
+          // Don't allow editors to create new items
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+
         fields: [
           {
             type: 'string',
@@ -70,30 +196,7 @@ export default defineConfig({
         ],
       },
 
-      {
-        name: "post",
-        label: "Posts",
-        path: "content/posts",
-        fields: [
-          {
-            type: "string",
-            name: "title",
-            label: "Title",
-            isTitle: true,
-            required: true,
-          },
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
-          },
-        ],
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/demo/blog/${document._sys.filename}`,
-        },
-      },
+
     ],
   },
 });

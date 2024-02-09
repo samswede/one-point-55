@@ -1,5 +1,5 @@
 ---
-title: Impressum Test Title
+title: Impressum
 ---
 
 # One Point 55 Ventures AG
@@ -22,8 +22,6 @@ Handelsregisteramt: Kanton Graubünden
 ### Geschäftsführerin
 
 Samira Vignola
-
-
 [
 samira.vignola@onepoint55.com
 ](mailto:samira.vignola@onepoint55.com)
