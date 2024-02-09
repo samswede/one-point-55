@@ -12,6 +12,15 @@ export function WelcomeHero(props: HomeBlocksHero) {
     <section className="relative overflow-hidden">
 
       <div className="relative flex flex-col items-center gap-2 py-24">
+        <video 
+          className="absolute top-0 left-0 z-[-1] w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+
+          src={require('@/public/assets/videos/waves_drone.mp4')}
+          />
+
         <div
           className="px-4 py-8 text-center"
           data-tina-field={tinaField(props, "message")}
