@@ -4,32 +4,39 @@ import type { Template } from 'tinacms'
 const heroBlock: Template = {
   name: 'hero',
   label: 'Hero',
-  ui: {
-    defaultItem: {
-      tagline: "Here's some text above the other text",
-      headline: 'This Big Text is Totally Awesome',
-      text: 'Phasellus scelerisque, libero eu finibus rutrum, risus risus accumsan libero, nec molestie urna dui a leo.',
-    },
-  },
+
   fields: [
+    
     {
-      type: 'string',
-      label: 'Tagline',
-      name: 'tagline',
+      type: 'rich-text',
+      label: 'Message',
+      name: 'message',
     },
+
     {
-      type: 'string',
-      label: 'Headline',
-      name: 'headline',
-    },
-    {
-      type: 'string',
-      label: 'Text',
-      name: 'text',
+      name: "links",
+      label: "Links",
+      type: "object",
+      list: true,
+
       ui: {
-        component: 'textarea',
+        itemProps: (item) => {
+          // Field values are accessed by item?.<Field name>
+          return { label: item?.label };
+        },
       },
+
+      fields: [
+        { type: "string", name: "link" },
+        { type: "string", name: "label" },
+        {
+          type: "string",
+          name: "style",
+          options: ["light", "dark"],
+        },
+      ],
     },
+
   ],
 }
 
