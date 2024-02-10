@@ -1,29 +1,38 @@
 "use client"; // This is a special comment that tells Tina to use the client from the generated file
 
-import { PageQuery, PageQueryVariables } from "@/tina/__generated__/types";
-import { useTina, tinaField } from "tinacms/dist/react";
+import { HomeBlocksAccordion } from "@/tina/__generated__/types";
 
-import { AccordionDemo } from "@/components/shared/accordion/AccordionDemo";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
-export default function FAQ(props: {
-    data: PageQuery;
-    variables: PageQueryVariables;
-    query: string;
-    }) {
 
-    const { data } = useTina({
-        data: props.data,
-        query: props.query,
-        variables: props.variables,
-    });
+export default function FAQ(props: HomeBlocksAccordion) {
+
 
   return (
     <div>
         <h1>
-        Frequently Asked Questions
+        {props.title}
         </h1>
 
-        <AccordionDemo />
+      <Accordion type="single" collapsible className="w-full">
+
+        {
+          props.items?.map((item, idx) => {
+            return (
+              <AccordionItem key={idx} value={`item-${idx}`}>
+                <AccordionTrigger>{item?.trigger}</AccordionTrigger>
+                <AccordionContent>{item?.content}</AccordionContent>
+              </AccordionItem>
+            )
+          })
+        }
+
+      </Accordion>
         
     </div>
   );

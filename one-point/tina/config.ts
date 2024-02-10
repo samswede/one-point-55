@@ -74,6 +74,12 @@ export default defineConfig({
             create: false,
             delete: false,
           },
+
+          // This makes the page the default route in the CMS
+          // This is what makes it live editable!
+          router: props => {
+            return `/`
+          }
         },
 
         fields: [
@@ -179,6 +185,12 @@ export default defineConfig({
             create: false,
             delete: false,
           },
+
+          // This makes the page the default route in the CMS
+          // This is what makes it live editable!
+          router: props => {
+            return `/impressum`
+          }
         },
 
         fields: [

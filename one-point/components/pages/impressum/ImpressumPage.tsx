@@ -27,7 +27,34 @@ export default function ImpressumPage(props: {
         
         <h1>{data.impressum?.title}</h1>
 
-        <TinaMarkdown content={data.impressum?.body} />
+        <TinaMarkdown content={data.impressum?.body} 
+        
+          /*
+          components={
+            {
+              h1: (props) => <h1
+                className="text-4xl font-bold text-indigo-900"
+                >{...props}</h1>,
+              h2: (props) => <h2
+                className="text-3xl font-bold text-indigo-900"
+                >{...props}</h2>,
+              h3: (props) => <h3
+                className="text-2xl font-bold text-indigo-900"
+                >{...props}</h3>,
+
+              p: (props) => <p
+                className="text-lg font-normal text-indigo-900"
+                >{...props}</p>,
+
+              a: (props) => <a
+                className="text-lg font-normal text-red-900"
+                >{...props}</a>,
+              
+
+            }
+          }
+        */
+        />
       
     </main>
   );
