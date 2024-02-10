@@ -4,8 +4,6 @@ blocks:
       # OnePoint**55**
 
       This is basic text...
-
-      ###
     links:
       - link: /impressum
         label: Impressum
