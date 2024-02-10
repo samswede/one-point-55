@@ -1,16 +1,10 @@
 ---
 blocks:
-  - tagline: Here's some text above the other text
-    headline: This Big Text is Totally Awesome
-    text: >-
-      Phasellus scelerisque, libero eu finibus rutrum, risus risus accumsan
-      libero, nec molestie urna dui a leo.
+  - message: |
+      # Welcome to **Zermatt**
     _template: hero
-  - _template: features
-  - body: >-
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
-      Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse
-      urna nibh, viverra non, semper suscipit, posuere a, pede.
+  - message: |
+      ## more and more tests
     _template: content
 ---
 

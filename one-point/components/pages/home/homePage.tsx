@@ -1,13 +1,13 @@
-"use client"; // This is a special comment that tells Tina to use the client from the generated file
+"use client";
 
 import { HomeQuery, HomeQueryVariables } from "@/tina/__generated__/types";
-import { useTina, tinaField } from "tinacms/dist/react";
+import { useTina } from "tinacms/dist/react";
 
-import FAQ from "@/components/pages/home/FAQ/FAQ";
+
 import { WelcomeHero } from "@/components/pages/home/hero/WelcomeHero";
 import { Concept } from "@/components/pages/home/concept/Concept";
 import { PastTripsSection } from "@/components/pages/home/trips/past/PastTripsSection";
-
+import FAQ from "@/components/pages/home/FAQ/FAQ";
 
 export default function HomePage(props: {
     data: HomeQuery,
