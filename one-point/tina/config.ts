@@ -64,7 +64,7 @@ export default defineConfig({
       },
       
       {
-        label: 'Home Page',
+        label: 'Home',
         name: 'home',
         path: 'content/home',
 
@@ -125,28 +125,6 @@ export default defineConfig({
             templates: [heroBlock, featureBlock, contentBlock],
           },
         ],
-      },
-
-      {
-        name: 'page',
-        label: 'Pages',
-        path: 'content/pages',
-        format: 'json',
-        fields: [
-          {
-            name: 'title',
-            label: 'Title',
-            type: 'string'
-          },
-          {
-            name: 'subtitle',
-            label: 'Subtitle',
-            type: 'string'
-          },
-          
-                
-        ]
-      
       },
 
       {

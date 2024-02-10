@@ -68,20 +68,39 @@ const featureBlock: Template = {
 const contentBlock: Template = {
   name: 'content',
   label: 'Content',
-  ui: {
-    defaultItem: {
-      body: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.',
-    },
-  },
+
   fields: [
+    
     {
-      type: 'string',
-      ui: {
-        component: 'textarea',
-      },
-      label: 'Body',
-      name: 'body',
+      type: 'rich-text',
+      label: 'Message',
+      name: 'message',
     },
+
+    {
+      name: "links",
+      label: "Links",
+      type: "object",
+      list: true,
+
+      ui: {
+        itemProps: (item) => {
+          // Field values are accessed by item?.<Field name>
+          return { label: item?.label };
+        },
+      },
+
+      fields: [
+        { type: "string", name: "link" },
+        { type: "string", name: "label" },
+        {
+          type: "string",
+          name: "style",
+          options: ["light", "dark"],
+        },
+      ],
+    },
+
   ],
 }
 

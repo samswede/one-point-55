@@ -12,6 +12,15 @@ blocks:
         label: About
         style: light
     _template: hero
+  - message: |
+      # testing 
+
+      # **testing 1**2**3**
+    links:
+      - link: /
+        label: Learn More
+        style: dark
+    _template: content
   - title: Frequently Asked Questions
     items:
       - trigger: Question 1
