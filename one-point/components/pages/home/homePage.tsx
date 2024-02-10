@@ -6,6 +6,7 @@ import { useTina, tinaField } from "tinacms/dist/react";
 import FAQ from "@/components/pages/home/FAQ/FAQ";
 import { WelcomeHero } from "@/components/pages/home/hero/WelcomeHero";
 import { Concept } from "@/components/pages/home/concept/Concept";
+import { PastTripsSection } from "@/components/pages/home/trips/past/PastTripsSection";
 
 
 export default function HomePage(props: {
@@ -29,7 +30,9 @@ export default function HomePage(props: {
             case "HomeBlocksContent": {
               return <Concept key={i} {...block} />
             }
-
+            case "HomeBlocksPasttrips": {
+              return <PastTripsSection key={i} {...block} />
+            }
           }
         })}
 

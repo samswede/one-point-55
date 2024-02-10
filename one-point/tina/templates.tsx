@@ -40,6 +40,77 @@ const heroBlock: Template = {
   ],
 }
 
+const pasttripsBlock: Template = {
+  name: 'pasttrips',
+  label: 'Past Trips Section',
+
+  fields: [
+    
+    {
+      type: 'rich-text',
+      label: 'Message',
+      name: 'message',
+    },
+
+    {
+      type: "string",
+      label: "Carousel Style",
+      name: "style",
+      options: ["swiper", "cards"],
+    },
+
+    {
+      type: 'object',
+      label: 'Past Trips',
+      name: 'tripscarousel',
+      list: true,
+
+      ui: {
+        itemProps: (item) => {
+          // Field values are accessed by item?.<Field name>
+          return { label: item?.title };
+        },
+      },
+
+      fields: [
+        {
+          type: 'string',
+          label: 'Title',
+          name: 'title',
+        },
+        {
+          type: 'string',
+          label: 'Text',
+          name: 'text',
+        },
+
+        {
+          type: 'string',
+          label: 'Link',
+          name: 'link',
+        },
+        
+        
+        {
+          type: 'image',
+          label: 'Image',
+          name: 'image',
+        },
+      ],
+    }
+
+  ],
+}
+
+/*
+{
+  type: "string",
+  label: "Style",
+  name: "style",
+  options: ["swiper", "cards"],
+},
+*/
+
 const featureBlock: Template = {
   name: 'features',
   label: 'Features',
@@ -211,7 +282,9 @@ const imageGalleryBlock: Template = {
 export {
     heroBlock,
     featureBlock,
+
     contentBlock,
+    pasttripsBlock,
 
     imageGalleryBlock,
 

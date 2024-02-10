@@ -6,6 +6,8 @@ import {
   featureBlock,
   contentBlock,
 
+  pasttripsBlock,
+
   accordionBlock,
   } from "./templates";
 
@@ -89,7 +91,9 @@ export default defineConfig({
             name: 'blocks',
             label: 'Sections',
             templates: [  heroBlock, 
-                          featureBlock, 
+                          featureBlock,
+                          pasttripsBlock,
+
                           contentBlock, 
                           accordionBlock,
                         ],
