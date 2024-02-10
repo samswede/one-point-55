@@ -21,5 +21,10 @@ blocks:
       - trigger: Question 3
         content: Answer to Q3
     _template: accordion
+  - title: Other Questions
+    items:
+      - trigger: thingy 1
+        content: thingy 2
+    _template: accordion
 ---
 
