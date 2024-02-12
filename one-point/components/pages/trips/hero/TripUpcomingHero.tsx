@@ -18,7 +18,7 @@ export function TripUpcomingHero(props: TripupcomingBlocksHero) {
           loop
           muted
 
-          src={require('@/public/assets/videos/waves_drone.mp4')}
+          src={require('@/public/assets/videos/ibiza/waves_drone.mp4')}
           />
 
         <div
