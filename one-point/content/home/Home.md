@@ -46,18 +46,18 @@ blocks:
     tripscarousel:
       - title: Zermatt 2022
         header: |
-          #### **Zermatt** 
+          #### **Zermatt**
 
           #### 2022
         description: >
           Relive the adventure in Zermatt, where our past trip combined the
           serenity of yoga with the thrill of skiing under the Matterhorn, all
           wrapped up in the luxury of a chalet equipped with a gym and SPA.
-        link: /
+        link: /trips/past/Zermatt_2022
         image: /assets/images/zermatt/train_matterhorn.jpg
       - title: Ibiza 2021
         header: |
-          #### **Ibiza** 
+          #### **Ibiza**
 
           #### 2021
         description: >
@@ -65,7 +65,7 @@ blocks:
           where yoga and fitness meet the beauty of the Mediterranean, offering
           a unique retreat that rejuvenates both body and mind amidst stunning
           natural landscapes.
-        link: /
+        link: /trips/past/Ibiza_2021
         image: /assets/images/zermatt/skis_and_goggles.webp
     _template: pasttrips
   - title: Frequently Asked Questions

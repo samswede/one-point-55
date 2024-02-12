@@ -9,7 +9,7 @@ import {
   pasttripsBlock,
 
   accordionBlock,
-  } from "./templates";
+  } from "./templates/templates";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =

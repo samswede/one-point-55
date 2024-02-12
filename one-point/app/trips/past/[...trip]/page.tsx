@@ -9,7 +9,7 @@ export default async function TripPast(props: {params: {trip: [string]} }) {
 
   const documentPath = `${trip[0]}.md`;
 
-  //console.log("documentPath: ", documentPath);
+  console.log("documentPath: ", documentPath);
 
   const result = await client.queries.trippast({ relativePath: documentPath})
   return <PastTripPage 

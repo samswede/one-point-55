@@ -110,6 +110,17 @@ const pasttripsBlock: Template = {
 }
 
 /*
+const contactBlock: Template = {
+  name: 'contact',
+  label: 'Contact',
+  fields: [
+
+  ]
+
+}
+*/
+
+/*
 {
   type: "string",
   label: "Style",
