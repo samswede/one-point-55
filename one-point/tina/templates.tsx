@@ -78,10 +78,17 @@ const pasttripsBlock: Template = {
           label: 'Title',
           name: 'title',
         },
+        
         {
-          type: 'string',
-          label: 'Text',
-          name: 'text',
+          type: 'rich-text',
+          label: 'Header',
+          name: 'header',
+        },
+
+        {
+          type: 'rich-text',
+          label: 'Description',
+          name: 'description',
         },
 
         {

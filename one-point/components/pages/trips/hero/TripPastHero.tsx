@@ -1,4 +1,5 @@
 import Link from "next/link"
+
 import { TrippastBlocksHero } from "@/tina/__generated__/types"
 import { ArrowRight } from "lucide-react"
 import { tinaField } from "tinacms/dist/react"
@@ -6,6 +7,8 @@ import { TinaMarkdown } from "tinacms/dist/rich-text"
 
 import { Button } from "@/components/ui/button"
 //import { IconList } from "@/components/icons"
+
+import videoWaves from "@/public/assets/videos/ibiza/waves_drone.mp4"
 
 export function TripPastHero(props: TrippastBlocksHero) {
   return (
@@ -17,8 +20,13 @@ export function TripPastHero(props: TrippastBlocksHero) {
           autoPlay
           loop
           muted
+          playsInline // required for iOS
 
-          src={require('@/public/assets/videos/waves_drone.mp4')}
+          //src={require('@/public/assets/videos/waves_drone.mp4')
+          src={videoWaves}
+
+          // fallback image
+          //poster={}
           />
 
         <div

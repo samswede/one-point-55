@@ -9,11 +9,3 @@ export default async function Home() {
             variables={result.variables}
           />;
 }
-
-/*
-export default async function Page() {
-  const result = await client.queries.pageAndNav({ relativePath: "home.md" })
-  return <PageComponent {...result} />
-}
-
-*/

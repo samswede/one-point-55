@@ -27,33 +27,69 @@ export default function ImpressumPage(props: {
         
         <h1>{data.impressum?.title}</h1>
 
-        <TinaMarkdown content={data.impressum?.body} 
-        
-          /*
+        <TinaMarkdown 
+          content={data.impressum?.body} 
           components={
             {
-              h1: (props) => <h1
-                className="text-4xl font-bold text-indigo-900"
-                >{...props}</h1>,
-              h2: (props) => <h2
-                className="text-3xl font-bold text-indigo-900"
-                >{...props}</h2>,
-              h3: (props) => <h3
-                className="text-2xl font-bold text-indigo-900"
-                >{...props}</h3>,
+              h1: (props) => (
+                <h1
+                  className="mx-auto text-5xl font-extrabold leading-tight tracking-tighter text-primary md:text-7xl"
+                  {...props}
+                />
+              ),
+              h2: (props) => (
+                <h2
+                  className="mx-auto text-4xl font-extrabold leading-tight tracking-tighter text-primary md:text-6xl"
+                  {...props}
+                />
+              ),
+              h3: (props) => (
+                <h3
+                  className="mx-auto text-3xl font-extrabold leading-tight tracking-tighter text-primary md:text-5xl"
+                  {...props}
+                />
+              ),
+              h4: (props) => (
+                <h4
+                  className="mx-auto text-2xl font-extrabold leading-tight tracking-tighter text-primary md:text-4xl"
+                  {...props}
+                />
+              ),
+              h5: (props) => (
+                <h5
+                  className="mx-auto text-xl font-extrabold leading-tight tracking-tighter text-primary md:text-3xl"
+                  {...props}
+                />
+              ),
+              bold: (props) => (
+                <span
+                  className="bg-gradient-to-b from-blue-400 to-green-600 bg-clip-text text-transparent"
+                  {...props}
+                />
+              ),
+              // Customizing the italic component with a different color gradient
+              em: (props) => (
+                <span
+                  className="bg-gradient-to-r from-green-300 to-blue-500 bg-clip-text text-transparent"
+                  {...props}
+                />
+              ),
+              /*
+              I want to make it so that if something is both italic and bold, it will be a different color
+              */
 
-              p: (props) => <p
-                className="text-lg font-normal text-indigo-900"
-                >{...props}</p>,
-
-              a: (props) => <a
-                className="text-lg font-normal text-red-900"
-                >{...props}</a>,
+              
+              p: (props) => (
+                <p
+                  className="mx-auto mt-8 max-w-[700px] px-2 text-center text-xl text-muted-foreground"
+                  {...props}
+                />
+              ),
               
 
             }
           }
-        */
+        
         />
       
     </main>

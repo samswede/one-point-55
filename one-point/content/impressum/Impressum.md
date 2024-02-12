@@ -11,19 +11,23 @@ Waldhaus
 
 Handelsregister Rechtsform:
 
-
-
 Aktiengesellschaft UID: CHE-274.804.587
+
+
 Handelsregisteramt: Kanton Graubünden
 
 [info@onepoint55.com
-](mailto:info@onepoint55.com)[www.onepoint55.com](http://www.onepoint55.com/)
+](mailto:info@onepoint55.com)
+
+[www.onepoint55.com](http://www.onepoint55.com/)
 
 ### Geschäftsführerin
 
 Samira Vignola
 [
-samira.vignola@onepoint55.com
+](mailto:samira.vignola@onepoint55.com)
+
+[samira.vignola@onepoint55.com
 ](mailto:samira.vignola@onepoint55.com)
 
 #### Rechtshinweise/Gewährleistung

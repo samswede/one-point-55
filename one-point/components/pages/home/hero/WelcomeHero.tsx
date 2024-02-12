@@ -18,7 +18,7 @@ export function WelcomeHero(props: HomeBlocksHero) {
           loop
           muted
 
-          src={require('@/public/assets/videos/waves_drone.mp4')}
+          src={require('@/public/assets/videos/ibiza/waves_drone.mp4')}
           />
 
         <div

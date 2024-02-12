@@ -29,6 +29,7 @@ import {
   } from "@/components/ui/carousel"
 
 
+
 export function PastTripsSection(props: HomeBlocksPasttrips) {
   return (
     <section className="relative overflow-hidden">
@@ -40,7 +41,7 @@ export function PastTripsSection(props: HomeBlocksPasttrips) {
           loop
           muted
 
-          src={require('@/public/assets/videos/waves_drone.mp4')}
+          src={require(`@/public/assets/videos/${props?.backgroundVideo || "ibiza/waves_drone.mp4"}`)}
           />
 
         <div
@@ -83,31 +84,100 @@ export function PastTripsSection(props: HomeBlocksPasttrips) {
                       {props?.tripscarousel?.map((trip, index) => (
                         <CarouselItem key={index}>
 
+                        
                           <Card>
-                            <CardHeader>
-                              <AspectRatio ratio={16 / 9}>
-                                <Image
-                                  src={trip?.image || ""}
-                                  alt=""
-                                  layout="fill"
-                                  objectFit="cover"
-                                />
-                              </AspectRatio>
-                            </CardHeader>
-                            <CardContent>
-                              <CardTitle>{trip?.title || ""}</CardTitle>
-                              <CardDescription>
-                                {trip?.text || ""}
-                              </CardDescription>
-                            </CardContent>
-                            <CardFooter>
-                              <Link href={trip?.link || ""}>
-                                
-                                <Button>View Trip</Button>
-                                
-                              </Link>
-                            </CardFooter>
+                          
+                                <CardHeader>
+                                  <AspectRatio ratio={16 / 9}>
+                                    <Image
+                                      src={trip?.image || ""}
+                                      alt=""
+                                      layout="fill"
+                                      objectFit="cover"
+                                      
+                                      className="object-cover"
+                                      
+                                    />
+                                  </AspectRatio>
+                                </CardHeader>
+                                <CardContent
+                                  className="bg-white/30 backdrop-blur-lg p-4 rounded-lg"
+                                  >
+                                    
+                                    <TinaMarkdown
+                                        content={trip?.body}
+                                        components={{
+                                          h1: (props) => (
+                                            <h1
+                                              className="mx-auto text-5xl font-extrabold leading-tight tracking-tighter text-primary md:text-7xl"
+                                              {...props}
+                                            />
+                                          ),
+                                          h2: (props) => (
+                                            <h2
+                                              className="mx-auto text-4xl font-extrabold leading-tight tracking-tighter text-primary md:text-6xl"
+                                              {...props}
+                                            />
+                                          ),
+                                          h3: (props) => (
+                                            <h3
+                                              className="mx-auto text-3xl font-extrabold leading-tight tracking-tighter text-primary md:text-5xl"
+                                              {...props}
+                                            />
+                                          ),
+                                          h4: (props) => (
+                                            <h4
+                                              className="mx-auto text-2xl font-extrabold leading-tight tracking-tighter text-primary md:text-4xl"
+                                              {...props}
+                                            />
+                                          ),
+                                          h5: (props) => (
+                                            <h5
+                                              className="mx-auto text-xl font-extrabold leading-tight tracking-tighter text-primary md:text-3xl"
+                                              {...props}
+                                            />
+                                          ),
+                                          bold: (props) => (
+                                            <span
+                                              className="bg-gradient-to-b from-blue-400 to-green-600 bg-clip-text text-transparent"
+                                              {...props}
+                                            />
+                                          ),
+                                          // Customizing the italic component with a different color gradient
+                                          em: (props) => (
+                                            <span
+                                              className="bg-gradient-to-r from-green-300 to-blue-500 bg-clip-text text-transparent"
+                                              {...props}
+                                            />
+                                          ),
+                                          /*
+                                          I want to make it so that if something is both italic and bold, it will be a different color
+                                          */
+
+                                          
+                                          p: (props) => (
+                                            <p
+                                              className="mx-auto mt-8 max-w-[700px] px-2 text-left text-sm text-muted-foreground"
+                                              {...props}
+                                            />
+                                          ),
+
+                                          
+                                        }}
+                                      />
+
+                                </CardContent>
+                                <CardFooter>
+                                  <Link href={trip?.link || ""}>
+                                    
+                                    <Button>View Trip</Button>
+                                    
+                                  </Link>
+                                </CardFooter>
+                            
                           </Card>
+
+                          
                         </CarouselItem>
                       ))}
                     </CarouselContent>
@@ -123,33 +193,157 @@ export function PastTripsSection(props: HomeBlocksPasttrips) {
                     <CarouselContent>
                       {props?.tripscarousel?.map((trip, index) => (
                         <CarouselItem key={index}>
-                          <Card key={index}>
-                            <CardHeader>
-                              <AspectRatio ratio={16 / 9}>
+                          
+                          <div className="relative p-4 rounded-lg justify-center">
+                              <div className="absolute inset-0 z-[-1] rounded-lg">
+                                
                                 <Image
-                                  src={trip?.image || ""}
-                                  alt=""
-                                  layout="fill"
-                                  objectFit="cover"
-                                />
-                              </AspectRatio>
-                            </CardHeader>
-                            <CardContent>
-                              <CardTitle>Card {index + 1}</CardTitle>
-                              <CardDescription>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                Morbi accumsan, justo in tincidunt luctus, odio libero 
-                                facilisis mi, nec faucibus turpis nunc nec elit.
-                              </CardDescription>
-                            </CardContent>
-                            <CardFooter>
-                              <Link href="/trips">
-                                
-                                <Button>View Trip</Button>
-                                
-                              </Link>
-                            </CardFooter>
-                          </Card>
+                                      src={trip?.image || ""}
+                                      alt=""
+                                      layout="fill"
+                                      objectFit="cover"
+                                      
+                                      className="object-cover rounded-lg"
+                                      
+                                    />
+
+                              </div>
+                              <div className="p-4 rounded-lg">
+                                  <TinaMarkdown
+                                        content={trip?.header}
+                                        components={{
+                                          h1: (props) => (
+                                            <h1
+                                              className="mx-auto text-5xl font-extrabold leading-tight tracking-tighter text-primary md:text-7xl"
+                                              {...props}
+                                            />
+                                          ),
+                                          h2: (props) => (
+                                            <h2
+                                              className="mx-auto text-4xl font-extrabold leading-tight tracking-tighter text-primary md:text-6xl"
+                                              {...props}
+                                            />
+                                          ),
+                                          h3: (props) => (
+                                            <h3
+                                              className="mx-auto text-3xl font-extrabold leading-tight tracking-tighter text-primary md:text-5xl"
+                                              {...props}
+                                            />
+                                          ),
+                                          h4: (props) => (
+                                            <h4
+                                              className="mx-auto text-2xl font-extrabold leading-tight tracking-tighter text-secondary md:text-4xl text-center"
+                                              {...props}
+                                            />
+                                          ),
+                                          h5: (props) => (
+                                            <h5
+                                              className="mx-auto text-xl font-extrabold leading-tight tracking-tighter text-primary md:text-3xl"
+                                              {...props}
+                                            />
+                                          ),
+                                          bold: (props) => (
+                                            <span
+                                              className="bg-gradient-to-b from-yellow-400 to-red-600 bg-clip-text text-transparent"
+                                              {...props}
+                                            />
+                                          ),
+                                          // Customizing the italic component with a different color gradient
+                                          em: (props) => (
+                                            <span
+                                              className="bg-gradient-to-r from-green-300 to-blue-500 bg-clip-text text-transparent"
+                                              {...props}
+                                            />
+                                          ),
+                                          /*
+                                          I want to make it so that if something is both italic and bold, it will be a different color
+                                          */
+
+                                          
+                                          p: (props) => (
+                                            <p
+                                              className="mx-auto mt-8 max-w-[700px] px-2 text-left text-sm text-primary-foreground"
+                                              {...props}
+                                            />
+                                          ),
+
+                                          
+                                        }}
+                                      />
+                              </div>
+                              <div className="p-4 bg-white/30 backdrop-blur-md rounded-lg">
+                                  <TinaMarkdown
+                                        content={trip?.description}
+                                        components={{
+                                          h1: (props) => (
+                                            <h1
+                                              className="mx-auto text-5xl font-extrabold leading-tight tracking-tighter text-primary md:text-7xl"
+                                              {...props}
+                                            />
+                                          ),
+                                          h2: (props) => (
+                                            <h2
+                                              className="mx-auto text-4xl font-extrabold leading-tight tracking-tighter text-primary md:text-6xl"
+                                              {...props}
+                                            />
+                                          ),
+                                          h3: (props) => (
+                                            <h3
+                                              className="mx-auto text-3xl font-extrabold leading-tight tracking-tighter text-primary md:text-5xl"
+                                              {...props}
+                                            />
+                                          ),
+                                          h4: (props) => (
+                                            <h4
+                                              className="mx-auto text-2xl font-extrabold leading-tight tracking-tighter text-primary md:text-4xl"
+                                              {...props}
+                                            />
+                                          ),
+                                          h5: (props) => (
+                                            <h5
+                                              className="mx-auto text-xl font-extrabold leading-tight tracking-tighter text-primary md:text-3xl"
+                                              {...props}
+                                            />
+                                          ),
+                                          bold: (props) => (
+                                            <span
+                                              className="bg-gradient-to-b from-blue-400 to-green-600 bg-clip-text text-transparent"
+                                              {...props}
+                                            />
+                                          ),
+                                          // Customizing the italic component with a different color gradient
+                                          em: (props) => (
+                                            <span
+                                              className="bg-gradient-to-r from-green-300 to-blue-500 bg-clip-text text-transparent"
+                                              {...props}
+                                            />
+                                          ),
+                                          /*
+                                          I want to make it so that if something is both italic and bold, it will be a different color
+                                          */
+
+                                          
+                                          p: (props) => (
+                                            <p
+                                              className="mx-auto max-w-[700px] px-2 text-left text-sm text-secondary-foreground"
+                                              {...props}
+                                            />
+                                          ),
+
+                                          
+                                        }}
+                                      />
+                              </div>
+                              <div className="relative p-4 rounded-lg justify-center">
+                                  <Link href={trip?.link || ""}>
+                                    
+                                    <Button>View Trip</Button>
+                                    
+                                  </Link>
+                              </div>
+                          </div>
+                          
+
                         </CarouselItem>
                       ))}
                       
