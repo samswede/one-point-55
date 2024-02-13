@@ -13,16 +13,17 @@ export function TripUpcomingHero(props: TripupcomingBlocksHero) {
 
       <div className="relative flex flex-col items-center gap-2 py-24">
         <video 
-          className="absolute top-0 left-0 z-[-1] w-full h-full object-cover"
+          className="absolute top-0 left-0 w-full h-full object-cover"
           autoPlay
           loop
           muted
 
-          src={require('@/public/assets/videos/ibiza/waves_drone.mp4')}
+          src={props?.backgroundVideo || "public/assets/videos/ibiza/waves_drone.mp4"}
+          poster={props?.backgroundFallbackImage || ""}
           />
 
         <div
-          className="px-4 py-8 text-center"
+          className="px-4 py-8 text-center z-[1]"
           data-tina-field={tinaField(props, "message")}
         >
           <TinaMarkdown
@@ -49,7 +50,7 @@ export function TripUpcomingHero(props: TripupcomingBlocksHero) {
             }}
           />
         </div>
-        <div className="flex gap-5 py-12">
+        <div className="flex gap-5 py-12 z-[1]">
           {props.links?.map((link) => {
             switch (link?.style) {
               case "dark": {

@@ -43,21 +43,10 @@ export function PastTripsSection(props: HomeBlocksPasttrips) {
           loop
           muted
 
-          //src={require(`@/public/assets/videos/${props?.backgroundVideo || "ibiza/waves_drone.mp4"}`)}
           src={props?.backgroundVideo || "public/assets/videos/ibiza/waves_drone.mp4"}
           poster={props?.backgroundFallbackImage || ""}
           >
-            {/*
-            <Image
-              src={props?.backgroundFallbackImage || ""}
-              alt="fallback image"
-              layout="fill"
-              objectFit="cover"
-              
-              className="object-cover"
-              
-            />
-            */}
+  
         </video>
 
 
