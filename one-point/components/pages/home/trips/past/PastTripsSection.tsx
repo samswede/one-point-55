@@ -44,8 +44,19 @@ export function PastTripsSection(props: HomeBlocksPasttrips) {
           loop
           muted
 
-          src={require(`/public/assets/videos/${props?.backgroundVideo || "ibiza/waves_drone.mp4"}`)}
-          />
+          src={require(`@/public/assets/videos/${props?.backgroundVideo || "ibiza/waves_drone.mp4"}`)}
+          >
+            <Image
+              src={props?.backgroundFallbackImage || ""}
+              alt=""
+              layout="fill"
+              objectFit="cover"
+              
+              className="object-cover"
+              
+            />
+        </video>
+
 
         <div
           className="px-4 py-8 text-center"
