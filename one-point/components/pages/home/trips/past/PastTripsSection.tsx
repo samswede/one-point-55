@@ -31,6 +31,9 @@ import {
 
 
 export function PastTripsSection(props: HomeBlocksPasttrips) {
+
+  //  @/public/assets/videos/${props?.backgroundVideo || "ibiza/waves_drone.mp4"}
+
   return (
     <section className="relative overflow-hidden">
 
@@ -41,7 +44,7 @@ export function PastTripsSection(props: HomeBlocksPasttrips) {
           loop
           muted
 
-          src={require(`@/public/assets/videos/${props?.backgroundVideo || "ibiza/waves_drone.mp4"}`)}
+          src={require(`/public/assets/videos/${props?.backgroundVideo || "ibiza/waves_drone.mp4"}`)}
           />
 
         <div
