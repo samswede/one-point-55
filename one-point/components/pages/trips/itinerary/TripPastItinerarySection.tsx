@@ -29,9 +29,18 @@ import {
   } from "@/components/ui/carousel"
 
 
+// Import background svgs
+import CustomColorCircle from "@/components/svg/circle/CustomColorCircle"
+import PresetColorCircle from "@/components/svg/circle/PresetColorCircle"
 
 export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
 
+  const exampleColorStops = [
+    { offset: "15%", color: "#0057B8", opacity: "0.5" },
+    { offset: "75%", color: "hsl(240, 100%, 50%)", opacity: "1" },
+    { offset: "100%", color: "#00BFFF", opacity: "1" }
+  ];
+  
 
   return (
     <section className="relative overflow-hidden" id="itinerary">
@@ -116,19 +125,13 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
                           
                           
                           <div className="relative p-4 rounded-lg justify-center">
-                              <div className="absolute inset-0 z-[-1] rounded-lg">
-                                
-                                <Image
-                                      src={item?.backgroundImage || ""}
-                                      alt=""
-                                      layout="fill"
-                                      objectFit="cover"
-                                      
-                                      className="object-cover rounded-lg"
-                                      
-                                    />
+                            <div className="absolute inset-0 z-[-1] rounded-lg overflow-hidden">
+                              {
+                              //<CustomColorCircle className="w-full h-full" colorStops={exampleColorStops} />
+                              }
+                              <PresetColorCircle className="w-full h-full" colorName="green" />
+                            </div>
 
-                              </div>
                               <div className="p-4 rounded-lg">
                                   <TinaMarkdown
                                         content={item?.header}

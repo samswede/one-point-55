@@ -1,6 +1,9 @@
 
 import type { Template } from 'tinacms'
 
+import svgColorCircle from './svg/svgColorCircle.template';
+
+
 const heroBlock: Template = {
   name: 'hero',
   label: 'Hero',
@@ -209,6 +212,8 @@ const itineraryBlock: Template = {
             },
           ],
           backgroundImage: "",
+          backgroundStyle: "circle",
+          backgroundColor: "purple",
         }
       ]
 
@@ -335,6 +340,21 @@ const itineraryBlock: Template = {
           name: 'backgroundImage',
           type: 'image',
         },
+
+        {
+          label: "Background SVG Style",
+          name: "backgroundStyle",
+          type: "string",
+          options: ["circle", "horizon"],
+        },
+
+        {
+          
+          label: "Background SVG Color",
+          name: "backgroundColor",
+          type: "string",
+          options: ["red", "green", "blue", "purple", "yellow", "orange", "cyan", "magenta"],
+        },
       ],
     }
 
@@ -447,6 +467,8 @@ const markdownBlock: Template = {
 }
 
 */
+
+
 
 const accordionBlock: Template = {
     name: 'accordion',
