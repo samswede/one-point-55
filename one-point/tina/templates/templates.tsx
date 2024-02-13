@@ -14,6 +14,19 @@ const heroBlock: Template = {
     },
 
     {
+      type: 'image',
+      label: 'Background Video (MP4 <30MB)',
+      name: 'backgroundVideo',
+    },
+
+    {
+      type: 'image',
+      label: 'Background Fallback Image',
+      name: 'backgroundFallbackImage',
+    },
+
+
+    {
       name: "links",
       label: "Links",
       type: "object",
@@ -84,12 +97,15 @@ const pasttripsBlock: Template = {
     },
 
     {
-      type: "string",
-      label: "Background Video file path",
-      name: "backgroundVideo",
-      options: ["ibiza/waves_drone.mp4", "zermatt/matterhorn_drone.mp4"],
-      
-      
+      type: 'image',
+      label: 'Background Video (MP4 <30MB)',
+      name: 'backgroundVideo',
+    },
+
+    {
+      type: 'image',
+      label: 'Background Fallback Image',
+      name: 'backgroundFallbackImage',
     },
 
     {

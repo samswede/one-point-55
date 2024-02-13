@@ -32,34 +32,37 @@ import {
 
 export function PastTripsSection(props: HomeBlocksPasttrips) {
 
-  //  @/public/assets/videos/${props?.backgroundVideo || "ibiza/waves_drone.mp4"}
 
   return (
     <section className="relative overflow-hidden">
 
       <div className="relative flex flex-col items-center gap-2 py-24">
         <video 
-          className="absolute top-0 left-0 z-[-1] w-full h-full object-cover"
+          className="absolute top-0 left-0 w-full h-full object-cover"
           autoPlay
           loop
           muted
 
-          src={require(`@/public/assets/videos/${props?.backgroundVideo || "ibiza/waves_drone.mp4"}`)}
+          //src={require(`@/public/assets/videos/${props?.backgroundVideo || "ibiza/waves_drone.mp4"}`)}
+          src={props?.backgroundVideo || "public/assets/videos/ibiza/waves_drone.mp4"}
+          poster={props?.backgroundFallbackImage || ""}
           >
+            {/*
             <Image
               src={props?.backgroundFallbackImage || ""}
-              alt=""
+              alt="fallback image"
               layout="fill"
               objectFit="cover"
               
               className="object-cover"
               
             />
+            */}
         </video>
 
 
         <div
-          className="px-4 py-8 text-center"
+          className="px-4 py-8 text-center z-[1]"
           data-tina-field={tinaField(props, "message")}
         >
           <TinaMarkdown
@@ -93,7 +96,7 @@ export function PastTripsSection(props: HomeBlocksPasttrips) {
             switch (props?.style || "swiper") {
               case "swiper": {
                 return (
-                  <Carousel className="w-full max-w-xs">
+                  <Carousel className="w-full max-w-xs z-[1]">
                     <CarouselContent>
                       {props?.tripscarousel?.map((trip, index) => (
                         <CarouselItem key={index}>
