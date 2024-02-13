@@ -105,7 +105,7 @@ export function PastTripsSection(props: HomeBlocksPasttrips) {
                                   >
                                     
                                     <TinaMarkdown
-                                        content={trip?.body}
+                                        content={trip?.description}
                                         components={{
                                           h1: (props) => (
                                             <h1
