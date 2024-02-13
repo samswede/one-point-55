@@ -34,7 +34,7 @@ export function PastTripsSection(props: HomeBlocksPasttrips) {
 
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden" id="pasttrips">
 
       <div className="relative flex flex-col items-center gap-2 py-24">
         <video 

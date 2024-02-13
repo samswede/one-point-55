@@ -11,7 +11,9 @@ export function Concept(props: HomeBlocksContent) {
   return (
     <section className="relative overflow-hidden">
 
-      <div className="relative flex flex-col items-center gap-2 py-24">
+      <div 
+        id="concept"
+        className="relative flex flex-col items-center gap-2 py-24">
 
         <div
           className="px-4 py-8 text-center"

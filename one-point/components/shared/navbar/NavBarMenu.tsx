@@ -70,19 +70,19 @@ export function NavBarMenu() {
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/" title="The Concept">
+              <ListItem href="/#concept" title="The Concept">
                 What is OnePoint55 about?
               </ListItem>
               <ListItem href="/" title="Upcoming Trips">
                 Sign up for the next adventure
               </ListItem>
-              <ListItem href="/" title="Past Trips">
+              <ListItem href="/#pasttrips" title="Past Trips">
                 See where we have been before
               </ListItem>
               <ListItem href="/" title="Contact">
                 Reach out to us
               </ListItem>
-              <ListItem href="/" title="FAQ">
+              <ListItem href="/#FAQ" title="FAQ">
                 Answers to common questions
               </ListItem>
 

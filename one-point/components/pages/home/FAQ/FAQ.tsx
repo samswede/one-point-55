@@ -14,7 +14,7 @@ export default function FAQ(props: HomeBlocksAccordion) {
 
 
   return (
-    <div>
+    <div id="FAQ">
         <h1>
         {props.title}
         </h1>
