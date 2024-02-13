@@ -43,6 +43,7 @@ blocks:
 
       Checkout where we've been
     style: cards
+    backgroundVideo: zermatt/matterhorn_drone.mp4
     tripscarousel:
       - title: Zermatt 2022
         header: |

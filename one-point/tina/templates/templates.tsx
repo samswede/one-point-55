@@ -44,6 +44,30 @@ const pasttripsBlock: Template = {
   name: 'pasttrips',
   label: 'Past Trips Section',
 
+  ui: {
+    itemProps: (item) => {
+      // Field values are accessed by item?.<Field name>
+      return { label: item?.title };
+    },
+    // Setting a default will auto-populate new items with the given values
+    defaultItem: {
+      message: "",
+      style: "cards",
+      backgroundVideo: "ibiza/waves_drone.mp4",
+      
+      tripscarousel: [
+        {
+          title: "Past Trip",
+          header: "Location 202X",
+          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.",
+          link: "/Location_202X",
+          image: "",
+        }
+      ]
+
+    }
+  },
+
   fields: [
     
     {
@@ -60,6 +84,15 @@ const pasttripsBlock: Template = {
     },
 
     {
+      type: "string",
+      label: "Background Video file path",
+      name: "backgroundVideo",
+      options: ["ibiza/waves_drone.mp4", "zermatt/matterhorn_drone.mp4"],
+      
+      
+    },
+
+    {
       type: 'object',
       label: 'Past Trips',
       name: 'tripscarousel',
@@ -70,6 +103,14 @@ const pasttripsBlock: Template = {
           // Field values are accessed by item?.<Field name>
           return { label: item?.title };
         },
+        // Setting a default will auto-populate new items with the given values
+        defaultItem: {
+          title: "Past Trip",
+          header: "Location 202X",
+          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.",
+          link: "/Location_202X",
+          image: "",
+        }
       },
 
       fields: [
