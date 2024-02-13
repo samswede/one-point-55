@@ -7,6 +7,7 @@ import {
   contentBlock,
 
   pasttripsBlock,
+  itineraryBlock,
 
   accordionBlock,
   } from "./templates/templates";
@@ -126,7 +127,7 @@ export default defineConfig({
             list: true,
             name: 'blocks',
             label: 'Sections',
-            templates: [heroBlock, contentBlock],
+            templates: [heroBlock, contentBlock, itineraryBlock],
           },
         ],
       },

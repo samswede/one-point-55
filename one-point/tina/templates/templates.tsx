@@ -166,6 +166,181 @@ const pasttripsBlock: Template = {
   ],
 }
 
+const itineraryBlock: Template = {
+  name: 'itinerary',
+  label: 'Itinerary Section',
+
+  ui: {
+    itemProps: (item) => {
+      // Field values are accessed by item?.<Field name>
+      return { label: item?.title };
+    },
+    // Setting a default will auto-populate new items with the given values
+    defaultItem: {
+      message: "",
+      badges: [
+        {
+          badge: "badge 1",
+        },
+        {
+          badge: "badge 2",
+        },
+        {
+          badge: "badge 3",
+        },
+      ],
+      
+      carouselTitle: "Swipe through the days",
+      
+      itineraryCarousel: [
+        {
+          title: "Day 1",
+          header: "Main Event in a Couple Words",
+          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.",
+          badges: [
+            {
+              badge: "badge 1",
+            },
+            {
+              badge: "badge 2",
+            },
+            {
+              badge: "badge 3",
+            },
+          ],
+          backgroundImage: "",
+        }
+      ]
+
+    }
+  },
+
+  fields: [
+    
+    {
+      label: 'Message',
+      name: 'message',
+      type: 'rich-text',
+    },
+
+    {
+      label: 'Badges',
+      name: 'badges',
+      type: 'object',
+      list: true,
+
+      ui: {
+        itemProps: (item) => {
+          // Field values are accessed by item?.<Field name>
+          return { label: item?.badge };
+        },
+        
+      },
+
+      fields: [
+        {
+          label: 'Badge',
+          name: 'badge',
+          type: 'string',
+        },
+
+      ],
+    },
+
+    {
+      label: 'Carousel Title',
+      name: 'carouselTitle',
+      type: 'rich-text',
+    },
+
+    {
+      label: 'Itinerary Cards Carousel',
+      name: 'itineraryCarousel',
+      type: 'object',
+      list: true,
+
+      ui: {
+        itemProps: (item) => {
+          // Field values are accessed by item?.<Field name>
+          return { label: item?.title };
+        },
+        // Setting a default will auto-populate new items with the given values
+        defaultItem: {
+          title: "Day X",
+          header: "Main Event in a Couple Words",
+          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.",
+          badges: [
+            {
+              badge: "badge 1",
+            },
+            {
+              badge: "badge 2",
+            },
+            {
+              badge: "badge 3",
+            },
+          ],
+          backgroundImage: "",
+        }
+      },
+
+      fields: [
+        {
+          type: 'string',
+          label: 'Title',
+          name: 'title',
+        },
+        
+        {
+          type: 'rich-text',
+          label: 'Header',
+          name: 'header',
+        },
+
+        {
+          type: 'rich-text',
+          label: 'Description',
+          name: 'description',
+        },
+
+        {
+          label: 'Badges',
+          name: 'badges',
+          type: 'object',
+          list: true,
+
+          ui: {
+            itemProps: (item) => {
+              // Field values are accessed by item?.<Field name>
+              return { label: item?.badge };
+            },
+            
+          },
+
+          fields: [
+            {
+              label: 'Badge',
+              name: 'badge',
+              type: 'string',
+            },
+
+          ],
+          
+        },
+        
+        
+        {
+          
+          label: 'Background Image',
+          name: 'backgroundImage',
+          type: 'image',
+        },
+      ],
+    }
+
+  ],
+}
+
 /*
 const contactBlock: Template = {
   name: 'contact',
@@ -360,6 +535,7 @@ export {
 
     contentBlock,
     pasttripsBlock,
+    itineraryBlock,
 
     imageGalleryBlock,
 

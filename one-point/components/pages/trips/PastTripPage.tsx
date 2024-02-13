@@ -6,7 +6,7 @@ import { useTina } from "tinacms/dist/react";
 
 import { TripPastHero } from "@/components/pages/trips/hero/TripPastHero";
 import { TripPastOverviewSection } from "@/components/pages/trips/overview/TripPastOverviewSection";
-
+import { TripPastItinerarySection } from "@/components/pages/trips/itinerary/TripPastItinerarySection";
 
 export default function PastTripPage(props: {
     data: TrippastQuery,
@@ -27,6 +27,10 @@ export default function PastTripPage(props: {
             case "TrippastBlocksContent": {
               return <TripPastOverviewSection key={i} {...block} />
             }
+
+            case "TrippastBlocksItinerary": {
+              return <TripPastItinerarySection key={i} {...block} />
+            }
             
           }
         })}
@@ -34,3 +38,4 @@ export default function PastTripPage(props: {
       </>
     )
   }
+
