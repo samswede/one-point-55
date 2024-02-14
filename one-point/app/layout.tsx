@@ -2,7 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { IBM_Plex_Sans } from 'next/font/google';
 
-import { NavigationMenuDemo } from "@/components/shared/navbar/NavigationMenuDemo";
+
 import { NavBarMenu } from '@/components/shared/navbar/NavBarMenu';
 
 import { FooterDemo } from "@/components/shared/footer/FooterDemo";

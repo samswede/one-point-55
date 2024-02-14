@@ -4,7 +4,7 @@ blocks:
       # OnePoint**55**
 
       This is basic text...
-    backgroundVideo: /assets/videos/ibiza/waves_drone.mp4
+    backgroundVideo: /assets/videos/general/onepoint_compilation_1.mp4
     backgroundFallbackImage: /assets/images/ibiza/beach_ibiza_1.jpeg
     links:
       - link: /impressum
