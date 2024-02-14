@@ -2,7 +2,11 @@
 fileName: testing
 blocks:
   - message: |
-      # Welcome to **Ibiza**
+      # Trip 
+
+      # **Ibiza**
+
+      # 2021
     backgroundVideo: /assets/videos/ibiza/ibiza_compilation_1_big.mp4
     _template: hero
   - message: >
@@ -34,12 +38,14 @@ blocks:
     _template: content
   - message: |
       # **Itinerary**
+
+      An X day adventure featuring many activities
     badges:
       - badge: meditation
       - badge: health
       - badge: yoga
     carouselTitle: |
-      ##### \*\*Swipe \*\*through daily activities!
+      ##### Swipe through the main events!
     carouselStyle: flow
     carouselBackgroundVideo: /assets/videos/ibiza/boat_fb_2.mp4
     itineraryCarousel:

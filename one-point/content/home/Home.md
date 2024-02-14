@@ -4,7 +4,7 @@ blocks:
       # OnePoint**55**
 
       This is basic text...
-    backgroundVideo: /assets/videos/general/onepoint_compilation_1.mp4
+    backgroundVideo: /assets/videos/ibiza/waves_fb_1.mp4
     backgroundFallbackImage: /assets/images/ibiza/beach_ibiza_1.jpeg
     links:
       - link: /impressum
@@ -43,9 +43,9 @@ blocks:
   - message: |
       # Recent Trips
 
-      Checkout where we've been
+      See what to expect
     style: cards
-    backgroundVideo: /assets/videos/zermatt/matterhorn_drone.mp4
+    backgroundVideo: /assets/videos/general/onepoint_compilation_1.mp4
     backgroundFallbackImage: /assets/images/ibiza/beach_ibiza_1.jpeg
     tripscarousel:
       - title: Zermatt 2022

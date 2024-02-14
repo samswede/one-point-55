@@ -11,7 +11,7 @@ type ItineraryCardProps = {
   header: any;
   description: any;
   badges?: Array<{ badge: string, description: string }>;
-  backgroundColor?: string;
+  backgroundColor: string;
 };
 
 const ItineraryCard: React.FC<ItineraryCardProps> = ({ backgroundColor, header, description, badges }) => {
