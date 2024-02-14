@@ -15,7 +15,9 @@ const PresetColorCircle: React.FC<ColorCircleProps> = ({ className, colorName })
       gradientId = "yellowCircular-grad";
       gradient = (
         <radialGradient id={gradientId} r="50%" cx="50%" cy="50%">
-          {/* Yellow gradient stops */}
+          <stop offset="15%" stopColor="#c9803e" stopOpacity="0.5"></stop>
+          <stop offset="75%" stopColor="hsl(28, 100%, 71%)" stopOpacity="1"></stop>
+          <stop offset="100%" stopColor="#ffffcc" stopOpacity="1"></stop>
         </radialGradient>
       );
       break;
@@ -43,7 +45,7 @@ const PresetColorCircle: React.FC<ColorCircleProps> = ({ className, colorName })
       gradientId = "green-circular-grad";
       gradient = (
         <radialGradient id={gradientId} r="50%" cx="50%" cy="50%">
-          <stop offset="15%" stopColor="#005300" stopOpacity="0.5"></stop>
+          <stop offset="15%" stopColor="#005300" stopOpacity="0.9"></stop>
           <stop offset="75%" stopColor="hsl(105, 69%, 30%)" stopOpacity="1"></stop>
           <stop offset="100%" stopColor="#97e476" stopOpacity="1"></stop>
         </radialGradient>
@@ -76,6 +78,16 @@ const PresetColorCircle: React.FC<ColorCircleProps> = ({ className, colorName })
           <stop offset="15%" stopColor="#005455" stopOpacity="0.5" />
           <stop offset="75%" stopColor="hsl(180, 69%, 30%)" stopOpacity="1" />
           <stop offset="100%" stopColor="#88e3e2" stopOpacity="1" />
+        </radialGradient>
+      );
+      break;
+    case 'magenta':
+      gradientId = "magentaCircular-grad";
+      gradient = (
+        <radialGradient id={gradientId} r="50%" cx="50%" cy="50%">
+          <stop offset="15%" stopColor="#80004d" stopOpacity="0.5" />
+          <stop offset="75%" stopColor="hsl(300, 77%, 40%)" stopOpacity="1" />
+          <stop offset="100%" stopColor="#ff8be6" stopOpacity="1" />
         </radialGradient>
       );
       break;

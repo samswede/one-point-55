@@ -28,10 +28,14 @@ import {
   CarouselPrevious,
   } from "@/components/ui/carousel"
 
+import CardsCarousel from "@/components/shared/carousel/CardsCarousel"
+import SwiperCarousel from "@/components/shared/carousel/SwiperCarousel"
+import { SwiperSlide } from 'swiper/react';
 
 // Import background svgs
-import CustomColorCircle from "@/components/svg/circle/CustomColorCircle"
 import PresetColorCircle from "@/components/svg/circle/PresetColorCircle"
+
+import ItineraryCard from "@/components/pages/trips/itinerary/ItineraryCard"
 
 export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
 
@@ -87,7 +91,7 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
 
           </div>
         </div>
-        <div className="flex gap-5 py-12">
+        <div className="flex-vertical gap-5 py-12">
           <div
             className="px-4 py-8 text-center z-[1]"
             data-tina-field={tinaField(props, "carouselTitle")}
@@ -101,185 +105,137 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
                     {...props}
                   />
                 ),
+                h2: (props) => (
+                  <h2
+                    className="mx-auto text-4xl font-extrabold leading-tight tracking-tighter text-primary md:text-6xl"
+                    {...props}
+                  />
+                ),
+                h3: (props) => (
+                  <h3
+                    className="mx-auto text-3xl font-extrabold leading-tight tracking-tighter text-primary md:text-5xl"
+                    {...props}
+                  />
+                ),
+                h4: (props) => (
+                  <h4
+                    className="mx-auto text-2xl font-extrabold leading-tight tracking-tighter text-secondary md:text-4xl text-center"
+                    {...props}
+                  />
+                ),
+                h5: (props) => (
+                  <h5
+                    className="mx-auto text-xl font-extrabold leading-tight tracking-tighter text-primary md:text-3xl"
+                    {...props}
+                  />
+                ),
                 bold: (props) => (
                   <span
-                    className="bg-gradient-to-b from-blue-300 to-pink-600 bg-clip-text text-transparent"
+                    className="bg-gradient-to-b from-yellow-400 to-red-600 bg-clip-text text-transparent"
                     {...props}
                   />
                 ),
+                // Customizing the italic component with a different color gradient
+                em: (props) => (
+                  <span
+                    className="bg-gradient-to-r from-green-300 to-blue-500 bg-clip-text text-transparent"
+                    {...props}
+                  />
+                ),
+                /*
+                I want to make it so that if something is both italic and bold, it will be a different color
+                */
+
+                
                 p: (props) => (
                   <p
-                    className="mx-auto mt-8 max-w-[700px] px-2 text-center text-xl text-muted-foreground"
+                    className="mx-auto mt-8 max-w-[700px] px-2 text-left text-sm text-primary-foreground"
                     {...props}
                   />
                 ),
+
               }}
             />
           </div>
-        
 
-                  <Carousel className="w-full max-w-xs">
-                    <CarouselContent>
+          <div
+            className="px-4 py-8 text-center z-[1] w-full rounded-lg"
+            
+            >
+          { (() => {
+            switch (props.carouselStyle) {
+              case 'cards':
+                return (
+                <CardsCarousel>
+                  {props?.itineraryCarousel?.map((item, index) => (
+                      <SwiperSlide
+                        key={index}
+                        className="w-full max-w-xs rounded-lg"
+                      >
+                          <ItineraryCard 
+                            header={item?.header}
+                            description={item?.description}
+                            badges={item?.badges}
+                            backgroundColor={item?.backgroundColor}
+                          />
+
+                      </SwiperSlide>
+                  ))}
+                </CardsCarousel>
+                );
+              
+              case 'flow':
+                return (
+                  <SwiperCarousel>
+                  {props?.itineraryCarousel?.map((item, index) => (
+                      <SwiperSlide
+                        key={index}
+                        className="w-full max-w-xs rounded-lg"
+                      >
+                          <ItineraryCard 
+                            header={item?.header}
+                            description={item?.description}
+                            badges={item?.badges}
+                            backgroundColor={item?.backgroundColor}
+                          />
+
+                      </SwiperSlide>
+                  ))}
+                </SwiperCarousel>
+                );
+
+              case 'click':
+                return (
+                  <Carousel className="w-full max-w-xs rounded-lg">
+                    <CarouselContent className="rounded-lg">
                       {props?.itineraryCarousel?.map((item, index) => (
-                        <CarouselItem key={index}>
+                        <CarouselItem key={index} className="rounded-lg">
                           
+                          <ItineraryCard 
+                            header={item?.header}
+                            description={item?.description}
+                            badges={item?.badges}
+                            backgroundColor={item?.backgroundColor}
+                          />
                           
-                          <div className="relative p-4 rounded-lg justify-center">
-                            <div className="absolute inset-0 z-[-1] rounded-lg overflow-hidden">
-                              {
-                              //<CustomColorCircle className="w-full h-full" colorStops={exampleColorStops} />
-                              }
-                              <PresetColorCircle className="w-full h-full" colorName="green" />
-                            </div>
-
-                              <div className="p-4 rounded-lg">
-                                  <TinaMarkdown
-                                        content={item?.header}
-                                        components={{
-                                          h1: (props) => (
-                                            <h1
-                                              className="mx-auto text-5xl font-extrabold leading-tight tracking-tighter text-primary md:text-7xl"
-                                              {...props}
-                                            />
-                                          ),
-                                          h2: (props) => (
-                                            <h2
-                                              className="mx-auto text-4xl font-extrabold leading-tight tracking-tighter text-primary md:text-6xl"
-                                              {...props}
-                                            />
-                                          ),
-                                          h3: (props) => (
-                                            <h3
-                                              className="mx-auto text-3xl font-extrabold leading-tight tracking-tighter text-primary md:text-5xl"
-                                              {...props}
-                                            />
-                                          ),
-                                          h4: (props) => (
-                                            <h4
-                                              className="mx-auto text-2xl font-extrabold leading-tight tracking-tighter text-secondary md:text-4xl text-center"
-                                              {...props}
-                                            />
-                                          ),
-                                          h5: (props) => (
-                                            <h5
-                                              className="mx-auto text-xl font-extrabold leading-tight tracking-tighter text-primary md:text-3xl"
-                                              {...props}
-                                            />
-                                          ),
-                                          bold: (props) => (
-                                            <span
-                                              className="bg-gradient-to-b from-yellow-400 to-red-600 bg-clip-text text-transparent"
-                                              {...props}
-                                            />
-                                          ),
-                                          // Customizing the italic component with a different color gradient
-                                          em: (props) => (
-                                            <span
-                                              className="bg-gradient-to-r from-green-300 to-blue-500 bg-clip-text text-transparent"
-                                              {...props}
-                                            />
-                                          ),
-                                          /*
-                                          I want to make it so that if something is both italic and bold, it will be a different color
-                                          */
-
-                                          
-                                          p: (props) => (
-                                            <p
-                                              className="mx-auto mt-8 max-w-[700px] px-2 text-left text-sm text-primary-foreground"
-                                              {...props}
-                                            />
-                                          ),
-
-                                          
-                                        }}
-                                      />
-                              </div>
-                              <div className="p-4 bg-white/30 backdrop-blur-md rounded-lg">
-                                  <TinaMarkdown
-                                        content={item?.description}
-                                        components={{
-                                          h1: (props) => (
-                                            <h1
-                                              className="mx-auto text-5xl font-extrabold leading-tight tracking-tighter text-primary md:text-7xl"
-                                              {...props}
-                                            />
-                                          ),
-                                          h2: (props) => (
-                                            <h2
-                                              className="mx-auto text-4xl font-extrabold leading-tight tracking-tighter text-primary md:text-6xl"
-                                              {...props}
-                                            />
-                                          ),
-                                          h3: (props) => (
-                                            <h3
-                                              className="mx-auto text-3xl font-extrabold leading-tight tracking-tighter text-primary md:text-5xl"
-                                              {...props}
-                                            />
-                                          ),
-                                          h4: (props) => (
-                                            <h4
-                                              className="mx-auto text-2xl font-extrabold leading-tight tracking-tighter text-primary md:text-4xl"
-                                              {...props}
-                                            />
-                                          ),
-                                          h5: (props) => (
-                                            <h5
-                                              className="mx-auto text-xl font-extrabold leading-tight tracking-tighter text-primary md:text-3xl"
-                                              {...props}
-                                            />
-                                          ),
-                                          bold: (props) => (
-                                            <span
-                                              className="bg-gradient-to-b from-blue-400 to-green-600 bg-clip-text text-transparent"
-                                              {...props}
-                                            />
-                                          ),
-                                          // Customizing the italic component with a different color gradient
-                                          em: (props) => (
-                                            <span
-                                              className="bg-gradient-to-r from-green-300 to-blue-500 bg-clip-text text-transparent"
-                                              {...props}
-                                            />
-                                          ),
-                                          /*
-                                          I want to make it so that if something is both italic and bold, it will be a different color
-                                          */
-
-                                          
-                                          p: (props) => (
-                                            <p
-                                              className="mx-auto max-w-[700px] px-2 text-left text-sm text-secondary-foreground"
-                                              {...props}
-                                            />
-                                          ),
-
-                                          
-                                        }}
-                                      />
-                              </div>
-                              <div className="relative p-4 rounded-lg justify-center">
-                                  {item?.badges?.map((item, index) => (
-                                    
-                                    <Badge key={index} variant="destructive" color="secondary">
-                                      {item?.badge}
-                                    </Badge>
-                                  ))
-                                  }
-                              </div>
-                          </div>
-                          
-
                         </CarouselItem>
-                      ))}
+                      )
+                      )
+                      }
                       
                     </CarouselContent>
                     <CarouselPrevious />
                     <CarouselNext />
                   </Carousel>
-
                 );
+              }
+
+              })()
+            }
+                  
+
               
+          </div>
           
         </div>
       </div>

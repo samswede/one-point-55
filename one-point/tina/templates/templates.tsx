@@ -2,6 +2,7 @@
 import type { Template } from 'tinacms'
 
 import svgColorCircle from './svg/svgColorCircle.template';
+import { describe } from 'node:test';
 
 
 const heroBlock: Template = {
@@ -179,17 +180,24 @@ const itineraryBlock: Template = {
       return { label: item?.title };
     },
     // Setting a default will auto-populate new items with the given values
+
+    /*
     defaultItem: {
+      
       message: "",
+
       badges: [
         {
           badge: "badge 1",
+          description: "badge 1 description",
         },
         {
           badge: "badge 2",
+          description: "badge 2 description",
         },
         {
           badge: "badge 3",
+          description: "badge 3 description",
         },
       ],
       
@@ -198,26 +206,30 @@ const itineraryBlock: Template = {
       itineraryCarousel: [
         {
           title: "Day 1",
-          header: "Main Event in a Couple Words",
-          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.",
+          header: "",
+          description: "",
           badges: [
             {
               badge: "badge 1",
+              description: "badge 1 description",
             },
             {
               badge: "badge 2",
+              description: "badge 2 description",
             },
             {
               badge: "badge 3",
+              description: "badge 3 description",
             },
           ],
-          backgroundImage: "",
+          
           backgroundStyle: "circle",
           backgroundColor: "purple",
         }
       ]
 
     }
+    */
   },
 
   fields: [
@@ -259,6 +271,13 @@ const itineraryBlock: Template = {
     },
 
     {
+      label: "Carousel Style",
+      name: "carouselStyle",
+      type: "string",
+      options: ["cards", "flow", "click"],
+    },
+
+    {
       label: 'Itinerary Cards Carousel',
       name: 'itineraryCarousel',
       type: 'object',
@@ -270,42 +289,52 @@ const itineraryBlock: Template = {
           return { label: item?.title };
         },
         // Setting a default will auto-populate new items with the given values
+
+        /*
         defaultItem: {
           title: "Day X",
-          header: "Main Event in a Couple Words",
-          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.",
+          header: "",
+          description: "",
           badges: [
             {
               badge: "badge 1",
+              description: "badge 1 description",
             },
             {
               badge: "badge 2",
+              description: "badge 2 description",
             },
             {
               badge: "badge 3",
+              description: "badge 3 description",
             },
           ],
-          backgroundImage: "",
+          backgroundStyle: "circle",
+          backgroundColor: "red",
         }
+        */
       },
 
       fields: [
         {
-          type: 'string',
+          
           label: 'Title',
           name: 'title',
+          type: 'string',
         },
         
         {
-          type: 'rich-text',
+          
           label: 'Header',
           name: 'header',
+          type: 'rich-text',
         },
 
         {
-          type: 'rich-text',
+          
           label: 'Description',
           name: 'description',
+          type: 'rich-text',
         },
 
         {
@@ -328,19 +357,16 @@ const itineraryBlock: Template = {
               name: 'badge',
               type: 'string',
             },
+            { 
+              label: 'Description',
+              name: 'description',
+              type: 'string',
+            }
 
           ],
           
         },
         
-        
-        {
-          
-          label: 'Background Image',
-          name: 'backgroundImage',
-          type: 'image',
-        },
-
         {
           label: "Background SVG Style",
           name: "backgroundStyle",
@@ -361,25 +387,6 @@ const itineraryBlock: Template = {
   ],
 }
 
-/*
-const contactBlock: Template = {
-  name: 'contact',
-  label: 'Contact',
-  fields: [
-
-  ]
-
-}
-*/
-
-/*
-{
-  type: "string",
-  label: "Style",
-  name: "style",
-  options: ["swiper", "cards"],
-},
-*/
 
 const featureBlock: Template = {
   name: 'features',
@@ -406,6 +413,7 @@ const featureBlock: Template = {
   ],
 }
   
+
 const contentBlock: Template = {
   name: 'content',
   label: 'Content',
@@ -444,29 +452,6 @@ const contentBlock: Template = {
 
   ],
 }
-
-/*
-
-const markdownBlock: Template = {
-    name: 'markdown',
-    label: 'Markdown',
-    format: 'md',
-    fields: [
-        {
-        type: 'string',
-        label: 'Title',
-        name: 'title',
-        },
-        {
-        type: 'rich-text',
-        label: 'Post Body',
-        name: 'body',
-        isBody: true,
-        },
-    ],
-}
-
-*/
 
 
 

@@ -41,7 +41,7 @@ blocks:
         style: light
     _template: content
   - message: |
-      # Past **Trips**
+      # Recent Trips
 
       Checkout where we've been
     style: cards
