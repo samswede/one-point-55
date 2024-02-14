@@ -2,7 +2,7 @@
 fileName: testing
 blocks:
   - message: |
-      # Trip 
+      # Trip
 
       # **Ibiza**
 
@@ -46,18 +46,18 @@ blocks:
       - badge: yoga
     carouselTitle: |
       ##### Swipe through the main events!
-    carouselStyle: flow
+    carouselStyle: cards
     carouselBackgroundVideo: /assets/videos/ibiza/boat_fb_2.mp4
     itineraryCarousel:
       - title: Day 1
         header: |
-          ### What is **Lorem** Ipsum?
+          ### Testing Leo
         description: "Lorem Ipsum\_is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n"
         badges:
           - badge: Ipsum
           - badge: Lorem
         backgroundStyle: circle
-        backgroundColor: green
+        backgroundColor: red
       - title: Day 2
         header: |
           ## What is Lorem **Ipsum**?
