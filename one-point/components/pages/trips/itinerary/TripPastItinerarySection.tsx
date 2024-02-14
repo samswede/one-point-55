@@ -52,7 +52,7 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
       <div className="relative flex flex-col items-center gap-2 py-24">
         
         <div
-          className="px-4 py-8 text-center z-[1]"
+          className="px-4 py-8 text-center"
           data-tina-field={tinaField(props, "message")}
         >
           <TinaMarkdown
@@ -80,7 +80,7 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
           />
           <div
             id="badges"
-            className="flex gap-5 py-12 z-[1]"
+            className="flex gap-5 py-12"
             >
             {props?.badges?.map((item, index) => (
               <Badge key={index} variant="destructive" color="secondary">
@@ -92,6 +92,7 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
           </div>
         </div>
         <div className="flex-vertical gap-5 py-12">
+          
           <div
             className="px-4 py-8 text-center z-[1]"
             data-tina-field={tinaField(props, "carouselTitle")}
@@ -157,85 +158,101 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
               }}
             />
           </div>
+          
 
-          <div
-            className="px-4 py-8 text-center z-[1] w-full rounded-lg"
-            
-            >
-          { (() => {
-            switch (props.carouselStyle) {
-              case 'cards':
-                return (
-                <CardsCarousel>
-                  {props?.itineraryCarousel?.map((item, index) => (
-                      <SwiperSlide
-                        key={index}
-                        className="w-full max-w-xs rounded-lg"
-                      >
-                          <ItineraryCard 
-                            header={item?.header}
-                            description={item?.description}
-                            badges={item?.badges}
-                            backgroundColor={item?.backgroundColor}
-                          />
+          <div>
+            <video 
+              className="absolute bottom-0 left-0 w-full object-cover z-[-1]"
+              autoPlay
+              loop
+              muted
+              playsInline // required for iOS
 
-                      </SwiperSlide>
-                  ))}
-                </CardsCarousel>
-                );
+              src={props?.carouselBackgroundVideo || "public/assets/videos/ibiza/waves_drone.mp4"}
+              poster={props?.carouselBackgroundFallbackImage || ""}
+
+              />
+
+            <div
+              className="px-4 py-8 text-center z-[1] w-full rounded-lg"
               
-              case 'flow':
-                return (
-                  <SwiperCarousel>
-                  {props?.itineraryCarousel?.map((item, index) => (
-                      <SwiperSlide
-                        key={index}
-                        className="w-full max-w-xs rounded-lg"
-                      >
-                          <ItineraryCard 
-                            header={item?.header}
-                            description={item?.description}
-                            badges={item?.badges}
-                            backgroundColor={item?.backgroundColor}
-                          />
+              >
+            { (() => {
+              switch (props.carouselStyle) {
+                case 'cards':
+                  return (
+                  <CardsCarousel>
+                    {props?.itineraryCarousel?.map((item, index) => (
+                        <SwiperSlide
+                          key={index}
+                          className="w-full max-w-xs rounded-lg"
+                        >
+                            <ItineraryCard 
+                              header={item?.header}
+                              description={item?.description}
+                              badges={item?.badges}
+                              backgroundColor={item?.backgroundColor}
+                            />
 
-                      </SwiperSlide>
-                  ))}
-                </SwiperCarousel>
-                );
+                        </SwiperSlide>
+                    ))}
+                  </CardsCarousel>
+                  );
+                
+                case 'flow':
+                  return (
+                    <SwiperCarousel>
+                    {props?.itineraryCarousel?.map((item, index) => (
+                        <SwiperSlide
+                          key={index}
+                          className="w-full max-w-xs rounded-lg"
+                        >
+                            <ItineraryCard 
+                              header={item?.header}
+                              description={item?.description}
+                              badges={item?.badges}
+                              backgroundColor={item?.backgroundColor}
+                            />
 
-              case 'click':
-                return (
-                  <Carousel className="w-full max-w-xs rounded-lg">
-                    <CarouselContent className="rounded-lg">
-                      {props?.itineraryCarousel?.map((item, index) => (
-                        <CarouselItem key={index} className="rounded-lg">
-                          
-                          <ItineraryCard 
-                            header={item?.header}
-                            description={item?.description}
-                            badges={item?.badges}
-                            backgroundColor={item?.backgroundColor}
-                          />
-                          
-                        </CarouselItem>
-                      )
-                      )
-                      }
-                      
-                    </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
-                  </Carousel>
-                );
+                        </SwiperSlide>
+                    ))}
+                  </SwiperCarousel>
+                  );
+
+                case 'click':
+                  return (
+                    <Carousel className="w-full max-w-xs rounded-lg">
+                      <CarouselContent className="rounded-lg">
+                        {props?.itineraryCarousel?.map((item, index) => (
+                          <CarouselItem key={index} className="rounded-lg">
+                            
+                            <ItineraryCard 
+                              header={item?.header}
+                              description={item?.description}
+                              badges={item?.badges}
+                              backgroundColor={item?.backgroundColor}
+                            />
+                            
+                          </CarouselItem>
+                        )
+                        )
+                        }
+                        
+                      </CarouselContent>
+                      <CarouselPrevious />
+                      <CarouselNext />
+                    </Carousel>
+                  );
+                }
+
+                })()
               }
+                    
 
-              })()
-            }
-                  
-
-              
+                
+            </div>
           </div>
+          
           
         </div>
       </div>

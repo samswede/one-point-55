@@ -278,6 +278,19 @@ const itineraryBlock: Template = {
     },
 
     {
+      label: "Carousel Background Video",
+      name: "carouselBackgroundVideo",
+      type: "image",
+    },
+
+    {
+      label: "Carousel Background Fallback Image",
+      name: "carouselBackgroundFallbackImage",
+      type: "image",
+    },
+
+
+    {
       label: 'Itinerary Cards Carousel',
       name: 'itineraryCarousel',
       type: 'object',

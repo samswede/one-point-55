@@ -3,6 +3,7 @@ fileName: testing
 blocks:
   - message: |
       # Welcome to **Ibiza**
+    backgroundVideo: /assets/videos/ibiza/ibiza_compilation_1_big.mp4
     _template: hero
   - message: >
       # Overview
@@ -40,6 +41,7 @@ blocks:
     carouselTitle: |
       ##### \*\*Swipe \*\*through daily activities!
     carouselStyle: flow
+    carouselBackgroundVideo: /assets/videos/ibiza/boat_fb_2.mp4
     itineraryCarousel:
       - title: Day 1
         header: |
