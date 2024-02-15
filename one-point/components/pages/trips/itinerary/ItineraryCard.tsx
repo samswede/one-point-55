@@ -10,8 +10,8 @@ import PresetColorCircle from "@/components/svg/circle/PresetColorCircle"
 type ItineraryCardProps = {
   header: any;
   description: any;
-  badges?: Array<{ badge: string, description: string }>;
-  backgroundColor: string;
+  badges?: Array<{ badge?: string | null; description?: string | null } | null> | null;
+  backgroundColor?: string | null;
 };
 
 const ItineraryCard: React.FC<ItineraryCardProps> = ({ backgroundColor, header, description, badges }) => {
@@ -138,7 +138,7 @@ const ItineraryCard: React.FC<ItineraryCardProps> = ({ backgroundColor, header, 
       <div className="relative p-4 rounded-lg justify-center">
         {badges?.map((item, index) => (
           <Badge key={index} variant="destructive" color="secondary">
-            {item.badge}
+            {item?.badge}
           </Badge>
         ))}
       </div>

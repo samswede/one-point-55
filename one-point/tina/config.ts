@@ -66,6 +66,7 @@ export default defineConfig({
         ],
       },
       
+      
       {
         label: 'Home',
         name: 'home',

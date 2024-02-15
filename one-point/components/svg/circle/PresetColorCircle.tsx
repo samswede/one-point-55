@@ -3,10 +3,10 @@ import React from 'react';
 
 type ColorCircleProps = {
   className?: string;
-  colorName: string;
+  colorName?: string | null;
 };
 
-const PresetColorCircle: React.FC<ColorCircleProps> = ({ className, colorName }) => {
+const PresetColorCircle: React.FC<ColorCircleProps> = ({ className, colorName = "yellow" }) => {
   let gradientId = "";
   let gradient;
 
