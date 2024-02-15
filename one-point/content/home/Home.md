@@ -3,13 +3,10 @@ blocks:
   - message: |
       # OnePoint**55**
 
-      Changed the subtitle
+      This is a new subtitle
     backgroundVideo: /assets/videos/ibiza/waves_fb_1.mp4
     backgroundFallbackImage: /assets/images/ibiza/beach_ibiza_1.jpeg
     links:
-      - link: /link
-        label: New Button
-        style: dark
       - link: /impressum
         label: Impressum
         style: dark
