@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 
 import PresetColorCircle from "@/components/svg/circle/PresetColorCircle"
 
+import TextMD from '@/components/shared/text/TextMD';
 
 type ItineraryCardProps = {
   header: any;
