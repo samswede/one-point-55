@@ -35,7 +35,6 @@ import { SwiperSlide } from 'swiper/react';
 import TextMD from '@/components/shared/text/TextMD';
 
 // Import background svgs
-import PresetColorCircle from "@/components/svg/circle/PresetColorCircle"
 
 import ItineraryCard from "@/components/pages/trips/itinerary/ItineraryCard"
 
@@ -78,7 +77,7 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
         <div className="flex-vertical gap-5 py-12">
           
           <div
-            className="px-4 py-8 text-center z-[1] bg-gradient-to-b from-green-600 to-secondary rounded-lg"
+            className="px-4 py-8 text-center z-[1] bg-gradient-to-b from-green-600 rounded-lg"
             data-tina-field={tinaField(props, "carouselTitle")}
             >
 
@@ -94,8 +93,10 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
           
 
           <div>
+            {/*
+            
             <video 
-              className="absolute bottom-0 left-0 w-full object-cover z-[-1]"
+              className="absolute bottom-0 left-0  h-full object-cover z-[-1]"
               autoPlay
               loop
               muted
@@ -106,6 +107,7 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
 
               />
 
+            */}
             <div
               className="px-4 py-8 text-center z-[1] w-full rounded-lg"
               
@@ -124,7 +126,10 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
                               header={item?.header}
                               description={item?.description}
                               badges={item?.badges}
+
                               backgroundColor={item?.backgroundColor}
+                              specialStyle={item?.specialStyle}
+                              specialColor={item?.specialColor}
                             />
 
                         </SwiperSlide>
@@ -145,6 +150,8 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
                               description={item?.description}
                               badges={item?.badges}
                               backgroundColor={item?.backgroundColor}
+                              specialStyle={item?.specialStyle}
+                              specialColor={item?.specialColor}
                             />
 
                         </SwiperSlide>
@@ -164,6 +171,8 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
                               description={item?.description}
                               badges={item?.badges}
                               backgroundColor={item?.backgroundColor}
+                              specialStyle={item?.specialStyle}
+                              specialColor={item?.specialColor}
                             />
                             
                           </CarouselItem>

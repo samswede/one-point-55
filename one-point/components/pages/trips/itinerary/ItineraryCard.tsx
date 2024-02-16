@@ -11,13 +11,24 @@ type ItineraryCardProps = {
   description: any;
   badges?: Array<{ badge?: string | null; description?: string | null } | null> | null;
   backgroundColor?: string | null;
+  specialStyle?: string | null;
+  specialColor?: string | null;
 };
 
-const ItineraryCard: React.FC<ItineraryCardProps> = ({ backgroundColor, header, description, badges }) => {
+const ItineraryCard: React.FC<ItineraryCardProps> = ({ 
+     
+    header, 
+    description, 
+    badges,
+    backgroundColor="bg-gradient-to-b from-black to-purple-600",
+    specialColor,
+    specialStyle="circle"
+  
+    }) => {
   return (
     <div className="relative p-4 rounded-lg justify-center">
-      <div className="absolute inset-0 z-[-1] rounded-lg overflow-hidden">
-        <PresetColorCircle className="w-full h-full" colorName={backgroundColor} />
+      <div className={`absolute inset-0 z-[-1] rounded-lg overflow-hidden ${backgroundColor}`}>
+        <PresetColorCircle className="w-full h-full" colorName={specialColor} />
       </div>
 
       <div className="p-2 rounded-lg">

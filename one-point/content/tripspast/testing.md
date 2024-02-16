@@ -46,7 +46,7 @@ blocks:
       - badge: yoga
     carouselTitle: |
       ##### Swipe through the main events!
-    carouselStyle: flow
+    carouselStyle: cards
     carouselBackgroundVideo: /assets/videos/ibiza/boat_fb_2.mp4
     itineraryCarousel:
       - title: Day 1
@@ -56,8 +56,9 @@ blocks:
         badges:
           - badge: Ipsum
           - badge: Lorem
-        backgroundStyle: circle
-        backgroundColor: blue
+        backgroundColor: bg-gradient-to-r from-black
+        specialStyle: circle
+        specialColor: yellow
       - title: Day 2
         header: |
           ## What is Lorem **Ipsum**?
@@ -65,7 +66,6 @@ blocks:
         badges:
           - badge: thing
           - badge: thing
-        backgroundStyle: circle
         backgroundColor: yellow
       - title: Day 3
         header: |
@@ -74,19 +74,16 @@ blocks:
         badges:
           - badge: badge 1
           - badge: badge 2
-        backgroundStyle: circle
         backgroundColor: blue
       - title: Day 4
         header: |
           ### What is Lorem Ipsum?
         description: "Lorem Ipsum\_is simply dummy text of the printing and typesetting industry.\n\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n\nLorem Ipsum\_is simply dummy text of the printing and typesetting industry.\n"
-        backgroundStyle: circle
         backgroundColor: red
       - title: Day 5
         header: |
           ### What is Lorem Ipsum?
         description: "Lorem Ipsum\_is simply dummy text of the printing and typesetting industry.\n\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n\nLorem Ipsum\_is simply dummy text of the printing and typesetting industry.\n"
-        backgroundStyle: circle
         backgroundColor: purple
     _template: itinerary
 ---

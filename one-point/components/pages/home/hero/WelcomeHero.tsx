@@ -21,6 +21,7 @@ export function WelcomeHero(props: HomeBlocksHero) {
           autoPlay
           loop
           muted
+          playsInline
 
           src={props?.backgroundVideo || "public/assets/videos/ibiza/waves_drone.mp4"}
           poster={props?.backgroundFallbackImage || ""}

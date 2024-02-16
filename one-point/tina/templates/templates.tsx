@@ -381,16 +381,25 @@ const itineraryBlock: Template = {
         },
         
         {
-          label: "Background SVG Style",
-          name: "backgroundStyle",
+          
+          label: "Card Background Color",
+          description: "Write Tailwind CSS color names or hex codes e.g. 'bg-gradient-to-b from-black to-purple-600'",
+          name: "backgroundColor",
           type: "string",
-          options: ["circle", "horizon"],
+          
+        },
+
+        {
+          label: "Special SVG Style",
+          name: "specialStyle",
+          type: "string",
+          options: ["circle", "horizon", "none"],
         },
 
         {
           
-          label: "Background SVG Color",
-          name: "backgroundColor",
+          label: "Special SVG Color",
+          name: "specialColor",
           type: "string",
           options: ["red", "green", "blue", "purple", "yellow", "orange", "cyan", "magenta"],
         },
