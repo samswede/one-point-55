@@ -32,6 +32,8 @@ import CardsCarousel from "@/components/shared/carousel/CardsCarousel"
 import SwiperCarousel from "@/components/shared/carousel/SwiperCarousel"
 import { SwiperSlide } from 'swiper/react';
 
+import TextMD from '@/components/shared/text/TextMD';
+
 // Import background svgs
 import PresetColorCircle from "@/components/svg/circle/PresetColorCircle"
 
@@ -55,29 +57,11 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
           className="px-4 py-8 text-center"
           data-tina-field={tinaField(props, "message")}
         >
-          <TinaMarkdown
+
+          <TextMD 
             content={props.message}
-            components={{
-              h1: (props) => (
-                <h1
-                  className="mx-auto text-5xl font-extrabold leading-tight tracking-tighter text-primary md:text-7xl"
-                  {...props}
-                />
-              ),
-              bold: (props) => (
-                <span
-                  className="bg-gradient-to-b from-blue-300 to-pink-600 bg-clip-text text-transparent"
-                  {...props}
-                />
-              ),
-              p: (props) => (
-                <p
-                  className="mx-auto mt-8 max-w-[700px] px-2 text-center text-xl text-muted-foreground"
-                  {...props}
-                />
-              ),
-            }}
-          />
+            />
+
           <div
             id="badges"
             className="flex gap-5 py-12"
@@ -97,65 +81,14 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
             className="px-4 py-8 text-center z-[1] bg-gradient-to-b from-green-600 to-secondary rounded-lg"
             data-tina-field={tinaField(props, "carouselTitle")}
             >
-            <TinaMarkdown
+
+            <TextMD 
               content={props.carouselTitle}
-              components={{
-                h1: (props) => (
-                  <h1
-                    className="mx-auto text-5xl font-extrabold leading-tight tracking-tighter text-primary md:text-7xl"
-                    {...props}
-                  />
-                ),
-                h2: (props) => (
-                  <h2
-                    className="mx-auto text-4xl font-extrabold leading-tight tracking-tighter text-primary md:text-6xl"
-                    {...props}
-                  />
-                ),
-                h3: (props) => (
-                  <h3
-                    className="mx-auto text-3xl font-extrabold leading-tight tracking-tighter text-primary md:text-5xl"
-                    {...props}
-                  />
-                ),
-                h4: (props) => (
-                  <h4
-                    className="mx-auto text-2xl font-extrabold leading-tight tracking-tighter text-secondary md:text-4xl text-center"
-                    {...props}
-                  />
-                ),
-                h5: (props) => (
-                  <h5
-                    className="mx-auto text-xl font-extrabold leading-tight tracking-tighter text-primary md:text-3xl"
-                    {...props}
-                  />
-                ),
-                bold: (props) => (
-                  <span
-                    className="bg-gradient-to-b from-yellow-400 to-red-600 bg-clip-text text-transparent"
-                    {...props}
-                  />
-                ),
-                // Customizing the italic component with a different color gradient
-                em: (props) => (
-                  <span
-                    className="bg-gradient-to-r from-green-300 to-blue-500 bg-clip-text text-transparent"
-                    {...props}
-                  />
-                ),
-                /*
-                I want to make it so that if something is both italic and bold, it will be a different color
-                */
+              headerColor= "text-secondary"
+              boldColor = "bg-gradient-to-b from-yellow-400 to-red-600"
+              pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
+              pColor = "text-primary-foreground"
 
-                
-                p: (props) => (
-                  <p
-                    className="mx-auto mt-8 max-w-[700px] px-2 text-left text-sm text-primary-foreground"
-                    {...props}
-                  />
-                ),
-
-              }}
             />
           </div>
           
