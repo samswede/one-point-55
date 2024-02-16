@@ -42,6 +42,7 @@ export function PastTripsSection(props: HomeBlocksPasttrips) {
           autoPlay
           loop
           muted
+          playsInline
 
           src={props?.backgroundVideo || "public/assets/videos/ibiza/waves_drone.mp4"}
           poster={props?.backgroundFallbackImage || ""}
