@@ -5,14 +5,11 @@ title: Impressum
 # One Point 55 Ventures AG
 
 Adresse:
-via Cuorta 8
-7018 Flims
-Waldhaus
+Badenerstrasse 853, 8048 Zürich 
 
 Handelsregister Rechtsform:
 
 Aktiengesellschaft UID: CHE-274.804.587
-
 
 Handelsregisteramt: Kanton Graubünden
 
