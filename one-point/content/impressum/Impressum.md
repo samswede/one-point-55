@@ -4,7 +4,7 @@ title: Impressum
 
 # One Point 55 Ventures AG
 
-Adresse:
+**Adresse:**
 Badenerstrasse 853, 8048 Zürich 
 
 Handelsregister Rechtsform:
