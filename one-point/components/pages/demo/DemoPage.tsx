@@ -34,40 +34,41 @@ export default function DemoPage(props: {
     return (
       <>
       <body className={`${data?.global?.theme}`}>
-      <div className="flex-col items-center text-center">
+      <div className="flex-col items-center text-center bg-gradient-to-tl from-transparent via-accent to-transparent">
+        <br/>
         <h1>Alert</h1>
         <AlertDemo />
-
+        <br/>
         <Separator />
-
+        <br/>
         <h1>Alert Dialog</h1>
         <AlertDialogDemo />
-
+        <br/>
         <Separator />
-
+        <br/>
         <h1>Button</h1>
         <ButtonDemo />
-
+        <br/>
         <Separator />
-
+        <br/>
         <h1>Calendar</h1>
         <CalendarDemo />
-
+        <br/>
         <Separator />
-
+        <br/>
         <h1>Card</h1>
         <CardDemo />
-
+        <br/>
         <Separator />
-
+        <br/>
         <h1>Sheet</h1>
         <SheetDemo />
-
+        <br/>
         <Separator />
-
+        <br/>
         <h1>Sonner</h1>
         <SonnerDemo />
-
+        <br/>
       </div>
       </body>
       </>

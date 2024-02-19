@@ -68,7 +68,7 @@ export default defineConfig({
             name: 'theme',
             type: 'string',
             description: 'Choose a theme for the website',
-            options: ['light', 'dark', 'capuccino', 'test'],
+            options: ['light', 'dark', 'dark cappuccino', 'dark test', 'dark zinc'],
             
           },
 

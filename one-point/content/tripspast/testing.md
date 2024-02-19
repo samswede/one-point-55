@@ -46,7 +46,7 @@ blocks:
       - badge: yoga
     carouselTitle: |
       ##### Swipe through the main events!
-    carouselStyle: cards
+    carouselStyle: flow
     carouselBackgroundVideo: /assets/videos/ibiza/boat_fb_2.mp4
     itineraryCarousel:
       - title: Day 1
@@ -58,7 +58,7 @@ blocks:
           - badge: Lorem
         backgroundColor: bg-gradient-to-r from-black
         specialStyle: circle
-        specialColor: yellow
+        specialColor: red
       - title: Day 2
         header: |
           ## What is Lorem **Ipsum**?
@@ -67,6 +67,8 @@ blocks:
           - badge: thing
           - badge: thing
         backgroundColor: yellow
+        specialStyle: circle
+        specialColor: green
       - title: Day 3
         header: |
           ### What is Lorem Ipsum?

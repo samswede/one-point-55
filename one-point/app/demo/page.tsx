@@ -8,7 +8,6 @@ export default async function Demo() {
   const result = await client.queries.global({ relativePath: "Global.md"})
   
 
-
   return <DemoPage 
     data={result.data} 
     query={result.query} 

@@ -16,6 +16,7 @@ import { IBM_Plex_Sans } from 'next/font/google';
 import { NavBarMenu } from '@/components/shared/navbar/NavBarMenu';
 import { FooterDemo } from "@/components/shared/footer/FooterDemo";
 
+import { cn } from "@/lib/utils";
 
 
 export const metadata: Metadata = {
@@ -47,6 +48,7 @@ export default async function RootLayout({
 }) {
   // Fetch tinaCMS data
   const result = await client.queries.global({ relativePath: "Global.md"})
+  
   /*
   // Use TinaCMS data
   const { data } = useTina({
@@ -59,14 +61,14 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <PHProvider>
-        <body className={ibmPlexSans.className}>
+        <body className={cn(ibmPlexSans.className, result?.data?.global?.theme)}>
 
           <PostHogPageView /> 
 
           <header>
             <NavBarMenu />
           </header>
-          <div className="bg-gradient-to-b from-rgb-(190,155,123) via-zinc-500/50 to-transparent"></div>
+          
             {children}
           
           <FooterDemo />
