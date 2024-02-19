@@ -7,6 +7,7 @@ import dynamic from 'next/dynamic'
 
 // TinaCMS
 import client from "@/tina/__generated__/client";
+import { useTina, tinaField } from "tinacms/dist/react";
 
 // Fonts
 import { IBM_Plex_Sans } from 'next/font/google';
@@ -46,6 +47,14 @@ export default async function RootLayout({
 }) {
   // Fetch tinaCMS data
   const result = await client.queries.global({ relativePath: "Global.md"})
+  /*
+  // Use TinaCMS data
+  const { data } = useTina({
+    data: result?.data,
+    query: result?.query,
+    variables: result?.variables,
+  });
+  */
 
   return (
     <html lang="en">
@@ -57,7 +66,8 @@ export default async function RootLayout({
           <header>
             <NavBarMenu />
           </header>
-          {children}
+          <div className="bg-gradient-to-b from-rgb-(190,155,123) via-zinc-500/50 to-transparent"></div>
+            {children}
           
           <FooterDemo />
         </body>

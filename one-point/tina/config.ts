@@ -53,16 +53,26 @@ export default defineConfig({
             create: false,
             delete: false,
           },
+
+          // This makes the home page the default route when editing live
+          router: props => {
+            return `/demo`
+          },
+
         },
 
         fields: [
           {
-            type: 'object',
-            list: true,
-            name: 'blocks',
-            label: 'Sections',
-            templates: [heroBlock, featureBlock, contentBlock],
+            
+            label: 'Theme',
+            name: 'theme',
+            type: 'string',
+            description: 'Choose a theme for the website',
+            options: ['light', 'dark', 'capuccino', 'test'],
+            
           },
+
+
         ],
       },
       
