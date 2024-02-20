@@ -14,6 +14,8 @@ import { CalendarDemo } from "@/components/shared/calendar/CalendarDemo";
 import { CardDemo } from "@/components/shared/card/CardDemo";
 
 import { SheetDemo } from "@/components/shared/sheet/SheetDemo";
+import { SheetGoogleForm } from "@/components/shared/sheet/SheetGoogleForm";
+
 import { SonnerDemo } from "@/components/shared/sonner/SonnerDemo";
 
 
@@ -38,36 +40,64 @@ export default function DemoPage(props: {
         <br/>
         <h1>Alert</h1>
         <AlertDemo />
+
         <br/>
         <Separator />
         <br/>
+
         <h1>Alert Dialog</h1>
         <AlertDialogDemo />
+
         <br/>
         <Separator />
         <br/>
+
         <h1>Button</h1>
         <ButtonDemo />
+
         <br/>
         <Separator />
         <br/>
+
         <h1>Calendar</h1>
         <CalendarDemo />
+
         <br/>
         <Separator />
         <br/>
+
         <h1>Card</h1>
         <CardDemo />
+
         <br/>
         <Separator />
         <br/>
+
         <h1>Sheet</h1>
         <SheetDemo />
         <br/>
+        <SheetGoogleForm />
+
+        <br/>
         <Separator />
         <br/>
+
+        <iframe 
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeqymnsplI3MfVipP9Gdv7Taf7DakbmH6AyLGglvXt-X39esg/viewform?embedded=true" 
+          className="w-full top-0 left-0"
+          height="1000"
+          >
+            Loading…
+        </iframe>
+
+
+        <br/>
+        <Separator />
+        <br/>
+
         <h1>Sonner</h1>
         <SonnerDemo />
+
         <br/>
       </div>
       </body>
