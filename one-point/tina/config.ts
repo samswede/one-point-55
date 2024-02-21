@@ -1,12 +1,14 @@
 import { defineConfig } from "tinacms";
 
 import globalCollection from "./collections/global.collection";
+
+import aboutCollection from "./collections/about.collection";
+
 import homeCollection from "./collections/home.collection";
 
 import tripupcomingCollection from "./collections/tripupcoming.collection";
 import trippastCollection from "./collections/trippast.collection";
 
-import aboutCollection from "./collections/about.collection";
 import impressumCollection from "./collections/impressum.collection";
 
 
@@ -41,14 +43,14 @@ export default defineConfig({
     collections: [
 
       globalCollection,
+
+      aboutCollection,
       
       homeCollection,
       
       tripupcomingCollection,
 
       trippastCollection,
-
-      aboutCollection,
 
       impressumCollection,
 
