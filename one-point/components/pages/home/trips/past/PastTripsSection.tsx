@@ -108,7 +108,7 @@ export function PastTripsSection(props: HomeBlocksPasttrips) {
                                   </AspectRatio>
                                 </CardHeader>
                                 <CardContent
-                                  className="bg-white/30 backdrop-blur-lg p-4 rounded-lg"
+                                  className="bg-black/30 backdrop-blur-lg p-4 rounded-lg"
                                   >
                                     
                                     <TinaMarkdown

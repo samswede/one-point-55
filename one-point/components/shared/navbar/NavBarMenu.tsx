@@ -80,7 +80,7 @@ export function NavBarMenu() {
               <ListItem href="/#pasttrips" title="Past Trips">
                 See where we have been before
               </ListItem>
-              <ListItem href="/" title="Contact">
+              <ListItem href="/contact" title="Contact">
                 Reach out to us
               </ListItem>
               <ListItem href="/#FAQ" title="FAQ">

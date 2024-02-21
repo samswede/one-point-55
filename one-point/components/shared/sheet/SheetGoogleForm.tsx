@@ -14,29 +14,30 @@ import {
 } from "@/components/ui/sheet"
 import { Scroll } from "lucide-react"
 
-export function SheetGoogleForm() {
+type SheetGoogleFormProps = {
+  buttonText?: string | null,
+  embeddedFormURL?: string | null,
+}
+
+
+export function SheetGoogleForm({ buttonText, embeddedFormURL }: SheetGoogleFormProps) {
+  const defaultText = "Google Form Sheet"
+  const defaultFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSeqymnsplI3MfVipP9Gdv7Taf7DakbmH6AyLGglvXt-X39esg/viewform?embedded=true"
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline">Open</Button>
+        <Button variant="outline">{buttonText ?? defaultText}</Button>
       </SheetTrigger>
       <SheetContent>
-        
-          {/*
-          I want to make this form responsive, but I'm not sure how to do it.
-
-          I want to use className with tailwindcss to give the form a max height
-           */}
           
           <iframe 
-            src="https://docs.google.com/forms/d/e/1FAIpQLSeqymnsplI3MfVipP9Gdv7Taf7DakbmH6AyLGglvXt-X39esg/viewform?embedded=true" 
+            src={embeddedFormURL ?? defaultFormURL} 
             className="w-full top-0 left-0"
             height="800"
             >
               Loading…
           </iframe>
-        
-
+          
       </SheetContent>
     </Sheet>
   )

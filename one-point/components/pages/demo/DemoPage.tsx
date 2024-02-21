@@ -76,7 +76,8 @@ export default function DemoPage(props: {
         <h1>Sheet</h1>
         <SheetDemo />
         <br/>
-        <SheetGoogleForm />
+        {/*<SheetGoogleForm {...data.global?.sheetGoogleForm}/>
+        */}
 
         <br/>
         <Separator />

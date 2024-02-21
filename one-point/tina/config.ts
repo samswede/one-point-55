@@ -72,6 +72,25 @@ export default defineConfig({
             
           },
 
+          {
+            label: 'Sheet Google Form',
+            name: 'sheetGoogleForm',
+            type: 'object',
+            fields: [
+              {
+                label: 'Button Text',
+                name: 'buttonText',
+                type: 'string',
+                description: 'Text for the button that will open the Google Form',
+              },
+              {
+                label: 'Google Form Embedded URL',
+                name: 'embeddedFormURL',
+                type: 'string',
+                description: 'URL of the Google Form to embed (must be the embed URL, not the form URL!)',
+              },
+            ],
+          }
 
         ],
       },
