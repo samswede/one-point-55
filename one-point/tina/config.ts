@@ -1,16 +1,14 @@
 import { defineConfig } from "tinacms";
 
+import globalCollection from "./collections/global.collection";
+import homeCollection from "./collections/home.collection";
 
-import {
-  heroBlock,
-  featureBlock,
-  contentBlock,
+import tripupcomingCollection from "./collections/tripupcoming.collection";
+import trippastCollection from "./collections/trippast.collection";
 
-  pasttripsBlock,
-  itineraryBlock,
+import aboutCollection from "./collections/about.collection";
+import impressumCollection from "./collections/impressum.collection";
 
-  accordionBlock,
-  } from "./templates/templates";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -42,206 +40,17 @@ export default defineConfig({
   schema: {
     collections: [
 
-      {
-        label: 'Global',
-        name: 'global',
-        path: 'content/global',
-
-        ui: {
-          // Don't allow editors to create new items
-          allowedActions: {
-            create: false,
-            delete: false,
-          },
-
-          // This makes the home page the default route when editing live
-          router: props => {
-            return `/demo`
-          },
-
-        },
-
-        fields: [
-          {
-            
-            label: 'Theme',
-            name: 'theme',
-            type: 'string',
-            description: 'Choose a theme for the website',
-            options: ['light', 'dark', 'dark cappuccino', 'dark test', 'dark zinc'],
-            
-          },
-
-          {
-            label: 'Sheet Google Form',
-            name: 'sheetGoogleForm',
-            type: 'object',
-            fields: [
-              {
-                label: 'Button Text',
-                name: 'buttonText',
-                type: 'string',
-                description: 'Text for the button that will open the Google Form',
-              },
-              {
-                label: 'Google Form Embedded URL',
-                name: 'embeddedFormURL',
-                type: 'string',
-                description: 'URL of the Google Form to embed (must be the embed URL, not the form URL!)',
-              },
-            ],
-          }
-
-        ],
-      },
+      globalCollection,
       
+      homeCollection,
       
-      {
-        label: 'Home',
-        name: 'home',
-        path: 'content/home',
+      tripupcomingCollection,
 
-        ui: {
-          // Don't allow editors to create new items
-          allowedActions: {
-            create: false,
-            delete: false,
-          },
+      trippastCollection,
 
-          // This makes the page the default route in the CMS
-          // This is what makes it live editable!
-          router: props => {
-            return `/`
-          }
-        },
+      aboutCollection,
 
-        fields: [
-          {
-            type: 'object',
-            list: true,
-            name: 'blocks',
-            label: 'Sections',
-            templates: [  heroBlock, 
-                          featureBlock,
-                          pasttripsBlock,
-
-                          contentBlock, 
-                          accordionBlock,
-                        ],
-          },
-        ],
-      },
-      
-      {
-        label: 'Upcoming Trips',
-        name: 'tripupcoming',
-        path: 'content/tripsupcoming',
-        fields: [
-          {
-            type: 'object',
-            list: true,
-            name: 'blocks',
-            label: 'Sections',
-            templates: [heroBlock, contentBlock],
-          },
-        ],
-      },
-
-      {
-        label: 'Past Trips',
-        name: 'trippast',
-        path: 'content/tripspast',
-
-        ui: {
-          // This makes the page the default route in the CMS
-          // This is what makes it live editable!
-          // this is not working for some reason... 
-          router: props => {
-            console.log("printing router ui")
-            console.log(props)
-            //console.log(`/trips/past/${props?.fileName}`)
-            return `/trips/past/testing`
-            
-          }
-        },
-
-        fields: [
-          {
-            label: 'File Name',
-            name: 'fileName',
-            description: 'Must match the file name above (NOT including .md)! This is what makes it live editable.',
-            type: 'string',
-          },
-          {
-            label: 'Sections',
-            name: 'blocks',
-            type: 'object',
-            list: true,
-
-            templates: [heroBlock, contentBlock, itineraryBlock],
-          },
-        ],
-      },
-
-      {
-        label: 'About',
-        name: 'about',
-        path: 'content/about',
-
-        ui: {
-          // Don't allow editors to create new items
-          allowedActions: {
-            create: false,
-            delete: false,
-          },
-        },
-
-        fields: [
-          {
-            type: 'object',
-            list: true,
-            name: 'blocks',
-            label: 'Sections',
-            templates: [heroBlock, featureBlock, contentBlock],
-          },
-        ],
-      },
-
-      {
-        label: 'Impressum',
-        name: 'impressum',
-        path: 'content/impressum',
-        format: 'md',
-
-        ui: {
-          // Don't allow editors to create new items
-          allowedActions: {
-            create: false,
-            delete: false,
-          },
-
-          // This makes the page the default route in the CMS
-          // This is what makes it live editable!
-          router: props => {
-            return `/impressum`
-          }
-        },
-
-        fields: [
-          {
-            type: 'string',
-            label: 'Title',
-            name: 'title',
-          },
-          {
-            type: 'rich-text',
-            label: 'Post Body',
-            name: 'body',
-            isBody: true,
-          },
-        ],
-      },
-
+      impressumCollection,
 
     ],
   },

@@ -1,9 +1,6 @@
 
 import type { Template } from 'tinacms'
 
-import svgColorCircle from './svg/svgColorCircle.template';
-import { describe } from 'node:test';
-
 
 const heroBlock: Template = {
   name: 'hero',
