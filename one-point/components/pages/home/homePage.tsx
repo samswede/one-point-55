@@ -7,6 +7,7 @@ import { useTina } from "tinacms/dist/react";
 import { WelcomeHero } from "@/components/pages/home/hero/WelcomeHero";
 import { Concept } from "@/components/pages/home/concept/Concept";
 import { PastTripsSection } from "@/components/pages/home/trips/past/PastTripsSection";
+import { UpcomingTripsSection } from "@/components/pages/home/trips/upcoming/UpcomingTripsSection";
 import FAQ from "@/components/pages/home/FAQ/FAQ";
 
 export default function HomePage(props: {
@@ -32,6 +33,9 @@ export default function HomePage(props: {
             }
             case "HomeBlocksPasttrips": {
               return <PastTripsSection key={i} {...block} />
+            }
+            case "HomeBlocksUpcomingtrips": {
+              return <UpcomingTripsSection key={i} {...block} />
             }
           }
         })}

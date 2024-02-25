@@ -4,6 +4,7 @@ import { heroBlock } from "./templates/hero.template";
 import { contentBlock } from "./templates/content.template";
 import { accordionBlock } from "./templates/accordion.template";
 import { pasttripsBlock } from "./templates/pasttrips.template";
+import { upcomingtripsBlock } from "./templates/upcomingtrips.template";
 
 
 const homeCollection : Collection = {
@@ -32,6 +33,8 @@ const homeCollection : Collection = {
         name: 'blocks',
         label: 'Sections',
         templates: [  heroBlock, 
+
+                      upcomingtripsBlock,
                       pasttripsBlock,
 
                       contentBlock, 

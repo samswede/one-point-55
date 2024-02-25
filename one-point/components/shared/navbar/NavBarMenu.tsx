@@ -47,7 +47,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function NavBarMenu() {
   return (
-    <NavigationMenu className="opacity-85">
+    <NavigationMenu className="opacity-95">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Home</NavigationMenuTrigger>

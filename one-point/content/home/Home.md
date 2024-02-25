@@ -41,6 +41,23 @@ blocks:
         style: light
     _template: content
   - message: |
+      # Upcoming **Trips**
+    style: cards
+    backgroundVideo: ''
+    tripscarousel:
+      - title: Upcoming Trip
+        header: |
+          ## 11.2024
+        description: |
+          #### **Aurora Borealis**
+
+          This is a trip you don't wanna miss!
+        link: /Location_202X
+        image: /assets/images/north/levin_iglut.JPG
+        sheetGoogleForm:
+          buttonText: Google Form
+    _template: upcomingtrips
+  - message: |
       # Recent Trips
 
       See what to expect
