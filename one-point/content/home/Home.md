@@ -45,7 +45,7 @@ blocks:
     style: cards
     backgroundVideo: ''
     tripscarousel:
-      - title: Upcoming Trip
+      - title: Aurora Borealis
         header: |
           ## 11.2024
         description: |
@@ -55,7 +55,9 @@ blocks:
         link: /Location_202X
         image: /assets/images/north/levin_iglut.JPG
         sheetGoogleForm:
-          buttonText: Google Form
+          buttonText: Book Now
+          embeddedFormURL: >-
+            https://docs.google.com/forms/d/e/1FAIpQLSf4Zy254a3orX3rD1FN_Auz69neDjVlB-ieAgagtmeuc9W5YA/viewform?embedded=true
     _template: upcomingtrips
   - message: |
       # Recent Trips
