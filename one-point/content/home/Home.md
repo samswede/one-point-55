@@ -43,7 +43,8 @@ blocks:
   - message: |
       # Upcoming **Trips**
     style: cards
-    backgroundVideo: /assets/videos/zermatt/zermatt_compilation_1.mp4
+    backgroundVideo: /assets/videos/north/time_lapse_video_of_aurora_borealis.mp4
+    backgroundFallbackImage: /assets/images/north/restaurant_utsu.JPG
     tripscarousel:
       - title: Aurora Borealis
         header: |
@@ -53,7 +54,7 @@ blocks:
 
           This is a trip you don't wanna miss!
         link: /Location_202X
-        image: ''
+        image: /assets/images/north/levin_iglut.JPG
         sheetGoogleForm:
           buttonText: Book Now
           embeddedFormURL: >-

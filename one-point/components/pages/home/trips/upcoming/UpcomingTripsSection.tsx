@@ -9,7 +9,6 @@ import { TinaMarkdown } from "tinacms/dist/rich-text"
 import TextMD from '@/components/shared/text/TextMD';
 
 
-
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 
 import { Button } from "@/components/ui/button"
@@ -37,6 +36,9 @@ import { SwiperSlide } from 'swiper/react';
 
 
 import { SheetGoogleForm } from "@/components/shared/sheet/SheetGoogleForm";
+
+
+import TripCard from "@/components/pages/home/trips/upcoming/TripCard"
 
 
 
@@ -88,45 +90,13 @@ export function UpcomingTripsSection(props: HomeBlocksUpcomingtrips) {
                         <CarouselItem key={index}>
 
                         
-                          <Card>
-                          
-                                <CardHeader>
-                                  <AspectRatio ratio={16 / 9}>
-                                    <Image
-                                      src={trip?.image || ""}
-                                      alt=""
-                                      layout="fill"
-                                      objectFit="cover"
-                                      
-                                      className="object-cover"
-                                      
-                                    />
-                                  </AspectRatio>
-                                </CardHeader>
-                                <CardContent
-                                  className="bg-black/30 backdrop-blur-lg p-4 rounded-lg"
-                                  >
-                                    
-                                    <TextMD 
-                                      content={trip?.description}
-                                      headerColor='text-secondary'
-                                      boldColor = "bg-gradient-to-b from-yellow-400 to-red-600"
-                                      pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
-                                      pColor = "text-secondary-foreground"
-                                      />
-
-                                </CardContent>
-                                <CardFooter>
-                                  <Link href={trip?.link || ""}>
-                                    
-                                    <Button>Learn More</Button>
-                                    
-                                  </Link>
-
-                                  <SheetGoogleForm {...trip?.sheetGoogleForm}/>
-                                </CardFooter>
-                            
-                          </Card>
+                            <TripCard 
+                              header={trip?.header}
+                              description={trip?.description}
+                              link={trip?.link}
+                              image={trip?.image}
+                              sheetGoogleForm={trip?.sheetGoogleForm}
+                            />
 
                           
                         </CarouselItem>
@@ -145,49 +115,13 @@ export function UpcomingTripsSection(props: HomeBlocksUpcomingtrips) {
                       {props?.tripscarousel?.map((trip, index) => (
                         <CarouselItem key={index}>
                           
-                          <div className="relative p-4 rounded-lg justify-center">
-                              <div className="absolute inset-0 z-[-1] rounded-lg">
-                                
-                                <Image
-                                      src={trip?.image || ""}
-                                      alt=""
-                                      layout="fill"
-                                      objectFit="cover"
-                                      
-                                      className="object-cover rounded-lg"
-                                      
-                                    />
-
-                              </div>
-                              <div className="p-4 rounded-lg">
-                                  <TextMD 
-                                      content={trip?.header}
-                                      headerColor='text-primary'
-                                      boldColor = "bg-gradient-to-b from-yellow-400 to-red-600"
-                                      pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
-                                      pColor = "text-primary-foreground"
-                                      />
-
-                              </div>
-                              <div className="p-4 bg-white/30 backdrop-blur-md rounded-lg">
-                                  <TextMD 
-                                      content={trip?.description}
-                                      headerColor='text-secondary'
-                                      boldColor = "bg-gradient-to-b from-blue-300 to-green-400"
-                                      pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
-                                      pColor = "text-secondary-foreground"
-                                      />
-                                  
-                              </div>
-                              <div className="relative p-4 rounded-lg justify-center">
-                                  <Link href={trip?.link || ""}>
-                                    
-                                    <Button>View Trip</Button>
-                                    
-                                  </Link>
-                                  <SheetGoogleForm {...trip?.sheetGoogleForm}/>
-                              </div>
-                          </div>
+                          <TripCard 
+                              header={trip?.header}
+                              description={trip?.description}
+                              link={trip?.link}
+                              image={trip?.image}
+                              sheetGoogleForm={trip?.sheetGoogleForm}
+                            />
                           
 
                         </CarouselItem>
@@ -209,56 +143,13 @@ export function UpcomingTripsSection(props: HomeBlocksUpcomingtrips) {
                           key={index}
                           className="w-full max-w-xs rounded-lg"
                         >
-                            <div className="relative p-4 rounded-lg justify-center bg-black/60 backdrop-blur-lg">
-                              <div className="absolute inset-0 z-[-1] rounded-lg">
-                                {
-                                  // if trip?.image is not empty, then render the Image component
-                                  // else, render nothing
-                                  trip?.image && (
-                                    <Image
-                                      src={trip?.image || ""}
-                                      alt=""
-                                      layout="fill"
-                                      objectFit="cover"
-                                      
-                                      className="object-cover rounded-lg"
-                                      
-                                    />
-                                  )
-                                }
-                                
-
-                              </div>
-                              <div className="p-4 rounded-lg">
-                                  <TextMD 
-                                      content={trip?.header}
-                                      headerColor='text-primary'
-                                      boldColor = "bg-gradient-to-b from-yellow-400 to-red-600"
-                                      pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
-                                      pColor = "text-primary-foreground"
-                                      />
-
-                              </div>
-                              
-                              <div className="p-4 bg-white/30 backdrop-blur-md rounded-lg">
-                                  <TextMD 
-                                      content={trip?.description}
-                                      headerColor='text-secondary'
-                                      boldColor = "bg-gradient-to-b from-blue-300 to-green-400"
-                                      pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
-                                      pColor = "text-secondary-foreground"
-                                      />
-                                  
-                              </div>
-                              <div className="relative p-4 rounded-lg justify-center">
-                                  <Link href={trip?.link || ""}>
-                                    
-                                    <Button>View Trip</Button>
-                                    
-                                  </Link>
-                                  <SheetGoogleForm {...trip?.sheetGoogleForm}/>
-                              </div>
-                          </div>
+                            <TripCard 
+                              header={trip?.header}
+                              description={trip?.description}
+                              link={trip?.link}
+                              image={trip?.image}
+                              sheetGoogleForm={trip?.sheetGoogleForm}
+                            />
 
                         </SwiperSlide>
                     ))}
@@ -273,49 +164,13 @@ export function UpcomingTripsSection(props: HomeBlocksUpcomingtrips) {
                           key={index}
                           className="w-full max-w-xs rounded-lg"
                         >
-                            <div className="relative p-4 rounded-lg justify-center">
-                              <div className="absolute inset-0 z-[-1] rounded-lg">
-                                
-                                <Image
-                                      src={trip?.image || ""}
-                                      alt=""
-                                      layout="fill"
-                                      objectFit="cover"
-                                      
-                                      className="object-cover rounded-lg"
-                                      
-                                    />
-
-                              </div>
-                              <div className="p-4 rounded-lg">
-                                  <TextMD 
-                                      content={trip?.header}
-                                      headerColor='text-primary'
-                                      boldColor = "bg-gradient-to-b from-yellow-400 to-red-600"
-                                      pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
-                                      pColor = "text-primary-foreground"
-                                      />
-
-                              </div>
-                              <div className="p-4 bg-white/30 backdrop-blur-md rounded-lg">
-                                  <TextMD 
-                                      content={trip?.description}
-                                      headerColor='text-secondary'
-                                      boldColor = "bg-gradient-to-b from-blue-300 to-green-400"
-                                      pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
-                                      pColor = "text-secondary-foreground"
-                                      />
-                                  
-                              </div>
-                              <div className="relative p-4 rounded-lg justify-center">
-                                  <Link href={trip?.link || ""}>
-                                    
-                                    <Button>View Trip</Button>
-                                    
-                                  </Link>
-                                  <SheetGoogleForm {...trip?.sheetGoogleForm}/>
-                              </div>
-                          </div>
+                            <TripCard 
+                              header={trip?.header}
+                              description={trip?.description}
+                              link={trip?.link}
+                              image={trip?.image}
+                              sheetGoogleForm={trip?.sheetGoogleForm}
+                            />
 
                         </SwiperSlide>
                     ))}
