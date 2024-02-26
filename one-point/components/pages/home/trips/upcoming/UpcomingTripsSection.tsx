@@ -30,6 +30,12 @@ import {
   CarouselPrevious,
   } from "@/components/ui/carousel"
 
+
+import CardsCarousel from "@/components/shared/carousel/CardsCarousel"
+import SwiperCarousel from "@/components/shared/carousel/SwiperCarousel"
+import { SwiperSlide } from 'swiper/react';
+
+
 import { SheetGoogleForm } from "@/components/shared/sheet/SheetGoogleForm";
 
 
@@ -74,7 +80,7 @@ export function UpcomingTripsSection(props: HomeBlocksUpcomingtrips) {
         {
           (() => {
             switch (props?.style || "swiper") {
-              case "swiper": {
+              case "test": {
                 return (
                   <Carousel className="w-full max-w-xs z-[1]">
                     <CarouselContent>
@@ -132,7 +138,7 @@ export function UpcomingTripsSection(props: HomeBlocksUpcomingtrips) {
                 );
               }
               
-              case "cards": {
+              case "click": {
                 return (
                   <Carousel className="w-full max-w-xs">
                     <CarouselContent>
@@ -194,6 +200,127 @@ export function UpcomingTripsSection(props: HomeBlocksUpcomingtrips) {
 
                 );
               }
+
+              case 'cards':
+                  return (
+                  <CardsCarousel>
+                    {props?.tripscarousel?.map((trip, index) => (
+                        <SwiperSlide
+                          key={index}
+                          className="w-full max-w-xs rounded-lg"
+                        >
+                            <div className="relative p-4 rounded-lg justify-center bg-black/60 backdrop-blur-lg">
+                              <div className="absolute inset-0 z-[-1] rounded-lg">
+                                {
+                                  // if trip?.image is not empty, then render the Image component
+                                  // else, render nothing
+                                  trip?.image && (
+                                    <Image
+                                      src={trip?.image || ""}
+                                      alt=""
+                                      layout="fill"
+                                      objectFit="cover"
+                                      
+                                      className="object-cover rounded-lg"
+                                      
+                                    />
+                                  )
+                                }
+                                
+
+                              </div>
+                              <div className="p-4 rounded-lg">
+                                  <TextMD 
+                                      content={trip?.header}
+                                      headerColor='text-primary'
+                                      boldColor = "bg-gradient-to-b from-yellow-400 to-red-600"
+                                      pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
+                                      pColor = "text-primary-foreground"
+                                      />
+
+                              </div>
+                              
+                              <div className="p-4 bg-white/30 backdrop-blur-md rounded-lg">
+                                  <TextMD 
+                                      content={trip?.description}
+                                      headerColor='text-secondary'
+                                      boldColor = "bg-gradient-to-b from-blue-300 to-green-400"
+                                      pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
+                                      pColor = "text-secondary-foreground"
+                                      />
+                                  
+                              </div>
+                              <div className="relative p-4 rounded-lg justify-center">
+                                  <Link href={trip?.link || ""}>
+                                    
+                                    <Button>View Trip</Button>
+                                    
+                                  </Link>
+                                  <SheetGoogleForm {...trip?.sheetGoogleForm}/>
+                              </div>
+                          </div>
+
+                        </SwiperSlide>
+                    ))}
+                  </CardsCarousel>
+                  );
+                
+                case 'flow':
+                  return (
+                    <SwiperCarousel>
+                    {props?.tripscarousel?.map((trip, index) => (
+                        <SwiperSlide
+                          key={index}
+                          className="w-full max-w-xs rounded-lg"
+                        >
+                            <div className="relative p-4 rounded-lg justify-center">
+                              <div className="absolute inset-0 z-[-1] rounded-lg">
+                                
+                                <Image
+                                      src={trip?.image || ""}
+                                      alt=""
+                                      layout="fill"
+                                      objectFit="cover"
+                                      
+                                      className="object-cover rounded-lg"
+                                      
+                                    />
+
+                              </div>
+                              <div className="p-4 rounded-lg">
+                                  <TextMD 
+                                      content={trip?.header}
+                                      headerColor='text-primary'
+                                      boldColor = "bg-gradient-to-b from-yellow-400 to-red-600"
+                                      pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
+                                      pColor = "text-primary-foreground"
+                                      />
+
+                              </div>
+                              <div className="p-4 bg-white/30 backdrop-blur-md rounded-lg">
+                                  <TextMD 
+                                      content={trip?.description}
+                                      headerColor='text-secondary'
+                                      boldColor = "bg-gradient-to-b from-blue-300 to-green-400"
+                                      pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
+                                      pColor = "text-secondary-foreground"
+                                      />
+                                  
+                              </div>
+                              <div className="relative p-4 rounded-lg justify-center">
+                                  <Link href={trip?.link || ""}>
+                                    
+                                    <Button>View Trip</Button>
+                                    
+                                  </Link>
+                                  <SheetGoogleForm {...trip?.sheetGoogleForm}/>
+                              </div>
+                          </div>
+
+                        </SwiperSlide>
+                    ))}
+                  </SwiperCarousel>
+                  );
 
               default: {
                 return null;

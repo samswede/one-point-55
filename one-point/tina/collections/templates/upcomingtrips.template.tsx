@@ -40,7 +40,7 @@ export const upcomingtripsBlock: Template = {
         type: "string",
         label: "Carousel Style",
         name: "style",
-        options: ["swiper", "cards"],
+        options: ["swiper", "cards", "click", "test"],
       },
   
       {
@@ -128,7 +128,7 @@ export const upcomingtripsBlock: Template = {
               },
             ],
           }
-          
+
         ],
       }
   

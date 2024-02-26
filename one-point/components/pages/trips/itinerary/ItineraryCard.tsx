@@ -26,8 +26,8 @@ const ItineraryCard: React.FC<ItineraryCardProps> = ({
   
     }) => {
   return (
-    <div className="relative p-4 rounded-lg justify-center">
-      <div className={`absolute inset-0 z-[-1] rounded-lg overflow-hidden ${backgroundColor}`}>
+    <div className={`relative p-4 rounded-lg justify-center ${backgroundColor}`}>
+      <div className={`absolute inset-0 z-[-1] rounded-lg overflow-hidden`}>
         <PresetColorCircle className="w-full h-full" colorName={specialColor} />
       </div>
 
