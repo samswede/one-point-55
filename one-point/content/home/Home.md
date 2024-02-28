@@ -56,10 +56,17 @@ blocks:
         link: /Location_202X
         image: /assets/images/north/levin_iglut.JPG
         sheetGoogleForm:
-          buttonText: Book Now
+          buttonText: Enquire
           embeddedFormURL: >-
             https://docs.google.com/forms/d/e/1FAIpQLSf4Zy254a3orX3rD1FN_Auz69neDjVlB-ieAgagtmeuc9W5YA/viewform?embedded=true
     _template: upcomingtrips
+  - message: |
+      # Commit to an **Adventure**
+    links:
+      - link: 'https://buy.stripe.com/test_14kbMvfPK1t5dCE5kk'
+        label: Book Now
+        style: dark
+    _template: content
   - message: |
       # Recent Trips
 
