@@ -2,6 +2,7 @@ import { Collection } from "tinacms";
 
 import { heroBlock } from "./templates/hero.template";
 import { contentBlock } from "./templates/content.template";
+import { markdownBlock } from "./templates/markdown.template";
 import { itineraryBlock } from "./templates/itinerary.template";
 
 const trippastCollection : Collection = {
@@ -35,7 +36,7 @@ const trippastCollection : Collection = {
         type: 'object',
         list: true,
 
-        templates: [heroBlock, contentBlock, itineraryBlock],
+        templates: [heroBlock, contentBlock, markdownBlock, itineraryBlock],
       },
     ],
   }
