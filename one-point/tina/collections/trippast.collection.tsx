@@ -13,14 +13,10 @@ const trippastCollection : Collection = {
     ui: {
       // This makes the page the default route in the CMS
       // This is what makes it live editable!
-      // this is not working for some reason... 
-      router: props => {
-        console.log("printing router ui")
-        console.log(props)
-        //console.log(`/trips/past/${props?.fileName}`)
-        return `/trips/past/testing`
-        
-      }
+      router: ({ document }) => {
+        // navigate to the project that was clicked
+        return `/trips/past/${document._sys.filename}`
+      },
     },
 
     fields: [

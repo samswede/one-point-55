@@ -7,6 +7,14 @@ const tripupcomingCollection : Collection = {
     label: 'Upcoming Trips',
     name: 'tripupcoming',
     path: 'content/tripsupcoming',
+    ui: {
+      // This makes the page the default route in the CMS
+      // This is what makes it live editable!
+      router: ({ document }) => {
+        // navigate to the project that was clicked
+        return `/trips/upcoming/${document._sys.filename}`
+      },
+    },
     fields: [
       {
         type: 'object',
