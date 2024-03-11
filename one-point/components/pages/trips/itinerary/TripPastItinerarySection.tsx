@@ -77,7 +77,7 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
         <div className="flex-vertical gap-5 py-12">
           
           <div
-            className="px-4 py-8 text-center z-[1] bg-gradient-to-b from-green-600 rounded-lg"
+            className="px-4 py-8 text-center z-[1] bg-gradient-to-b"
             data-tina-field={tinaField(props, "carouselTitle")}
             >
 
@@ -93,7 +93,7 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
           
 
           <div>
-            {/*
+            {
             
             <video 
               className="absolute bottom-0 left-0  h-full object-cover z-[-1]"
@@ -107,7 +107,7 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
 
               />
 
-            */}
+            }
             <div
               className="px-4 py-8 text-center z-[1] w-full rounded-lg"
               
