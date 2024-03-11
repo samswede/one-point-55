@@ -1,0 +1,5 @@
+.box {
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 0,100% 0,100% calc(100% - 22.01rem),calc(100% - 7rem) calc(100% - 7rem),calc(100% - 22.01rem) 100%,0 100%);
+}

@@ -1,3 +1,5 @@
+import styles from "./PastTripsSection.module.css"
+
 import Link from "next/link"
 import Image from "next/image"
 
@@ -34,7 +36,7 @@ export function PastTripsSection(props: HomeBlocksPasttrips) {
 
 
   return (
-    <section className="relative overflow-hidden" id="pasttrips">
+    <section className={styles.box} id="pasttrips">
 
       <div className="relative flex flex-col items-center gap-2 py-24">
         <video 

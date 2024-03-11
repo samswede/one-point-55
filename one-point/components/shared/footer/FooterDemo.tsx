@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input"
 
 export function FooterDemo() {
   return (
-    <footer className="bg-gray-900">
+    <footer className="">
       <div
         className="
         container
@@ -23,7 +23,7 @@ export function FooterDemo() {
       >
         <div className="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
           <Link href={"/"} className="text-2xl text-white">
-            Do Not Miss Out!
+            Stay up to date
           </Link>
           <p className="mt-2 text-xs text-justify text-gray-400">
             Sign up to get notified about new trips and experiences.
@@ -75,7 +75,7 @@ export function FooterDemo() {
               </li>
               <li>
                 <Link href={"/"} className="text-gray-300">
-                  Past Trips
+                  Recent Trips
                 </Link>
               </li>
               <li>
