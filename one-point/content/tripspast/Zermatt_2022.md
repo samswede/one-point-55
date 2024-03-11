@@ -31,7 +31,8 @@ blocks:
       body and join us for another amazing experience with onepoint55!
     _template: content
   - message: ''
-    carouselTitle: ''
+    carouselTitle: |
+      ### **Swipe** through highlights
     carouselStyle: flow
     carouselBackgroundVideo: ''
     carouselBackgroundFallbackImage: /assets/images/zermatt/village_matterhorn.jpg
@@ -115,5 +116,19 @@ blocks:
         specialStyle: horizon
         specialColor: orange
     _template: itinerary
+  - items:
+      - src: /assets/images/zermatt/skis_and_goggles.webp
+        caption: skis & goggles
+        width: 212
+        height: 300
+      - src: /assets/images/zermatt/train_matterhorn.jpg
+        caption: zermatt & train
+        width: 320
+        height: 195
+      - src: /assets/images/zermatt/village_matterhorn.jpg
+        caption: 'matterhorn village '
+        width: 320
+        height: 222
+    _template: gallery
 ---
 

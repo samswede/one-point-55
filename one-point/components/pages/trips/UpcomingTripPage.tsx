@@ -6,7 +6,7 @@ import { useTina } from "tinacms/dist/react";
 
 import { TripUpcomingHero } from "@/components/pages/trips/hero/TripUpcomingHero";
 import { TripUpcomingOverviewSection } from "@/components/pages/trips/overview/TripUpcomingOverviewSection";
-
+import { GallerySection } from "@/components/pages/trips/gallery/TripUpcomingGallerySection";
 
 export default function UpcomingTripPage(props: {
     data: TripupcomingQuery,
@@ -26,6 +26,10 @@ export default function UpcomingTripPage(props: {
             
             case "TripupcomingBlocksContent": {
               return <TripUpcomingOverviewSection key={i} {...block} />
+            }
+
+            case "TripupcomingBlocksGallery": {
+              return <GallerySection key={i} {...block} />
             }
             
           }

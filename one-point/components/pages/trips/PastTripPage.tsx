@@ -7,6 +7,7 @@ import { useTina } from "tinacms/dist/react";
 import { TripPastHero } from "@/components/pages/trips/hero/TripPastHero";
 import { TripPastOverviewSection } from "@/components/pages/trips/overview/TripPastOverviewSection";
 import { TripPastItinerarySection } from "@/components/pages/trips/itinerary/TripPastItinerarySection";
+import { GallerySection } from "@/components/pages/trips/gallery/TripPastGallerySection";
 
 import TextMD from "@/components/shared/text/TextMD";
 
@@ -47,6 +48,10 @@ export default function PastTripPage(props: {
                 pColor = {block.style?.pColor || "text-muted-foreground"}
 
                  />
+            }
+
+            case "TrippastBlocksGallery": {
+              return <GallerySection key={i} {...block} />
             }
           }
         })}
