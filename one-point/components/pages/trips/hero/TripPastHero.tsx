@@ -29,12 +29,12 @@ export function TripPastHero(props: TrippastBlocksHero) {
           />
 
         <div
-          className="px-4 py-8 text-center z-[1]"
+          className="px-4 py-8 text-center z-[1] bg-white/30 backdrop-blur-sm rounded-lg"
           data-tina-field={tinaField(props, "message")}
         >
           <TextMD 
             content={props.message}
-            boldColor = "bg-gradient-to-b from-blue-400 to-green-600"
+            boldColor = "bg-gold-gradient"
             />
 
         </div>

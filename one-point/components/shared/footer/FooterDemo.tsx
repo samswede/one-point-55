@@ -23,10 +23,10 @@ export function FooterDemo() {
       >
         <div className="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
           <Link href={"/"} className="text-2xl text-white">
-            Stay up to date
+            Get our Newsletter
           </Link>
           <p className="mt-2 text-xs text-justify text-gray-400">
-            Sign up to get notified about new trips and experiences.
+            Exclusive discounts and notifications on new trips experiences.
           </p>
           <div className="flex mt-4">
             <Input type="email" placeholder="Email" />
@@ -43,18 +43,14 @@ export function FooterDemo() {
               Social Media
             </h2>
             <div className="flex justify-center mt-4 space-x-4 lg:mt-2">
-                <Link href={""}>
-                <Facebook className="text-blue-500" />
-                </Link>
+              
                 <Link href={""}>
                 <Twitter className="text-sky-300" />
                 </Link>
                 <Link href={""}>
                 <Instagram className="text-pink-500" />
                 </Link>
-                <Link href={""}>
-                <Linkedin className="text-blue-400" />
-                </Link>
+              
             </div>
           </div>
 

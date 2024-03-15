@@ -2,15 +2,12 @@
 blocks:
   - message: |
       ![](/assets/images/logo_large.png)
+
+      ### Connect, Explore,
+
+      ### Rejuvenate.
     backgroundVideo: /assets/videos/ibiza/waves_fb_1.mp4
     backgroundFallbackImage: /assets/images/ibiza/beach_ibiza_1.jpeg
-    links:
-      - link: /impressum
-        label: Impressum
-        style: dark
-      - link: /about
-        label: About
-        style: light
     _template: hero
   - message: >
       ## The **Concept**

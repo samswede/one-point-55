@@ -35,6 +35,8 @@ export function WelcomeHero(props: HomeBlocksHero) {
           <TextMD 
             content={props.message}
             boldColor = "bg-gradient-to-b from-blue-300 to-pink-600"
+            headerColor='text-secondary-foreground'
+            pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
             />
         </div>
         <div className="flex gap-5 py-12 z-[1]">

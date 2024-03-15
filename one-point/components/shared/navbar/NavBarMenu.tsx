@@ -82,7 +82,7 @@ export function NavBarMenu() {
                       onepoint55
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                      three word motto
+                    Connect, Explore, Rejuvenate
                     </p>
                   </a>
                 </NavigationMenuLink>

@@ -140,10 +140,10 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
 
                 case 'click':
                   return (
-                    <Carousel className="w-full max-w-xs rounded-lg">
+                    <Carousel className="w-full max-w-xl rounded-lg">
                       <CarouselContent className="rounded-lg">
                         {props?.itineraryCarousel?.map((item, index) => (
-                          <CarouselItem key={index} className="rounded-lg">
+                          <CarouselItem key={index} className="rounded-lg md:basis-2/3 lg:basis-1/2">
                             
                             <ItineraryCard 
                               header={item?.header}
