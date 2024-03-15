@@ -52,14 +52,14 @@ const TripCard: React.FC<TripCardProps> = ({
                     <TextMD 
                         content={header}
                         headerColor='text-primary'
-                        boldColor = "bg-gradient-to-b from-yellow-400 to-red-600"
+                        boldColor = "bg-gold-gradient"
                         pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
                         pColor = "text-primary-foreground"
                         />
 
                 </div>
                 
-                <div className="p-4 bg-white/30 backdrop-blur-md rounded-lg">
+                <div className="p-4 bg-black/30 backdrop-blur-md rounded-lg">
                     <TextMD 
                         content={description}
                         headerColor='text-secondary'

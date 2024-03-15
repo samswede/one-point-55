@@ -33,6 +33,9 @@
     --ring: hsl(20 14.3% 4.1%);
  
     --radius: 0.5rem;
+
+
+    --coffee: #be9b7b;
   }
   
   .dark {
@@ -63,6 +66,26 @@
     --border: hsl(12 6.5% 15.1%);
     --input: hsl(12 6.5% 15.1%);
     --ring: hsl(24 5.7% 82.9%);
+  }
+
+  .light.honey {
+    --background: #FFFBF8;
+    --foreground: #4b3832;
+ 
+    --primary: #8B7349;
+    --primary-foreground: #fff4e6;
+ 
+    --secondary: #854442;
+    --secondary-foreground: #fff4e6;
+
+    --muted: red;
+ 
+    --accent: #FAF3F0;
+ 
+    --border: #3c2f2f;
+    --input: #3c2f2f;
+    --ring: #3c2f2f;
+  
   }
 
   .dark.blue {

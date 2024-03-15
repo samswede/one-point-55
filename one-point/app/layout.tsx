@@ -10,7 +10,7 @@ import client from "@/tina/__generated__/client";
 import { useTina, tinaField } from "tinacms/dist/react";
 
 // Fonts
-import { IBM_Plex_Sans } from 'next/font/google';
+import { IBM_Plex_Sans, Playfair_Display } from 'next/font/google';
 
 // Components
 import { NavBarMenu } from '@/components/shared/navbar/NavBarMenu';
@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   title: 'OnePoint55',
   description: 'Unique Vacation Experiences',
 };
+//Badnerstrasse 853, 8048 Zürich, Switzerland
 
 
 // Post Hog
@@ -33,6 +34,12 @@ const PostHogPageView = dynamic(() => import('./PostHogPageView'), {
 
 // Fonts
 const ibmPlexSans = IBM_Plex_Sans({
+  display: 'swap',
+  subsets: ['latin'],
+  weight: ['500', '600', '700'],
+});
+
+const playfairDisplay = Playfair_Display({
   display: 'swap',
   subsets: ['latin'],
   weight: ['500', '600', '700'],
@@ -58,21 +65,26 @@ export default async function RootLayout({
   });
   */
 
+  //{cn(playfairDisplay.className, `${result?.data?.global?.theme}`)}
   return (
     <html lang="en">
       <PHProvider>
-        <body className={cn(ibmPlexSans.className, result?.data?.global?.theme)}>
+        
+          <body className={`${result?.data?.global?.theme}`}>
+            <div className={cn(playfairDisplay.className)}>
+              <PostHogPageView /> 
 
-          <PostHogPageView /> 
+              <header>
+                <NavBarMenu />
+              </header>
+              
+                {children}
+              
+              <FooterDemo />
 
-          <header>
-            <NavBarMenu />
-          </header>
-          
-            {children}
-          
-          <FooterDemo />
-        </body>
+            </div>
+          </body>
+        
       </PHProvider>
     </html>
   );

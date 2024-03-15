@@ -27,7 +27,7 @@ const globalCollection : Collection = {
         name: 'theme',
         type: 'string',
         description: 'Choose a theme for the website',
-        options: ['light', 'dark', 'dark cappuccino', 'dark test', 'dark zinc'],
+        options: ['light', 'dark', 'dark cappuccino', 'dark test', 'dark zinc', 'light honey'],
         
       },
 

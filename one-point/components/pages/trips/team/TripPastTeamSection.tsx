@@ -1,24 +1,9 @@
-import Link from "next/link"
-import Image from "next/image"
-
-import { TrippastBlocksItinerary } from "@/tina/__generated__/types"
+import { TrippastBlocksTeam } from "@/tina/__generated__/types"
 
 import { tinaField } from "tinacms/dist/react"
-import { TinaMarkdown } from "tinacms/dist/rich-text"
 
-
-
-import { AspectRatio } from "@/components/ui/aspect-ratio"
-
-import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  } from "@/components/ui/card"
 
 import { 
   Carousel,
@@ -36,9 +21,9 @@ import TextMD from '@/components/shared/text/TextMD';
 
 // Import background svgs
 
-import ItineraryCard from "@/components/pages/trips/itinerary/ItineraryCard"
+import TeamCard from "@/components/pages/trips/team/TeamCard"
 
-export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
+export function TripPastTeamSection(props: TrippastBlocksTeam) {
 
   const exampleColorStops = [
     { offset: "15%", color: "#0057B8", opacity: "0.5" },
@@ -52,7 +37,28 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
 
       <div className="relative flex flex-col items-center gap-2 py-24">
         
-        
+        <div
+          className="px-4 py-8 text-center"
+          data-tina-field={tinaField(props, "message")}
+        >
+
+          <TextMD 
+            content={props.message}
+            />
+
+          <div
+            id="badges"
+            className="flex gap-5 py-12"
+            >
+            {props?.badges?.map((item, index) => (
+              <Badge key={index} variant="destructive" color="secondary">
+                {item?.badge}
+              </Badge>
+            ))
+            }
+
+          </div>
+        </div>
         <div className="flex-vertical gap-5 py-12">
           
           <div
@@ -72,21 +78,7 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
           
 
           <div>
-            {
             
-            <video 
-              className="absolute bottom-0 left-0  h-full object-cover z-[-1]"
-              autoPlay
-              loop
-              muted
-              playsInline // required for iOS
-
-              src={props?.carouselBackgroundVideo || "public/assets/videos/ibiza/waves_drone.mp4"}
-              poster={props?.carouselBackgroundFallbackImage || ""}
-
-              />
-
-            }
             <div
               className="px-4 py-8 text-center z-[1] w-full rounded-lg"
               
@@ -96,13 +88,13 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
                 case 'cards':
                   return (
                   <CardsCarousel>
-                    {props?.itineraryCarousel?.map((item, index) => (
+                    {props?.teamCarousel?.map((item, index) => (
                         <SwiperSlide
                           key={index}
                           className="w-full max-w-xs rounded-lg"
                         >
-                            <ItineraryCard 
-                              header={item?.header}
+                            <TeamCard 
+                              image={item?.image}
                               description={item?.description}
                               badges={item?.badges}
 
@@ -119,15 +111,16 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
                 case 'flow':
                   return (
                     <SwiperCarousel>
-                    {props?.itineraryCarousel?.map((item, index) => (
+                    {props?.teamCarousel?.map((item, index) => (
                         <SwiperSlide
                           key={index}
                           className="w-full max-w-xs rounded-lg"
                         >
-                            <ItineraryCard 
-                              header={item?.header}
+                            <TeamCard 
+                              image={item?.image}
                               description={item?.description}
                               badges={item?.badges}
+
                               backgroundColor={item?.backgroundColor}
                               specialStyle={item?.specialStyle}
                               specialColor={item?.specialColor}
@@ -142,13 +135,14 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
                   return (
                     <Carousel className="w-full max-w-xs rounded-lg">
                       <CarouselContent className="rounded-lg">
-                        {props?.itineraryCarousel?.map((item, index) => (
+                        {props?.teamCarousel?.map((item, index) => (
                           <CarouselItem key={index} className="rounded-lg">
                             
-                            <ItineraryCard 
-                              header={item?.header}
+                            <TeamCard 
+                              image={item?.image}
                               description={item?.description}
                               badges={item?.badges}
+
                               backgroundColor={item?.backgroundColor}
                               specialStyle={item?.specialStyle}
                               specialColor={item?.specialColor}

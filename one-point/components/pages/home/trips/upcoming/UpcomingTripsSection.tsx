@@ -1,3 +1,5 @@
+import styles from "./UpcomingTripsSection.module.css"
+
 import Link from "next/link"
 import Image from "next/image"
 
@@ -46,7 +48,7 @@ export function UpcomingTripsSection(props: HomeBlocksUpcomingtrips) {
 
 
   return (
-    <section className="relative overflow-hidden" id="upcomingtrips">
+    <section className={styles.box} id="upcomingtrips">
 
       <div className="relative flex flex-col items-center gap-2 py-24">
         <video 
@@ -64,14 +66,14 @@ export function UpcomingTripsSection(props: HomeBlocksUpcomingtrips) {
 
 
         <div
-          className="px-4 py-8 text-center z-[1]"
+          className="px-4 py-8 text-center z-[1] bg-black/30 backdrop-blur-sm rounded-lg"
           data-tina-field={tinaField(props, "message")}
         >
 
           <TextMD 
             content={props.message}
             headerColor='text-primary'
-            boldColor = "bg-gradient-to-b from-blue-300 to-pink-600"
+            boldColor = "bg-gold-gradient"
             pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
             pColor = "text-primary-foreground"
             />

@@ -57,6 +57,8 @@ const config = {
           DEFAULT: "var(--card)",
           foreground: "var(--card-foreground)",
         },
+
+        "custom-coffee": "var(--coffee)",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -77,6 +79,10 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+
+      backgroundImage: {
+        'gold-gradient': 'linear-gradient(to bottom, #cfc09f 22%,#634f2c 24%, #cfc09f 26%, #cfc09f 27%,#ffecb3 40%,#3a2c0f 78%)',
+      }
 
     },
   },

@@ -39,14 +39,14 @@ blocks:
         style: light
     _template: content
   - message: |
-      # Upcoming **Trips**
+      # **Upcoming Trips**
     style: cards
     backgroundVideo: /assets/videos/north/time_lapse_video_of_aurora_borealis.mp4
     backgroundFallbackImage: /assets/images/north/restaurant_utsu.JPG
     tripscarousel:
       - title: Aurora Borealis
         header: |
-          ## 11.2024
+          ## **11.2024**
         description: |
           #### **Aurora Borealis**
 
@@ -66,7 +66,7 @@ blocks:
         style: dark
     _template: content
   - message: |
-      # Recent Trips
+      # **Recent Trips**
     style: cards
     backgroundVideo: /assets/videos/general/onepoint_compilation_1.mp4
     backgroundFallbackImage: /assets/images/ibiza/beach_ibiza_1.jpeg

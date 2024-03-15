@@ -1,13 +1,16 @@
 import React from 'react';
 
+import Image from "next/image"
+
 import { Badge } from "@/components/ui/badge"
 
 import PresetColorCircle from "@/components/svg/circle/PresetColorCircle"
 
 import TextMD from '@/components/shared/text/TextMD';
 
-type ItineraryCardProps = {
-  header: any;
+
+type TeamCardProps = {
+  image: any;
   description: any;
   badges?: Array<{ badge?: string | null; description?: string | null } | null> | null;
   backgroundColor?: string | null;
@@ -15,9 +18,9 @@ type ItineraryCardProps = {
   specialColor?: string | null;
 };
 
-const ItineraryCard: React.FC<ItineraryCardProps> = ({ 
+const TeamCard: React.FC<TeamCardProps> = ({ 
      
-    header, 
+    image, 
     description, 
     badges,
     backgroundColor="bg-gradient-to-b from-black to-purple-600",
@@ -32,18 +35,25 @@ const ItineraryCard: React.FC<ItineraryCardProps> = ({
       </div>
 
       <div className="p-2 rounded-lg">
-    
-          <TextMD 
-            content={header}
-            headerColor='text-secondary'
-            boldColor = "bg-gold-gradient" //bg-gradient-to-b from-yellow-400 to-red-600
-            pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
-            pColor = "text-primary-foreground"
+        {
+            // if trip?.image is not empty, then render the Image component
+            // else, render nothing
+            (image) && (
+            <Image
+                src={image || ""}
+                alt=""
+                layout="fill"
+                objectFit="cover"
+                
+                className="object-cover rounded-lg"
+                
             />
+            )
+        }
             
       </div>
 
-      <div className="p-4 bg-black/60 backdrop-blur-md rounded-lg">
+      <div className="p-4 bg-black/30 backdrop-blur-md rounded-lg">
   
         <TextMD 
             content={description}
@@ -65,4 +75,4 @@ const ItineraryCard: React.FC<ItineraryCardProps> = ({
   );
 };
 
-export default ItineraryCard;
+export default TeamCard;

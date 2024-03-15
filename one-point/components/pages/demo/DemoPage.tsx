@@ -58,10 +58,10 @@ export default function DemoPage(props: {
     query: props?.query,
     variables: props?.variables,
   });
-
+  //className={`${data?.global?.theme}`}
     return (
       <>
-      <body className={`${data?.global?.theme}`}>
+      <body >
       <div className="flex-col items-center text-center bg-gradient-to-tl from-transparent via-accent to-transparent">
         <br/>
         <h1>Alert</h1>

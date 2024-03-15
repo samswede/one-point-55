@@ -3,6 +3,8 @@
 import * as React from "react"
 import Link from "next/link"
 
+import Image from "next/image"
+
 import { cn } from "@/lib/utils"
 //import { Icons } from "@/components/icons"
 
@@ -15,6 +17,8 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+
+import image from "@/public/assets/images/generated/wellness.webp"
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -59,14 +63,26 @@ export function NavBarMenu() {
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
-                    {/*
-                    <Icons.logo className="h-6 w-6" />
-                    */}
+                    {
+                    // if trip?.image is not empty, then render the Image component
+                    // else, render nothing
+                    (image) && (
+                    <Image
+                        src={image || ""}
+                        alt=""
+                        layout="fit"
+                        objectFit="cover"
+                        
+                        className="object-cover rounded-lg"
+                        
+                    />
+                    )
+                  }
                     <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
+                      onepoint55
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                      Beautiful video
+                      three word motto
                     </p>
                   </a>
                 </NavigationMenuLink>
