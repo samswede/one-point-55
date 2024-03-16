@@ -10,6 +10,8 @@ import { TripPastItinerarySection } from "@/components/pages/trips/itinerary/Tri
 import { GallerySection } from "@/components/pages/trips/gallery/TripPastGallerySection";
 import { TripPastTeamSection } from "@/components/pages/trips/team/TripPastTeamSection";
 
+import Countdown from "@/components/shared/countdown/Countdown";
+
 import TextMD from "@/components/shared/text/TextMD";
 
 
@@ -61,6 +63,10 @@ export default function PastTripPage(props: {
 
             case "TrippastBlocksTeam": {
               return <TripPastTeamSection key={i} {...block} />
+            }
+
+            case "TrippastBlocksCountdown": {
+              return <Countdown key={i} targetDate="2024-12-31T23:59:59"  />
             }
             
           }

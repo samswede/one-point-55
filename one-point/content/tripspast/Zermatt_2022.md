@@ -426,7 +426,7 @@ blocks:
 
           Dive into the depths of mental fortitude with David, our mental
           performance coach, whose journey from the Olympic Games to mastering
-          the mental game for athletes is nothing short of inspiring. 
+          the mental game for athletes is nothing short of inspiring.
 
 
           David's approach to harnessing the power of emotions for peak
@@ -442,7 +442,7 @@ blocks:
 
           Explore the world of yoga with Recha, a globetrotting Yoga Alliance
           Certified Teacher whose expertise spans across Hatha yoga, Mobility,
-          Yin Yoga, and more. 
+          Yin Yoga, and more.
 
 
           Recha's holistic approach, incorporating Sound Healing and Chinese
@@ -456,7 +456,7 @@ blocks:
 
           Journey with Satvika, a seasoned yoga practitioner, as she shares the
           rich traditions of Hatha yoga, Hatha flow, Sivanada, and Vinyasa
-          learned from the heart of India. 
+          learned from the heart of India.
 
 
           Satvika's teachings, emphasizing philosophy, breathing, and
@@ -469,7 +469,7 @@ blocks:
 
 
           Push your limits with Sam, a former ice hockey player and CrossFit
-          enthusiast turned personal trainer. 
+          enthusiast turned personal trainer.
 
 
           Sam's passion for strength and high-intensity training, under the
@@ -570,5 +570,6 @@ blocks:
       charming village of Zermatt. Join us to unplug, recharge, and create
       memories that will last a lifetime.
     _template: markdown
+  - _template: countdown
 ---
 

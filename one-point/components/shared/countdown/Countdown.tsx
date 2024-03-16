@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import { CalendarDemo } from '../calendar/CalendarDemo';
+
 interface TimeLeft {
   days: number;
   hours: number;
@@ -34,34 +36,46 @@ const Countdown: React.FC<{ targetDate: string }> = ({ targetDate }) => {
   }, [targetDate]);
 
   return (
-    <div className="countdown-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <div className="bg-primary" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
       <div className="countdown" style={{ textAlign: 'center' }}>
-        <div className="countdown-title" style={{ marginBottom: '20px' }}>
+        <div className="countdown-title text-primary-foreground" style={{ marginBottom: '20px' }}>
           Countdown title
           <p>Use this section to create urgency.</p>
         </div>
+
         <button style={{ marginBottom: '20px' }}>BOOK NOW</button>
-        <div className="countdown-timer" style={{ display: 'flex' }}>
+
+        <div className="countdown-timer text-primary-foreground" style={{ display: 'flex' }}>
           <div className="countdown-item" style={{ margin: '0 10px' }}>
             {timeLeft.days}
-            <span>DAYS</span>
+            <span> DAYS</span>
           </div>
           <div className="countdown-item" style={{ margin: '0 10px' }}>
             {timeLeft.hours}
-            <span>HOURS</span>
+            <span> HOURS</span>
           </div>
           <div className="countdown-item" style={{ margin: '0 10px' }}>
             {timeLeft.minutes}
-            <span>MINUTES</span>
+            <span> MINUTES</span>
           </div>
           <div className="countdown-item" style={{ margin: '0 10px' }}>
             {timeLeft.seconds}
-            <span>SECONDS</span>
+            <span> SECONDS</span>
           </div>
         </div>
+
+        
       </div>
+
+      <div className="calendar-demo">
+          <CalendarDemo />
+        </div>
     </div>
   );
 };
 
 export default Countdown;
+
+// Use
+
+//<Countdown targetDate="2024-12-31T23:59:59" />

@@ -3,6 +3,7 @@ import { Collection } from "tinacms";
 import { heroBlock } from "./templates/hero.template";
 import { contentBlock } from "./templates/content.template";
 import { galleryBlock } from "./templates/gallery.template";
+import { countdownBlock } from "./templates/countdown.template";
 
 const tripupcomingCollection : Collection = {
     label: 'Upcoming Trips',
@@ -22,7 +23,7 @@ const tripupcomingCollection : Collection = {
         list: true,
         name: 'blocks',
         label: 'Sections',
-        templates: [heroBlock, contentBlock, galleryBlock],
+        templates: [heroBlock, contentBlock, galleryBlock, countdownBlock],
       },
     ],
   }
