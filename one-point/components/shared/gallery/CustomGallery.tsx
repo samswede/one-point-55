@@ -36,7 +36,10 @@ const CustomGallery: React.FC<CustomGalleryProps> = ({ images }) => {
                 <span>No image available</span>
               </div>
             )}
-            <div className="caption" style={{ position: 'absolute', bottom: 0, width: '100%', textAlign: 'center', backgroundColor: 'rgba(0, 0, 0, 0.5)', color: '#fff' }}>{image.caption}</div>
+            {
+                //<div className="caption" style={{ position: 'absolute', bottom: 0, width: '100%', textAlign: 'center', backgroundColor: 'rgba(0, 0, 0, 0.5)', color: '#fff' }}>{image.caption}</div>
+            }
+            
           </div>
         ))}
       </div>
