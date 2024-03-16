@@ -59,16 +59,16 @@ export function TripPastTeamSection(props: TrippastBlocksTeam) {
 
           </div>
         </div>
-        <div className="flex-vertical gap-5 py-12">
+        <div className="flex flex-col xl:flex-row py-12 px-16">
           
           <div
-            className="px-4 py-8 text-center z-[1] bg-black/30 backdrop-blur-md"
+            className="px-4 py-8 text-center z-[1] bg-accent backdrop-blur-md rounded-lg"
             data-tina-field={tinaField(props, "carouselTitle")}
             >
 
             <TextMD 
               content={props.carouselTitle}
-              headerColor= "text-secondary"
+              headerColor= "text-primary"
               boldColor = "bg-gold-gradient"
               pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
               pColor = "text-primary-foreground"

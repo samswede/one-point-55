@@ -38,17 +38,21 @@ export default function PastTripPage(props: {
             }
             
             case "TrippastBlocksMarkdown": {
-              return <TextMD key={i} 
-                content={block.content}
-                className = {block.style?.className || "mx-auto"}
-                headerClassName = {block.style?.headerClassName || "font-extrabold leading-tight tracking-tighter text-primary"}
-                headerColor = {block.style?.headerColor || "text-primary"}
-                boldClassName = {block.style?.boldClassName || "bg-clip-text text-transparent"}
-                boldColor = {block.style?.boldColor || "bg-gradient-to-b from-yellow-400 to-red-600"}
-                pClassName = {block.style?.pClassName || "mt-8 max-w-[700px] px-2 text-center text-xl"}
-                pColor = {block.style?.pColor || "text-muted-foreground"}
+              return (
+              <div className="px-12 bg-accent">
+                <TextMD key={i} 
+                  content={block.content}
+                  className = {block.style?.className || "mx-auto"}
+                  headerClassName = {block.style?.headerClassName || "font-extrabold leading-tight tracking-tighter text-primary"}
+                  headerColor = {block.style?.headerColor || "text-primary"}
+                  boldClassName = {block.style?.boldClassName || "bg-clip-text text-transparent"}
+                  boldColor = {block.style?.boldColor || "bg-gradient-to-b from-yellow-400 to-red-600"}
+                  pClassName = {block.style?.pClassName || "mt-8 max-w-[700px] px-2 text-center text-xl"}
+                  pColor = {block.style?.pColor || "text-muted-foreground"}
 
-                 />
+                  />
+              </div>
+                 )
             }
 
             case "TrippastBlocksGallery": {

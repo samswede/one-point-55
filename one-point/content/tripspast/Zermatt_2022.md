@@ -397,73 +397,178 @@ blocks:
         width: 320
         height: 222
     _template: gallery
-  - message: ''
-    carouselTitle: ''
+  - message: |
+      # Meet the Team
+    carouselTitle: >
+      ###### Welcome to a captivating journey led by our remarkable team, a
+      collective of individuals whose expertise spans the realms of elite
+      sports, profound yoga disciplines, and invigorating fitness challenges.
+      This unique blend of talents converges to offer you an unparalleled
+      experience, where the thrill of physical achievement meets the tranquility
+      of spiritual awakening, all set against the majestic backdrop of the
+      Matterhorn.
+
+
+      ###### Our team embodies the spirit of adventure, resilience, and personal
+      growth, ensuring that your journey with us is not just about exploring
+      breathtaking landscapes but also about discovering new horizons within
+      yourself. Whether you're carving through the crisp mountain air, finding
+      balance in a yoga pose, or pushing your limits in a high-intensity
+      workout, you're in the hands of masters dedicated to your transformation
+      and enjoyment.
     carouselStyle: cards
     teamCarousel:
-      - name: Sam
-        image: /assets/images/people/sam_1.png
-        description: >
-          ### **Sam**
-
-
-          Sam is a former ice hockey player and CrossFit competitor who is now
-          devoted to personal training and group classes in Zürich.
-
-
-          His specialties are strength, high intensity interval training with
-          any kind of equipment.
-
-
-          According to Sam: "Effort is a Choice"
-        badges:
-          - badge: personal training
-          - badge: fitness
-          - badge: gym
-      - name: Satvika
-        image: /assets/images/people/satvika.png
-        description: >
-          ### **Satvika**
-
-
-          Satvika studied yoga in India and after 9 years became an
-          International Certified Yoga Teacher with Yoga Alliance.
-
-
-          She teaches traditional Hatha yoga, Hatha flow, Sivanada and Vinyasa,
-          focusing the energy towards discoveringyour true self.
-
-
-          Learn about philosophy, reathing exercises, asanas, alignments,
-          relaxation and meditation.
-      - name: Recha
-        image: /assets/images/people/resha_1.png
-        description: >
-          ### **Recha**
-
-
-          She has studied Yoga over the entire planet and is excited to never
-          stop studying and learning.
-
-
-          As a certified Yoga Alliance Teacher she teaches: Hatha yoga,
-          Mobility, Yin Yoga, Meditation, Pranayama, Chinese Meridian and Sound
-          Healing.
       - name: David
         image: /assets/images/people/david_1.png
         description: >
           ## **David**
 
 
-          David is a former professional swimmer who competed in the **Olympic
-          Games** in London 2012.
+          Dive into the depths of mental fortitude with David, our mental
+          performance coach, whose journey from the Olympic Games to mastering
+          the mental game for athletes is nothing short of inspiring. 
 
 
-          He is now working with pro athletes who want to master the mental game
-          and turn their intensified emotions on game day into \*\*extra fuel
-          \*\*for new levels of **peak performance**.
+          David's approach to harnessing the power of emotions for peak
+          performance will offer you new perspectives on resilience and
+          determination.
         specialStyle: circle
         specialColor: red
+      - name: Recha
+        image: /assets/images/people/resha_1.png
+        description: >
+          ### **Recha**
+
+
+          Explore the world of yoga with Recha, a globetrotting Yoga Alliance
+          Certified Teacher whose expertise spans across Hatha yoga, Mobility,
+          Yin Yoga, and more. 
+
+
+          Recha's holistic approach, incorporating Sound Healing and Chinese
+          Meridian practices, invites you to a journey of self-discovery and
+          profound relaxation.
+      - name: Satvika
+        image: /assets/images/people/satvika.png
+        description: >
+          ### **Satvika**
+
+
+          Journey with Satvika, a seasoned yoga practitioner, as she shares the
+          rich traditions of Hatha yoga, Hatha flow, Sivanada, and Vinyasa
+          learned from the heart of India. 
+
+
+          Satvika's teachings, emphasizing philosophy, breathing, and
+          meditation, aim to connect you with your inner self, unlocking a path
+          to tranquility and insight.
+      - name: Sam
+        image: /assets/images/people/sam_1.png
+        description: >
+          ### **Sam**
+
+
+          Push your limits with Sam, a former ice hockey player and CrossFit
+          enthusiast turned personal trainer. 
+
+
+          Sam's passion for strength and high-intensity training, under the
+          mantra "Effort is a Choice," promises to challenge and invigorate you,
+          offering a dynamic contrast to the serene mountain setting.
+        badges:
+          - badge: personal training
+          - badge: fitness
+          - badge: gym
     _template: team
+  - content: >
+      For this unforgettable event in Zermatt, surrounding the iconic
+      Matterhorn, we've tailored a comprehensive package that promises an
+      unparalleled blend of adventure, relaxation, and gourmet experiences.
+      Here's what the package includes:
+
+
+      ##### Accommodation:
+
+
+      * \- 7 nights in a luxurious Chalet with breathtaking views of the
+      Matterhorn, accommodating up to 20 guests.
+
+      * \- The Chalet boasts modern amenities including a fully equipped gym, a
+      SPA, and a hammam for ultimate relaxation.
+
+
+      ##### Dining Experience:
+
+
+      * \- Daily gourmet breakfast to start the day with energy.
+
+      * \- Exclusive dining experiences at high-altitude restaurants, including
+      a meal at a 3800m location offering panoramic views.
+
+      * \- Authentic Swiss cuisine at one of the 15 Gault Millau-rated
+      restaurants, including a Rösti experience.
+
+      * \- Evening enjoyment of Glühwein in a cozy igloo setup.
+
+
+      ##### Skiing and Activities:
+
+
+      * \- Full access to 360 kilometres of ski pistes, suitable for all levels
+      from beginners to advanced skiers.
+
+      * \- Ski pass for the duration of the stay, covering both Zermatt in
+      Switzerland and Cervinia in Italy.
+
+      * \- Morning yoga or light stretching sessions to prepare the body for a
+      day on the slopes.
+
+      * \- A unique "James Bond" ski experience, allowing guests to cruise down
+      perfectly groomed pistes.
+
+      * \- Evening gatherings around a bonfire for star gazing and late-night
+      discussions, enhancing the sense of community and relaxation.
+
+
+      ##### Additional Perks:
+
+
+      * \- Round-trip group transfer from the nearest airport to Zermatt,
+      ensuring a car-free and serene environment in the village.
+
+      * \- Professional ski instructors available for lessons (additional
+      charges apply).
+
+      * \- Personal concierge service to assist with any requests, ensuring a
+      seamless and worry-free experience.
+
+
+      ##### Pricing:
+
+
+      * \- Per Person Rate: $4,500 based on 20 guests sharing.
+
+      * \- Total Package Cost: $90,000 for exclusive Chalet hire and all the
+      included features.
+
+
+      ##### Not Included:
+
+
+      * \- International or domestic flights to Switzerland.
+
+      * \- Ski equipment rental (can be arranged upon request).
+
+      * \- Personal expenses and tips.
+
+      * \- Travel insurance (highly recommended).
+
+
+      This carefully curated package by onepoint55 promises an unforgettable
+      blend of exhilarating ski adventures, gourmet delights, and serene
+      moments, all set against the stunning backdrop of the Matterhorn and the
+      charming village of Zermatt. Join us to unplug, recharge, and create
+      memories that will last a lifetime.
+    _template: markdown
 ---
 

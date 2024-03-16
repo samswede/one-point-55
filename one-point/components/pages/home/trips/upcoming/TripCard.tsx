@@ -69,10 +69,10 @@ const TripCard: React.FC<TripCardProps> = ({
                         />
                     
                 </div>
-                <div className="relative p-4 rounded-lg justify-center">
+                <div className="relative p-4 rounded-lg flex justify-center gap-3">
                     <Link href={link || ""}>
                     
-                    <Button>Learn More</Button>
+                        <Button>Learn More</Button>
                     
                     </Link>
                     <SheetGoogleForm {...sheetGoogleForm}/>
