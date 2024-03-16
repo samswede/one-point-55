@@ -26,10 +26,10 @@ blocks:
       memories**.
     links:
       - link: /
-        label: About
+        label: Contact
         style: dark
-      - link: /
-        label: Team
+      - link: /info/#FAQ
+        label: FAQ
         style: light
       - link: /
         label: Gallery

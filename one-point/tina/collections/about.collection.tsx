@@ -2,6 +2,8 @@ import { Collection } from "tinacms";
 
 import { heroBlock } from "./templates/hero.template";
 import { contentBlock } from "./templates/content.template";
+import { accordionBlock } from "./templates/accordion.template";
+import { galleryBlock } from "./templates/gallery.template";
 
 const aboutCollection : Collection = {
     label: 'About',
@@ -14,6 +16,11 @@ const aboutCollection : Collection = {
         create: false,
         delete: false,
       },
+
+      // This makes the home page the default route when editing live
+      router: props => {
+        return `/about`
+      },
     },
 
     fields: [
@@ -22,7 +29,7 @@ const aboutCollection : Collection = {
         list: true,
         name: 'blocks',
         label: 'Sections',
-        templates: [heroBlock, contentBlock],
+        templates: [heroBlock, contentBlock, accordionBlock, galleryBlock],
       },
     ],
   }

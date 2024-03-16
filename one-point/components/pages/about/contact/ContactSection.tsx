@@ -26,15 +26,16 @@ const socials = [
 	},
 ];
 
-export default function Example() {
+export default function ContactSection() {
 	return (
+		//bg-gradient-to-tl from-primary-foreground to-primary
 		<div className=" bg-gradient-to-tl from-primary-foreground to-primary">
 			
-			<div className="container flex items-center justify-center min-h-screen px-4 mx-auto">
+			<div id="contact" className="container flex items-center justify-center min-h-screen px-4 mx-auto">
 				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
 					{socials.map((s, index) => (
 						//"bg-gradient-to-tl from-primary-foreground to-primary"
-						<Card key={index} className="bg-gradient-to-tl from-primary-foreground to-primary">
+						<Card key={index} className="bg-gold-gradient">
 							<Link
 								href={s.href}
 								target="_blank"

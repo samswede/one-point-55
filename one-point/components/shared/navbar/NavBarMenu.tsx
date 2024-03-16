@@ -22,29 +22,31 @@ import image from "@/public/assets/images/generated/wellness.webp"
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Mission",
-    href: "/about/mission",
+    title: "Contact",
+    href: "/about/#contact",
     description:
-      "Learn about our purpose.",
+      "Need help? Reach out to us.",
   },
-  
+
   {
-    title: "Team",
-    href: "/about/team",
+    title: "FAQ",
+    href: "/about/#FAQ",
     description:
-      "See who is behind the scenes."
+      "Answers to common questions.",
   },
   
+
   {
     title: "Gallery",
-    href: "/about/gallery",
+    href: "/about/#gallery",
     description:
       "View our past trips and experiences.",
   },
+
   {
-    title: "Itineraries",
-    href: "/about/itineraries",
-    description: "Details for what to expect.",
+    title: "Impressum / Legal",
+    href: "/about/#legal",
+    description: "Business details and legal disclaimers",
   },
   
 ]
@@ -96,12 +98,6 @@ export function NavBarMenu() {
               <ListItem href="/#pasttrips" title="Past Trips">
                 See where we have been before
               </ListItem>
-              <ListItem href="/contact" title="Contact">
-                Reach out to us
-              </ListItem>
-              <ListItem href="/#FAQ" title="FAQ">
-                Answers to common questions
-              </ListItem>
 
             </ul>
           </NavigationMenuContent>
@@ -122,13 +118,7 @@ export function NavBarMenu() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/impressum" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Impressum
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
+        
       </NavigationMenuList>
     </NavigationMenu>
   )

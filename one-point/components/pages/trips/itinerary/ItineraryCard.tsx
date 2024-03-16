@@ -26,12 +26,12 @@ const ItineraryCard: React.FC<ItineraryCardProps> = ({
   
     }) => {
   return (
-    <div className={`relative p-4 rounded-lg justify-center ${backgroundColor}`}>
-      <div className={`absolute inset-0 z-[-1] rounded-lg overflow-hidden`}>
+    <div className={`relative p-4 rounded-lg justify-center `}>
+      <div className={`absolute inset-0 rounded-lg overflow-hidden z-[-1] ${backgroundColor}`}>
         <PresetColorCircle className="w-full h-full" colorName={specialColor} />
       </div>
 
-      <div className="p-2 rounded-lg">
+      <div className="p-2 rounded-lg z-[1]">
     
           <TextMD 
             content={header}
@@ -43,7 +43,7 @@ const ItineraryCard: React.FC<ItineraryCardProps> = ({
             
       </div>
 
-      <div className="p-4 bg-black/60 backdrop-blur-md rounded-lg">
+      <div className="p-4 bg-black/60 backdrop-blur-md rounded-lg z-[1]">
   
         <TextMD 
             content={description}
@@ -54,7 +54,7 @@ const ItineraryCard: React.FC<ItineraryCardProps> = ({
             />
       </div>
 
-      <div className="relative p-4 rounded-lg justify-center">
+      <div className="relative p-4 rounded-lg justify-center z-[1]">
         {badges?.map((item, index) => (
           <Badge key={index} variant="destructive" color="secondary">
             {item?.badge}

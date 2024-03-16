@@ -48,7 +48,7 @@ blocks:
           - badge: Luxury
           - badge: Chalet
           - badge: Matterhorn
-        backgroundColor: ''
+        backgroundColor: bg-background
         specialStyle: circle
         specialColor: cyan
       - title: Morning Wellness
@@ -62,6 +62,7 @@ blocks:
           - badge: Wellness
           - badge: Skiing
           - badge: Yoga
+        backgroundColor: bg-background
         specialStyle: circle
         specialColor: magenta
       - title: Gourmet Heights
@@ -74,6 +75,7 @@ blocks:
           - badge: Gourmet
           - badge: Traditional
           - badge: Fine Dining
+        backgroundColor: bg-primary
         specialStyle: circle
         specialColor: red
       - title: Alpine Adventure
@@ -86,6 +88,7 @@ blocks:
         badges:
           - badge: Adventure
           - badge: Skiing
+        backgroundColor: ''
         specialStyle: circle
         specialColor: cyan
       - title: Totally Unplugged
@@ -113,6 +116,7 @@ blocks:
           - badge: Unplug
           - badge: Stars
           - badge: Bonfire
+        backgroundColor: bg-background
         specialStyle: horizon
         specialColor: orange
     _template: itinerary
@@ -306,7 +310,7 @@ blocks:
           - badge: Luxury
           - badge: Chalet
           - badge: Matterhorn
-        backgroundColor: ''
+        backgroundColor: bg-background
         specialStyle: circle
         specialColor: cyan
       - title: Morning Wellness
@@ -322,7 +326,7 @@ blocks:
           - badge: Wellness
           - badge: Skiing
           - badge: Yoga
-        backgroundColor: ''
+        backgroundColor: bg-background
         specialStyle: circle
         specialColor: magenta
       - title: Gourmet Heights
@@ -335,7 +339,7 @@ blocks:
           - badge: Gourmet
           - badge: Traditional
           - badge: Fine Dining
-        backgroundColor: bg-custom-coffee
+        backgroundColor: bg-background
         specialStyle: circle
         specialColor: red
       - title: Alpine Adventure
@@ -348,6 +352,7 @@ blocks:
         badges:
           - badge: Adventure
           - badge: Skiing
+        backgroundColor: bg-gradient-to-r from-black to-primary
         specialStyle: circle
         specialColor: cyan
       - title: Totally Unplugged

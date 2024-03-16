@@ -12,6 +12,13 @@ export const accordionBlock: Template = {
     },
 
     fields: [
+
+      {
+        type: 'string',
+        label: 'ID',
+        name: 'id',
+      },
+
       {
         type: 'string',
         label: 'Accordion Title',
