@@ -26,7 +26,7 @@ const CustomGallery: React.FC<CustomGalleryProps> = ({ images }) => {
     return (
     
       <div className="custom-gallery" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '10px' }}>
-        {images.map((image, index) => (
+        {images?.map((image, index) => (
           <div key={index} className="gallery-item" onClick={() => handleImageClick(image)} style={{ width: '100%', position: 'relative', paddingBottom: '100%' }}>
             {image.src && (
               <Image src={image.src} alt={image.caption} layout="fill" objectFit="cover" />
