@@ -10,7 +10,7 @@ interface ImageItem {
 }
 
 interface CustomGalleryProps {
-  images: ImageItem[] | any[];
+  images: ImageItem[] | any[] | null | undefined;
 }
 
 const CustomGallery: React.FC<CustomGalleryProps> = ({ images }) => {
