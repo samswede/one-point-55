@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-import { CalendarDemo } from '../calendar/CalendarDemo';
+import { CalendarDemo } from '@/components/shared/calendar/CalendarDemo';
+import { Button } from '@/components/ui/button';
+
+import { FormWaitlist } from '@/components/shared/form/FormWaitlist';
 
 interface TimeLeft {
   days: number;
@@ -8,6 +11,7 @@ interface TimeLeft {
   minutes: number;
   seconds: number;
 }
+
 
 const Countdown: React.FC<{ targetDate: string }> = ({ targetDate }) => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
@@ -35,41 +39,59 @@ const Countdown: React.FC<{ targetDate: string }> = ({ targetDate }) => {
     return () => clearInterval(timer);
   }, [targetDate]);
 
+
   return (
     <div className="bg-primary" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
       <div className="countdown" style={{ textAlign: 'center' }}>
         <div className="countdown-title text-primary-foreground" style={{ marginBottom: '20px' }}>
-          Countdown title
-          <p>Use this section to create urgency.</p>
+          <h1 className="mx-auto mt-4 text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl">
+            Join the Waitlist
+          </h1>
+          
+          <p 
+            className="mx-auto mt-4 max-w-[700px] px-2 text-sm">
+              There are limited spots available and the countdown has begun.
+          </p>
+          
         </div>
 
-        <button style={{ marginBottom: '20px' }}>BOOK NOW</button>
+      
 
-        <div className="countdown-timer text-primary-foreground" style={{ display: 'flex' }}>
-          <div className="countdown-item" style={{ margin: '0 10px' }}>
-            {timeLeft.days}
-            <span> DAYS</span>
+        <FormWaitlist />
+
+
+        <div className="countdown-title text-primary-foreground mt-4" style={{ marginBottom: '20px' }}>
+          <h1 className="mx-auto text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl">
+            Countdown to Launch
+          </h1> 
+        </div>
+        
+
+        <div className="countdown-timer text-primary-foreground mx-auto text-3xl font-extrabold leading-tight tracking-tighter md:text-5xl" style={{ display: 'flex', marginBottom: '20px' }}>
+          <div className="countdown-item flex-col mt-2" style={{ margin: '0 10px' }}>
+            <div>{timeLeft.days}</div>
+            <div> DAYS</div>
           </div>
-          <div className="countdown-item" style={{ margin: '0 10px' }}>
-            {timeLeft.hours}
-            <span> HOURS</span>
+          <div className="countdown-item flex-col mt-2" style={{ margin: '0 10px' }}>
+            <div>{timeLeft.hours}</div>
+            <div> HOURS</div>
           </div>
-          <div className="countdown-item" style={{ margin: '0 10px' }}>
-            {timeLeft.minutes}
-            <span> MINUTES</span>
+          <div className="countdown-item flex-col mt-2" style={{ margin: '0 10px' }}>
+            <div>{timeLeft.minutes}</div>
+            <div> MINUTES</div>
           </div>
-          <div className="countdown-item" style={{ margin: '0 10px' }}>
-            {timeLeft.seconds}
-            <span> SECONDS</span>
+          <div className="countdown-item flex-col mt-2" style={{ margin: '0 10px' }}>
+            <div>{timeLeft.seconds}</div>
+            <div> SECONDS</div>
           </div>
         </div>
 
         
+
+        
       </div>
 
-      <div className="calendar-demo">
-          <CalendarDemo />
-        </div>
+
     </div>
   );
 };
