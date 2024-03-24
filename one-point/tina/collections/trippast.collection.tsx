@@ -7,6 +7,7 @@ import { itineraryBlock } from "./templates/itinerary.template";
 import { galleryBlock } from "./templates/gallery.template";
 import { teamBlock } from "./templates/team.template";
 import { countdownBlock } from "./templates/countdown.template";
+import { waitlistBlock } from "./templates/waitlist.template";
 
 const trippastCollection : Collection = {
     label: 'Past Trips',
@@ -35,7 +36,7 @@ const trippastCollection : Collection = {
         type: 'object',
         list: true,
 
-        templates: [heroBlock, contentBlock, markdownBlock, itineraryBlock, galleryBlock, teamBlock, countdownBlock],
+        templates: [heroBlock, contentBlock, markdownBlock, itineraryBlock, galleryBlock, teamBlock, countdownBlock, waitlistBlock],
       },
     ],
   }

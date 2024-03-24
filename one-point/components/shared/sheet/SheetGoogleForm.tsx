@@ -17,16 +17,18 @@ import {
 type SheetGoogleFormProps = {
   buttonText?: string | null,
   embeddedFormURL?: string | null,
+  variant?: "link" | "default" | "destructive" | "outline" | "secondary" | "ghost" | null | undefined,
 }
 
 
-export function SheetGoogleForm({ buttonText, embeddedFormURL }: SheetGoogleFormProps) {
+export function SheetGoogleForm({ buttonText, embeddedFormURL, variant="outline" }: SheetGoogleFormProps) {
   const defaultText = "Google Form Sheet"
   const defaultFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSeqymnsplI3MfVipP9Gdv7Taf7DakbmH6AyLGglvXt-X39esg/viewform?embedded=true"
+  
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline">{buttonText ?? defaultText}</Button>
+        <Button variant={variant}>{buttonText ?? defaultText}</Button>
       </SheetTrigger>
       <SheetContent>
           

@@ -4,42 +4,42 @@ const INITIAL_STATE : ProductItem[] = [
     {
         id: '1',
         title: 'Black Seude',
-        description: 'Welcome to the dark side',
+        description: 'Product description goes here',
         imageUrl: '/assets/images/shop/1.jpg',
         price: 399
     },
     {
         id: '2',
         title: 'Mule',
-        description: 'Back to the future',
+        description: 'Product description goes here',
           imageUrl: '/assets/images/shop/4.jpg',
         price: 499
     },
     {
         id: '3',
         title: 'Chelsea',
-        description: 'God bless Carl Marx',
+        description: 'Product description goes here',
         imageUrl: '/assets/images/shop/8.jpg',
         price: 799
     },
     {
         id: '4',
         title: 'Desert Flats',
-        description: 'Go & kill snakes',
+        description: 'Product description goes here',
         imageUrl: '/assets/images/shop/2.jpg',
         price: 398
     },
     {
         id: '5',
         title: 'Angel',
-        description: 'Hitler did nothing wrong',
+        description: 'Product description goes here',
         imageUrl: '/assets/images/shop/5.jpg',
         price: 999
     },
     {
         id: '6',
         title: 'Desert',
-        description: 'Git Gud',
+        description: 'Product description goes here',
         imageUrl: '/assets/images/shop/7.jpg',
         price: 999
     },

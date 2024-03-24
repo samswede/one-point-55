@@ -10,6 +10,8 @@ import { PastTripsSection } from "@/components/pages/home/trips/past/PastTripsSe
 import { UpcomingTripsSection } from "@/components/pages/home/trips/upcoming/UpcomingTripsSection";
 import FAQ from "@/components/pages/home/FAQ/FAQ";
 
+import SheetWaitlistCountdown from "@/components/shared/sheet/SheetWaitlistCountdown";
+
 export default function HomePage(props: {
     data: HomeQuery,
     variables: HomeQueryVariables,
@@ -37,6 +39,13 @@ export default function HomePage(props: {
             case "HomeBlocksUpcomingtrips": {
               return <UpcomingTripsSection key={i} {...block} />
             }
+            case "HomeBlocksWaitlist": {
+              return <SheetWaitlistCountdown
+                key={i}
+                targetDate={block?.targetDate || "2024-12-31T23:59:59"}
+                embeddedFormURL={block?.embeddedFormURL || "https://docs.google.com/forms/d/e/1FAIpQLSf4Zy254a3orX3rD1FN_Auz69neDjVlB-ieAgagtmeuc9W5YA/viewform?embedded=true"}
+              />
+              }
           }
         })}
 

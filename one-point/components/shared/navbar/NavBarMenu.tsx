@@ -124,6 +124,14 @@ export function NavBarMenu() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <Link href="/shop" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Store / Shop / Merchandise
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
         
       </NavigationMenuList>
     </NavigationMenu>

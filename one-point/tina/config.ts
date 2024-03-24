@@ -9,6 +9,7 @@ import homeCollection from "./collections/home.collection";
 import tripupcomingCollection from "./collections/tripupcoming.collection";
 import trippastCollection from "./collections/trippast.collection";
 
+import shopCollection from "./collections/shop.collection";
 
 
 // Your hosting provider likely exposes this as an environment variable
@@ -50,6 +51,8 @@ export default defineConfig({
       tripupcomingCollection,
 
       trippastCollection,
+
+      shopCollection,
 
     ],
   },

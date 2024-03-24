@@ -6,6 +6,7 @@ import { accordionBlock } from "./templates/accordion.template";
 import { pasttripsBlock } from "./templates/pasttrips.template";
 import { upcomingtripsBlock } from "./templates/upcomingtrips.template";
 import { countdownBlock } from "./templates/countdown.template";
+import { waitlistBlock } from "./templates/waitlist.template";
 
 
 const homeCollection : Collection = {
@@ -40,7 +41,9 @@ const homeCollection : Collection = {
 
                       contentBlock, 
                       accordionBlock,
-                      countdownBlock
+                      countdownBlock,
+                      waitlistBlock
+
                     ],
       },
     ],

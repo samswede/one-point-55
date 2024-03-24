@@ -13,6 +13,7 @@ import { TripPastTeamSection } from "@/components/pages/trips/team/TripPastTeamS
 import Countdown from "@/components/shared/countdown/Countdown";
 
 import TextMD from "@/components/shared/text/TextMD";
+import SheetWaitlistCountdown from "@/components/shared/sheet/SheetWaitlistCountdown";
 
 
 export default function PastTripPage(props: {
@@ -66,10 +67,17 @@ export default function PastTripPage(props: {
             }
 
             case "TrippastBlocksCountdown": {
-              return <Countdown key={i} targetDate="2024-12-31T23:59:59"  />
+              return <Countdown key={i} targetDate="2024-06-31T23:59:59"  />
             }
-            
-          }
+
+            case "TrippastBlocksWaitlist": {
+              return <SheetWaitlistCountdown
+                key={i}
+                targetDate={block?.targetDate || "2024-06-31T23:59:59"}
+                embeddedFormURL={block?.embeddedFormURL || "https://docs.google.com/forms/d/e/1FAIpQLSf4Zy254a3orX3rD1FN_Auz69neDjVlB-ieAgagtmeuc9W5YA/viewform?embedded=true"}
+              />
+              }
+            }
         })}
 
       </>

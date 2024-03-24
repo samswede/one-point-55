@@ -223,6 +223,8 @@ blocks:
         width: 320
         height: 222
     _template: gallery
+  - message: ''
+    _template: countdown
   - message: |
       # Meet the Team
     carouselTitle: >
@@ -396,7 +398,9 @@ blocks:
       charming village of Zermatt. Join us to unplug, recharge, and create
       memories that will last a lifetime.
     _template: markdown
-  - message: ''
-    _template: countdown
+  - embeddedFormURL: >-
+      https://docs.google.com/forms/d/e/1FAIpQLSf4Zy254a3orX3rD1FN_Auz69neDjVlB-ieAgagtmeuc9W5YA/viewform?embedded=true
+    targetDate: '2024-06-31T23:59:59'
+    _template: waitlist
 ---
 
