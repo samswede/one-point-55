@@ -1,5 +1,5 @@
 ---
-theme: light honey
+theme: silver blue
 sheetGoogleForm:
   buttonText: Google Form
   embeddedFormURL: >-

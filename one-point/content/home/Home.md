@@ -36,33 +36,6 @@ blocks:
         style: light
     _template: content
   - message: |
-      # **Upcoming Trips**
-    style: cards
-    backgroundVideo: /assets/videos/north/time_lapse_video_of_aurora_borealis.mp4
-    backgroundFallbackImage: /assets/images/north/restaurant_utsu.JPG
-    tripscarousel:
-      - title: Aurora Borealis
-        header: |
-          ## **11.2024**
-        description: |
-          #### **Aurora Borealis**
-
-          This is a trip you don't wanna miss!
-        link: /Location_202X
-        image: /assets/images/north/levin_iglut.JPG
-        sheetGoogleForm:
-          buttonText: Enquire
-          embeddedFormURL: >-
-            https://docs.google.com/forms/d/e/1FAIpQLSf4Zy254a3orX3rD1FN_Auz69neDjVlB-ieAgagtmeuc9W5YA/viewform?embedded=true
-    _template: upcomingtrips
-  - message: |
-      # Commit to an **Adventure**
-    links:
-      - link: 'https://buy.stripe.com/test_14kbMvfPK1t5dCE5kk'
-        label: Book Now
-        style: dark
-    _template: content
-  - message: |
       # **Recent Trips**
     style: cards
     backgroundVideo: /assets/videos/general/onepoint_compilation_1.mp4
@@ -92,5 +65,32 @@ blocks:
         link: /trips/past/Ibiza_2021
         image: /assets/images/ibiza/sunset_ibiza_2.jpeg
     _template: pasttrips
+  - message: |
+      # Commit to an **Adventure**
+    links:
+      - link: 'https://buy.stripe.com/test_14kbMvfPK1t5dCE5kk'
+        label: Book Now
+        style: dark
+    _template: content
+  - message: |
+      # **Upcoming Trips**
+    style: cards
+    backgroundVideo: /assets/videos/north/time_lapse_video_of_aurora_borealis.mp4
+    backgroundFallbackImage: /assets/images/north/restaurant_utsu.JPG
+    tripscarousel:
+      - title: Aurora Borealis
+        header: |
+          ## **11.2024**
+        description: |
+          #### **Aurora Borealis**
+
+          This is a trip you don't wanna miss!
+        link: /Location_202X
+        image: /assets/images/north/levin_iglut.JPG
+        sheetGoogleForm:
+          buttonText: Join Waitlist
+          embeddedFormURL: >-
+            https://docs.google.com/forms/d/e/1FAIpQLSf4Zy254a3orX3rD1FN_Auz69neDjVlB-ieAgagtmeuc9W5YA/viewform?embedded=true
+    _template: upcomingtrips
 ---
 

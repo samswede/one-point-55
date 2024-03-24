@@ -88,6 +88,26 @@
   
   }
 
+  .silver.blue {
+    --background: #F0F5F9; /* Light silver blue, providing a clean and airy backdrop */
+    --foreground: #293241; /* Dark blue-gray, offering strong contrast for text */
+
+    --primary: #3D5A80; /* Medium silver blue, suitable for primary buttons and highlights */
+    --primary-foreground: #E1E5EA; /* Very light gray, ensuring legibility on primary elements */
+
+    --secondary: #98C1D9; /* Soft light blue, great for secondary buttons and accents */
+    --secondary-foreground: #293241; /* Dark blue-gray, to contrast with the secondary color */
+
+    --muted: #A8DADC; /* Muted teal blue, for less prominent UI elements needing a touch of color */
+
+    --accent: #E0FBFC; /* Very pale cyan, ideal for accentuating elements without overpowering */
+
+    --border: #3A506B; /* Blue-gray, for borders providing subtle definition */
+    --input: #3A506B; /* Blue-gray, for input fields ensuring readability */
+    --ring: #3A506B; /* Blue-gray, for focus rings to maintain consistency */
+}
+
+
   .dark.blue.test {
     --background: hsl(240 6.3% 10.6%);
     --foreground: hsl(60 9.1% 97.8%);
