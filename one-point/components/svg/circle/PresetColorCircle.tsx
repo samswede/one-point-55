@@ -61,6 +61,50 @@ const PresetColorCircle: React.FC<ColorCircleProps> = ({ className, colorName = 
         </radialGradient>
       );
       break;
+
+    case 'gold':
+      gradientId = "goldCircular-grad";
+      gradient = (
+        <radialGradient id={gradientId} r="50%" cx="50%" cy="50%">
+          <stop offset="15%" stopColor="#D4AF37" stopOpacity="0.8"></stop> {/* Rich gold */}
+          <stop offset="75%" stopColor="#FFD700" stopOpacity="1"></stop> {/* Bright gold */}
+          <stop offset="100%" stopColor="#FFF8DC" stopOpacity="1"></stop> {/* Soft, light gold, giving a highlight effect */}
+        </radialGradient>
+      );
+      break;
+
+    case 'silver':
+      gradientId = "silverCircular-grad";
+      gradient = (
+        <radialGradient id={gradientId} r="50%" cx="50%" cy="50%">
+          <stop offset="15%" stopColor="#C0C0C0" stopOpacity="0.5"></stop>
+          <stop offset="75%" stopColor="#E1E5EA" stopOpacity="1"></stop>
+          <stop offset="100%" stopColor="#F0F5F9" stopOpacity="1"></stop>
+        </radialGradient>
+      );
+      break;
+
+    case 'lightBlue':
+      gradientId = "lightBlueCircular-grad";
+      gradient = (
+        <radialGradient id={gradientId} r="50%" cx="50%" cy="50%">
+          <stop offset="15%" stopColor="#98C1D9" stopOpacity="0.5"></stop>
+          <stop offset="75%" stopColor="#B7D7E8" stopOpacity="1"></stop>
+          <stop offset="100%" stopColor="#E0FBFC" stopOpacity="1"></stop>
+        </radialGradient>
+      );
+      break;
+
+    case 'tealBlue':
+      gradientId = "tealBlueCircular-grad";
+      gradient = (
+        <radialGradient id={gradientId} r="50%" cx="50%" cy="50%">
+          <stop offset="15%" stopColor="#3A506B" stopOpacity="0.5"></stop>
+          <stop offset="75%" stopColor="#5C7B9D" stopOpacity="1"></stop>
+          <stop offset="100%" stopColor="#A8DADC" stopOpacity="1"></stop>
+        </radialGradient>
+      );
+      break;
     case 'orange':
       gradientId = "orangeCircular-grad";
       gradient = (

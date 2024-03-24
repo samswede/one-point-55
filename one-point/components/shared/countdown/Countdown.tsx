@@ -50,7 +50,7 @@ const Countdown: React.FC<{ targetDate: string }> = ({ targetDate }) => {
           
           <p 
             className="mx-auto mt-4 max-w-[700px] px-2 text-sm">
-              There are limited spots available and the countdown has begun.
+              Express your interest — limited spaces mean a chance for an exclusive invite.
           </p>
           
         </div>
@@ -62,7 +62,7 @@ const Countdown: React.FC<{ targetDate: string }> = ({ targetDate }) => {
 
         <div className="countdown-title text-primary-foreground mt-4" style={{ marginBottom: '20px' }}>
           <h1 className="mx-auto text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl">
-            Countdown to Launch
+            Registration Closes in
           </h1> 
         </div>
         

@@ -48,7 +48,7 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
   
 
   return (
-    <section className="relative overflow-hidden" id="itinerary">
+    <section className="relative overflow-hidden bg-gradient-to-t from-secondary to-background" id="itinerary">
 
       <div className="relative flex flex-col items-center gap-2 py-24">
         
@@ -56,14 +56,14 @@ export function TripPastItinerarySection(props: TrippastBlocksItinerary) {
         <div className="flex-vertical gap-5 py-12">
           
           <div
-            className="px-4 py-8 text-center z-[1] bg-black/30 backdrop-blur-md"
+            className="px-4 py-8 text-center z-[1] bg-primary"
             data-tina-field={tinaField(props, "carouselTitle")}
             >
 
             <TextMD 
               content={props.carouselTitle}
-              headerColor= "text-secondary"
-              boldColor = "bg-gold-gradient"
+              headerColor= "text-primary-foreground"
+              boldColor = "bg-gradient-to-b from-primary-foreground to-yellow-200"
               pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
               pColor = "text-primary-foreground"
 

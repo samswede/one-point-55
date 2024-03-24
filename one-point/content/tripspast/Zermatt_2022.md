@@ -32,100 +32,10 @@ blocks:
     _template: content
   - message: ''
     carouselTitle: |
-      ### **Swipe** through highlights
+      ### **Swipe** through the highlights
     carouselStyle: flow
     carouselBackgroundVideo: ''
-    carouselBackgroundFallbackImage: /assets/images/zermatt/village_matterhorn.jpg
-    itineraryCarousel:
-      - title: Enchanting Matterhorn
-        header: |
-          ### **Enchanting** Matterhorn
-        description: >
-          Discover the charm of Matterhorn's mountains and village. Stay in a
-          unique Chalet, complete with gym, SPA, and hammam for an exclusive
-          retreat.
-        badges:
-          - badge: Luxury
-          - badge: Chalet
-          - badge: Matterhorn
-        backgroundColor: bg-background
-        specialStyle: circle
-        specialColor: cyan
-      - title: Morning Wellness
-        header: |
-          ### Morning **Wellness**
-        description: >
-          Begin your day with rejuvenating yoga or light stretches, setting a
-          tranquil tone for adventure-filled skiing sessions on the majestic
-          slopes.
-        badges:
-          - badge: Wellness
-          - badge: Skiing
-          - badge: Yoga
-        backgroundColor: bg-background
-        specialStyle: circle
-        specialColor: magenta
-      - title: Gourmet Heights
-        header: |
-          ### **Gourmet** Heights
-        description: >
-          Indulge in the world's finest cuisines at 3800m, from high-altitude
-          gourmet dining to traditional Rösti in award-winning eateries.
-        badges:
-          - badge: Gourmet
-          - badge: Traditional
-          - badge: Fine Dining
-        backgroundColor: bg-primary
-        specialStyle: circle
-        specialColor: red
-      - title: Alpine Adventure
-        header: |
-          ### **Alpine** Adventure
-        description: >
-          Traverse 360 km of pristine ski routes, experience Europe's highest
-          cable car, and live out a James Bond fantasy on the slopes of
-          Switzerland and Italy.
-        badges:
-          - badge: Adventure
-          - badge: Skiing
-        backgroundColor: ''
-        specialStyle: circle
-        specialColor: cyan
-      - title: Totally Unplugged
-        header: |
-          ### Totally **Unplugged**
-        description: >
-          Embrace the tranquility of Zermatt, uniquely car-free, ensuring a
-          serene backdrop for relaxation. Beyond the majestic Matterhorn, it's
-          an ideal setting to rejuvenate among nature and fellow adventurers,
-          away from the buzz of modern life.
-        badges:
-          - badge: Rejuvenation
-          - badge: Tranquility
-          - badge: Car-Free
-        specialStyle: circle
-        specialColor: blue
-      - title: Starlit Soirees
-        header: |
-          ### **Starlit** Soirees
-        description: >
-          Embrace the camaraderie and the serenity of Zermatt with late-night
-          conversations by a bonfire under the starry sky, truly unplugging from
-          the mundane.
-        badges:
-          - badge: Unplug
-          - badge: Stars
-          - badge: Bonfire
-        backgroundColor: bg-background
-        specialStyle: horizon
-        specialColor: orange
-    _template: itinerary
-  - message: ''
-    carouselTitle: |
-      ### **Swipe** through highlights
-    carouselStyle: flow
-    carouselBackgroundVideo: ''
-    carouselBackgroundFallbackImage: /assets/images/backgrounds/aaabstract (5).webp
+    carouselBackgroundFallbackImage: ''
     itineraryCarousel:
       - title: Enchanting Matterhorn
         header: |
@@ -153,10 +63,10 @@ blocks:
           - badge: Skiing
           - badge: Yoga
         specialStyle: circle
-        specialColor: magenta
+        specialColor: blue
       - title: Gourmet Heights
         header: |
-          ### **Gourmet** Heights
+          ### **Gourmet Heights**
         description: >
           Indulge in the world's finest cuisines at 3800m, from high-altitude
           gourmet dining to traditional Rösti in award-winning eateries.
@@ -165,10 +75,10 @@ blocks:
           - badge: Traditional
           - badge: Fine Dining
         specialStyle: circle
-        specialColor: red
+        specialColor: tealBlue
       - title: Alpine Adventure
         header: |
-          ### **Alpine** Adventure
+          ### **Alpine Adventure**
         description: >
           Traverse 360 km of pristine ski routes, experience Europe's highest
           cable car, and live out a James Bond fantasy on the slopes of
@@ -180,7 +90,7 @@ blocks:
         specialColor: cyan
       - title: Totally Unplugged
         header: |
-          ### Totally **Unplugged**
+          ### **Totally Unplugged**
         description: >
           Embrace the tranquility of Zermatt, uniquely car-free, ensuring a
           serene backdrop for relaxation. Beyond the majestic Matterhorn, it's
@@ -204,100 +114,14 @@ blocks:
           - badge: Stars
           - badge: Bonfire
         specialStyle: horizon
-        specialColor: orange
-    _template: itinerary
-  - message: ''
-    carouselTitle: |
-      ### **Swipe** through highlights
-    carouselStyle: click
-    carouselBackgroundVideo: ''
-    carouselBackgroundFallbackImage: /assets/images/backgrounds/aaabstract (5).webp
-    itineraryCarousel:
-      - title: Enchanting Matterhorn
-        header: |
-          ### **Enchanting** Matterhorn
-        description: >
-          Discover the charm of Matterhorn's mountains and village. Stay in a
-          unique Chalet, complete with gym, SPA, and hammam for an exclusive
-          retreat.
-        badges:
-          - badge: Luxury
-          - badge: Chalet
-          - badge: Matterhorn
-        backgroundColor: ''
-        specialStyle: circle
-        specialColor: cyan
-      - title: Morning Wellness
-        header: |
-          ### Morning **Wellness**
-        description: >
-          Begin your day with rejuvenating yoga or light stretches, setting a
-          tranquil tone for adventure-filled skiing sessions on the majestic
-          slopes.
-        badges:
-          - badge: Wellness
-          - badge: Skiing
-          - badge: Yoga
-        specialStyle: circle
-        specialColor: magenta
-      - title: Gourmet Heights
-        header: |
-          ### **Gourmet** Heights
-        description: >
-          Indulge in the world's finest cuisines at 3800m, from high-altitude
-          gourmet dining to traditional Rösti in award-winning eateries.
-        badges:
-          - badge: Gourmet
-          - badge: Traditional
-          - badge: Fine Dining
-        specialStyle: circle
-        specialColor: red
-      - title: Alpine Adventure
-        header: |
-          ### **Alpine** Adventure
-        description: >
-          Traverse 360 km of pristine ski routes, experience Europe's highest
-          cable car, and live out a James Bond fantasy on the slopes of
-          Switzerland and Italy.
-        badges:
-          - badge: Adventure
-          - badge: Skiing
-        specialStyle: circle
-        specialColor: cyan
-      - title: Totally Unplugged
-        header: |
-          ### Totally **Unplugged**
-        description: >
-          Embrace the tranquility of Zermatt, uniquely car-free, ensuring a
-          serene backdrop for relaxation. Beyond the majestic Matterhorn, it's
-          an ideal setting to rejuvenate among nature and fellow adventurers,
-          away from the buzz of modern life.
-        badges:
-          - badge: Rejuvenation
-          - badge: Tranquility
-          - badge: Car-Free
-        specialStyle: circle
-        specialColor: blue
-      - title: Starlit Soirees
-        header: |
-          ### **Starlit** Soirees
-        description: >
-          Embrace the camaraderie and the serenity of Zermatt with late-night
-          conversations by a bonfire under the starry sky, truly unplugging from
-          the mundane.
-        badges:
-          - badge: Unplug
-          - badge: Stars
-          - badge: Bonfire
-        specialStyle: horizon
-        specialColor: orange
+        specialColor: tealBlue
     _template: itinerary
   - message: ''
     carouselTitle: |
       ### **Swipe** through highlights
     carouselStyle: cards
     carouselBackgroundVideo: ''
-    carouselBackgroundFallbackImage: /assets/images/backgrounds/aaabstract (5).webp
+    carouselBackgroundFallbackImage: ''
     itineraryCarousel:
       - title: Enchanting Matterhorn
         header: |
@@ -310,7 +134,7 @@ blocks:
           - badge: Luxury
           - badge: Chalet
           - badge: Matterhorn
-        backgroundColor: bg-background
+        backgroundColor: bg-gradient-to-b from-background to-secondary-foreground
         specialStyle: circle
         specialColor: cyan
       - title: Morning Wellness
@@ -326,9 +150,9 @@ blocks:
           - badge: Wellness
           - badge: Skiing
           - badge: Yoga
-        backgroundColor: bg-background
+        backgroundColor: bg-gradient-to-b from-background to-secondary-foreground
         specialStyle: circle
-        specialColor: magenta
+        specialColor: blue
       - title: Gourmet Heights
         header: |
           ### **Gourmet** Heights
@@ -339,9 +163,9 @@ blocks:
           - badge: Gourmet
           - badge: Traditional
           - badge: Fine Dining
-        backgroundColor: bg-background
+        backgroundColor: bg-gradient-to-b from-background to-secondary-foreground
         specialStyle: circle
-        specialColor: red
+        specialColor: tealBlue
       - title: Alpine Adventure
         header: |
           ### **Alpine** Adventure
@@ -352,7 +176,7 @@ blocks:
         badges:
           - badge: Adventure
           - badge: Skiing
-        backgroundColor: bg-gradient-to-r from-black to-primary
+        backgroundColor: bg-gradient-to-b from-background to-secondary-foreground
         specialStyle: circle
         specialColor: cyan
       - title: Totally Unplugged
@@ -367,6 +191,7 @@ blocks:
           - badge: Rejuvenation
           - badge: Tranquility
           - badge: Car-Free
+        backgroundColor: bg-gradient-to-b from-background to-secondary-foreground
         specialStyle: circle
         specialColor: blue
       - title: Starlit Soirees
@@ -380,8 +205,9 @@ blocks:
           - badge: Unplug
           - badge: Stars
           - badge: Bonfire
+        backgroundColor: bg-gradient-to-b from-background to-secondary-foreground
         specialStyle: horizon
-        specialColor: orange
+        specialColor: tealBlue
     _template: itinerary
   - items:
       - src: /assets/images/zermatt/skis_and_goggles.webp
@@ -570,6 +396,7 @@ blocks:
       charming village of Zermatt. Join us to unplug, recharge, and create
       memories that will last a lifetime.
     _template: markdown
-  - _template: countdown
+  - message: ''
+    _template: countdown
 ---
 

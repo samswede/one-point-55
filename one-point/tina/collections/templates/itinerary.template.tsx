@@ -232,7 +232,7 @@ export const itineraryBlock: Template = {
             label: "Special SVG Color",
             name: "specialColor",
             type: "string",
-            options: ["red", "green", "blue", "purple", "yellow", "orange", "cyan", "magenta"],
+            options: ["red", "green", "blue", "lightBlue", "tealBlue", "silver", "gold", "purple", "yellow", "orange", "cyan", "magenta"],
           },
         ],
       }

@@ -73,7 +73,7 @@ blocks:
           specific experience.
     _template: accordion
   - id: legal
-    title: Business Details & Legal Disclaimers
+    title: Impressum
     items:
       - trigger: Adresse
         content: 'Badenerstrasse 853, 8048 Zürich'

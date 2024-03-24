@@ -35,8 +35,8 @@ const ItineraryCard: React.FC<ItineraryCardProps> = ({
     
           <TextMD 
             content={header}
-            headerColor='text-secondary'
-            boldColor = "bg-gold-gradient" //bg-gradient-to-b from-yellow-400 to-red-600
+            headerColor='text-primary-foreground'
+            boldColor = "bg-gradient-to-b from-primary-foreground to-yellow-200" //bg-gradient-to-b from-yellow-400 to-red-600
             pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
             pColor = "text-primary-foreground"
             />
@@ -50,7 +50,7 @@ const ItineraryCard: React.FC<ItineraryCardProps> = ({
             headerColor='text-secondary'
             boldColor = "bg-gold-gradient"
             pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
-            pColor = "text-secondary-foreground"
+            pColor = "text-primary-foreground"
             />
       </div>
 

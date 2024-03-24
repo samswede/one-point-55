@@ -35,7 +35,7 @@ export default function ContactSection() {
 				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
 					{socials.map((s, index) => (
 						//"bg-gradient-to-tl from-primary-foreground to-primary"
-						<Card key={index} className="bg-gold-gradient">
+						<Card key={index} className="bg-gradient-to-br from-background to-secondary-foreground">
 							<Link
 								href={s.href}
 								target="_blank"

@@ -3,9 +3,9 @@ blocks:
   - message: |
       ![](/assets/images/logo_large.png)
 
-      ### Connect, Explore,
+      ### **Connect, Explore,**
 
-      ### Rejuvenate.
+      ### **Rejuvenate.**
     backgroundVideo: /assets/videos/ibiza/waves_fb_1.mp4
     backgroundFallbackImage: /assets/images/ibiza/beach_ibiza_1.jpeg
     _template: hero

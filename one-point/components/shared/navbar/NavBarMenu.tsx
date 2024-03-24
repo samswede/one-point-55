@@ -7,6 +7,7 @@ import Image from "next/image"
 
 import { cn } from "@/lib/utils"
 //import { Icons } from "@/components/icons"
+import BurgerMenuIcon from "@/components/icons/BurgerMenu.icon"
 
 import {
   NavigationMenu,
@@ -56,7 +57,12 @@ export function NavBarMenu() {
     <NavigationMenu className="opacity-95">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Home</NavigationMenuTrigger>
+          <NavigationMenuTrigger>
+            <BurgerMenuIcon 
+              color = 'currentColor'
+              
+              />
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
