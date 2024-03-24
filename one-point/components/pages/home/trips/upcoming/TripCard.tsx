@@ -52,7 +52,7 @@ const TripCard: React.FC<TripCardProps> = ({
                     <TextMD 
                         content={header}
                         headerColor='text-primary'
-                        boldColor = "bg-gold-gradient"
+                        boldColor = "bg-gradient-to-b from-primary-foreground to-secondary"
                         pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
                         pColor = "text-primary-foreground"
                         />
@@ -63,9 +63,9 @@ const TripCard: React.FC<TripCardProps> = ({
                     <TextMD 
                         content={description}
                         headerColor='text-secondary'
-                        boldColor = "bg-gradient-to-b from-blue-300 to-green-400"
+                        boldColor = "bg-gradient-to-b from-primary-foreground to-secondary"
                         pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
-                        pColor = "text-secondary-foreground"
+                        pColor = "text-primary-foreground"
                         />
                     
                 </div>

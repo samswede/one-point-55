@@ -60,7 +60,7 @@ export function PastTripsSection(props: HomeBlocksPasttrips) {
           <TextMD 
               content={props?.message}
               headerColor='text-primary'
-              boldColor = "bg-gold-gradient"
+              boldColor = "bg-gradient-to-b from-primary-foreground to-secondary"
               pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
               pColor = "text-primary-foreground"
               />
@@ -132,7 +132,7 @@ export function PastTripsSection(props: HomeBlocksPasttrips) {
                                           ),
                                           bold: (props) => (
                                             <span
-                                              className="bg-gradient-to-b from-blue-400 to-green-600 bg-clip-text text-transparent"
+                                              className="bg-gradient-to-b from-primary-foreground to-secondary bg-clip-text text-transparent"
                                               {...props}
                                             />
                                           ),
@@ -187,7 +187,7 @@ export function PastTripsSection(props: HomeBlocksPasttrips) {
                       {props?.tripscarousel?.map((trip, index) => (
                         <CarouselItem key={index}>
                           
-                          <div className="relative p-4 justify-center bg-black/30 backdrop-blur-sm rounded-lg">
+                          <div className="relative p-4 mx-auto bg-black/30 backdrop-blur-sm rounded-lg">
                             {/*
                             
                             <div className="absolute inset-0 z-[-1] rounded-lg">
@@ -207,11 +207,11 @@ export function PastTripsSection(props: HomeBlocksPasttrips) {
                             */}
                               
 
-                              <div className="p-4 rounded-lg">
+                              <div className="p-4 rounded-lg mx-auto">
                               <TextMD 
                                   content={trip?.header}
-                                  headerColor='text-primary'
-                                  boldColor = "bg-gradient-to-b from-blue-400 to-green-600"
+                                  headerColor='text-primary-foreground'
+                                  boldColor = "bg-gradient-to-b from-primary-foreground to-secondary"
                                   pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
                                   pColor = "text-primary-foreground"
                                   />
@@ -222,7 +222,7 @@ export function PastTripsSection(props: HomeBlocksPasttrips) {
                                   headerColor='text-primary'
                                   boldColor = "bg-gold-gradient"
                                   pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
-                                  pColor = "text-secondary-foreground"
+                                  pColor = "text-primary-foreground"
                                   />
                               </div>
                               <div className="relative p-4 rounded-lg justify-center">

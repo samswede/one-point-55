@@ -45,7 +45,7 @@ const components: { title: string; href: string; description: string }[] = [
   },
 
   {
-    title: "Impressum / Legal",
+    title: "Impressum",
     href: "/about/#legal",
     description: "Business details and legal disclaimers",
   },

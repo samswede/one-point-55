@@ -73,7 +73,7 @@ export function UpcomingTripsSection(props: HomeBlocksUpcomingtrips) {
           <TextMD 
             content={props.message}
             headerColor='text-primary'
-            boldColor = "bg-gold-gradient"
+            boldColor = "bg-gradient-to-b from-primary-foreground to-secondary"
             pClassName = "mt-8 max-w-[700px] px-2 text-left text-sm"
             pColor = "text-primary-foreground"
             />
