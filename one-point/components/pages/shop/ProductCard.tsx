@@ -67,6 +67,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
           <Button 
               href={stripeLink}
+              isExternal
               as={Link}
               color="primary"
               variant="solid">
