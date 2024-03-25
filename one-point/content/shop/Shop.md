@@ -17,7 +17,7 @@ blocks:
         description: Product Description
         price: 99
         image: /assets/images/shop/1.jpg
-        stripeLink: /shop/3
+        stripeLink: 'https://buy.stripe.com/test_14kbMvfPK1t5dCE5kk'
         soldOut: true
       - title: Product Title
         description: Product Description
