@@ -1,11 +1,11 @@
 ---
 blocks:
   - products:
-      - title: Product Title
+      - title: Desert Boots
         description: Product Description
         price: 99
         image: /assets/images/shop/7.jpg
-        stripeLink: /shop/3
+        stripeLink: 'https://buy.stripe.com/test_14kbMvfPK1t5dCE5kk'
         soldOut: false
       - title: Product Title
         description: Product Description
