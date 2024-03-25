@@ -25,7 +25,7 @@ blocks:
         image: /assets/images/shop/8.jpg
         stripeLink: 'https://buy.stripe.com/test_14kbMvfPK1t5dCE5kk'
         soldOut: false
-      - title: White Angel
+      - title: Angel White
         description: Product Description
         price: 99
         image: /assets/images/shop/5.jpg
