@@ -22,8 +22,9 @@ export const productsBlock: Template = {
 
         ui: {
           defaultItem: {
-      
-            price: 0,
+            title: 'Product Title',
+            description: 'Product Description',
+            price: 99,
             image: '/assets/images/shop/8.jpg',
             stripeLink: '/shop/3',
             soldOut: false,
@@ -38,12 +39,12 @@ export const productsBlock: Template = {
 
         fields: [
           {
-            type: 'rich-text',
+            type: 'string',
             label: 'Product Title',
             name: 'title',
           },
           {
-            type: 'rich-text',
+            type: 'string',
             label: 'Product Description',
             name: 'description',
           },

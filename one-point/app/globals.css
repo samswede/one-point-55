@@ -38,7 +38,7 @@
     --coffee: #be9b7b;
   }
   
-  .dark {
+  .mydark {
     --background: hsl(20 14.3% 4.1%);
     --foreground: hsl(60 9.1% 97.8%);
  
@@ -184,21 +184,6 @@
     --ring: #3c2f2f;
   }
 
-  .dark.zinc {
-    --background: #2e2e2e;
-    --foreground: #f2f2f2;
-
-    --primary: #2e2e2e;
-    --primary-foreground: #f2f2f2;
-
-    --secondary: #3c3c3c;
-    --secondary-foreground: #f2f2f2;
-
-    --muted: #3c3c3c;
-    
-    --accent: #3c3c3c;
-
-  }
 }
  
 @layer base {

@@ -1,48 +1,13 @@
-const ProductItems = [
-    {
-        title: 'Cap',
-        description: 'Product description goes here',
-        image: '/assets/images/shop/1.jpg',
-        price: 59,
-        stripeLink: '/shop/1'
-    },
-    {
-        title: 'Sweater',
-        description: 'Product description goes here',
-        image: '/assets/images/shop/4.jpg',
-        price: 99,
-        stripeLink: '/shop/2'
-    },
-    {
-        title: 'Shirt',
-        description: 'Product description goes here',
-        image: '/assets/images/shop/8.jpg',
-        price: 79,
-        stripeLink: '/shop/3'
-    },
-    {
-        title: 'Socks',
-        description: 'Product description goes here',
-        image: '/assets/images/shop/7.jpg',
-        price: 19,
-        stripeLink: '/shop/6'
-    },
-]
-
 
 import React from 'react';
 
-import Link from "next/link"
-import Image from "next/image"
+import {Card, CardHeader, CardBody, CardFooter, Image, Button, Link, Chip} from "@nextui-org/react";
 
-import { Button } from "@/components/ui/button"
-
-import TextMD from '@/components/shared/text/TextMD';
 
 type ProductCardProps = {
-  title: any;
-  description: any;
-  stripeLink: string | null | undefined;
+  title: string;
+  description: string;
+  stripeLink: string | undefined;
   image?: any;
   price: number;
   soldOut?: boolean;
@@ -56,49 +21,73 @@ const ProductCard: React.FC<ProductCardProps> = ({
   price,
   soldOut = false,
 }) => {
-  return (
-    <div className={`relative p-4 rounded-lg justify-center ${soldOut ? 'bg-gray-500' : 'bg-black/60'} backdrop-blur-lg`}>
-      {soldOut && (
-        <div className="absolute inset-0 bg-gray-500 opacity-75 z-10 rounded-lg"></div>
-      )}
-      <div className={`absolute inset-0 z-[-1] rounded-lg ${soldOut ? 'grayscale' : ''}`}>
-        {image && (
-          <Image
-            src={image}
-            alt=""
-            width={500}
-            height={500}
-            objectFit="cover"
-            className="object-cover rounded-lg"
-          />
+  //w-full h-[300px] col-span-12 sm:col-span-5
+  //w-full aspect-w-4 aspect-h-5 col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3
+  //w-full sm:w-96 md:w-80 lg:w-64 xl:w-72 h-auto p-4 col-span-12 sm:col-span-6 md:col-span-4
+  //
+  return (<>
+  
+    <Card 
+      isPressable
+      isFooterBlurred 
+      className="w-full sm:w-80 md:w-80 lg:w-64 xl:w-72 h-auto p-4 col-span-12 sm:col-span-6 md:col-span-4">
+      <CardHeader className="absolute z-10 top-1 flex-col items-start">
+        <p className="text-tiny text-white/60 uppercase font-bold">New</p>
+        <h4 className="text-black font-medium text-2xl bg-white/20 backdrop-blur-sm rounded-sm">Product Name</h4>
+      </CardHeader>
+      <Image
+        removeWrapper
+        isZoomed
+        alt="Card example background"
+        className="z-0 w-full h-full scale-125 -translate-y-6 object-cover"
+        src={image}
+      />
+      <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
+        {soldOut && (
+          <>
+          <div className="justify-between flex-row">
+            <p className="text-black text-md">{`${price}.-`} CHF</p>
+          </div>
+
+          <Chip 
+            color="warning"
+            variant="dot"
+            size="md">
+            Sold Out
+          </Chip>
+
+          </>
         )}
-      </div>
-      <div className="p-4 rounded-lg">
-        <TextMD 
-          content={title}
-          headerColor='text-primary'
-          boldColor="bg-gradient-to-b from-primary-foreground to-secondary"
-          pClassName="mt-8 max-w-[700px] px-2 text-left text-sm"
-          pColor="text-primary-foreground"
-        />
-      </div>
-      <div className="p-4 bg-black/30 backdrop-blur-md rounded-lg">
-        <TextMD 
-          content={description}
-          headerColor='text-secondary'
-          boldColor="bg-gradient-to-b from-primary-foreground to-secondary"
-          pClassName="mt-8 max-w-[700px] px-2 text-left text-sm"
-          pColor="text-primary-foreground"
-        />
-      </div>
-      {!soldOut && (
-        <div className="relative p-4 rounded-lg flex justify-center gap-3">
-          <Link href={stripeLink || "#"}>
-            <Button>Purchase</Button>
-          </Link>
-        </div>
-      )}
-    </div>
+        {!soldOut && (
+          <>
+
+          <div className="justify-between flex-row">
+            <p className="text-black text-md">{`${price}.-`} CHF</p>
+          </div>
+
+          <Button 
+              href={stripeLink}
+              as={Link}
+              color="primary"
+              variant="solid">
+              Buy
+          </Button>
+
+          <Chip 
+            color="success"
+            variant="dot"
+            size="md">
+            Available
+          </Chip>
+          
+        </>
+        )}
+
+        
+        
+      </CardFooter>
+    </Card>
+  </>
   );
 };
 

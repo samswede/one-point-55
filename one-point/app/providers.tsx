@@ -2,6 +2,7 @@
 'use client'
 import posthog from 'posthog-js'
 import { PostHogProvider } from 'posthog-js/react'
+import {NextUIProvider} from '@nextui-org/react'
 
 if (typeof window !== 'undefined') {
   posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY!, {
@@ -10,10 +11,20 @@ if (typeof window !== 'undefined') {
   })
 }
 
-export function PHProvider({
+export function Providers({
   children,
 }: {
   children: React.ReactNode
 }) {
-  return <PostHogProvider client={posthog}>{children}</PostHogProvider>
+  return <>
+    
+      
+        <NextUIProvider>
+          <PostHogProvider client={posthog}>
+          {children}
+          </PostHogProvider>
+        </NextUIProvider>
+      
+    
+  </>
 }

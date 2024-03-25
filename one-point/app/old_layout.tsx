@@ -68,30 +68,28 @@ export default async function RootLayout({
   //{cn(playfairDisplay.className, `${result?.data?.global?.theme}`)}
   return (
     <html lang="en">
-      
+      <Providers>
         
           <body className={`${result?.data?.global?.theme}`}>
-              <Providers>
-                <div className={cn(playfairDisplay.className)}>
-                  <PostHogPageView /> 
+            <div className={cn(playfairDisplay.className)}>
+              <PostHogPageView /> 
 
-                  <header>
-                    <NavBarMenu />
-                  </header>
-                  
-                  <main>
-                    {children}
-                  </main>
-                  
-                  <footer>
-                    <FooterDemo />
-                  </footer>
+              <header>
+                <NavBarMenu />
+              </header>
+              
+              <main>
+                {children}
+              </main>
+              
+              <footer>
+                <FooterDemo />
+              </footer>
 
-                </div>
-              </Providers>
+            </div>
           </body>
         
-      
+      </Providers>
     </html>
   );
 }
