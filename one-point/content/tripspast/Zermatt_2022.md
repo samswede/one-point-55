@@ -134,7 +134,7 @@ blocks:
           - badge: Luxury
           - badge: Chalet
           - badge: Matterhorn
-        backgroundColor: bg-gradient-to-b from-background to-secondary-foreground
+        backgroundColor: bg-gradient-to-b from-secondary-foreground to-secondary-background
         specialStyle: circle
         specialColor: cyan
       - title: Morning Wellness
@@ -150,7 +150,7 @@ blocks:
           - badge: Wellness
           - badge: Skiing
           - badge: Yoga
-        backgroundColor: bg-gradient-to-b from-background to-secondary-foreground
+        backgroundColor: bg-gradient-to-b from-secondary-foreground to-secondary-background
         specialStyle: circle
         specialColor: blue
       - title: Gourmet Heights
@@ -163,7 +163,7 @@ blocks:
           - badge: Gourmet
           - badge: Traditional
           - badge: Fine Dining
-        backgroundColor: bg-gradient-to-b from-background to-secondary-foreground
+        backgroundColor: bg-gradient-to-b from-secondary-foreground to-secondary-background
         specialStyle: circle
         specialColor: tealBlue
       - title: Alpine Adventure
@@ -176,7 +176,7 @@ blocks:
         badges:
           - badge: Adventure
           - badge: Skiing
-        backgroundColor: bg-gradient-to-b from-background to-secondary-foreground
+        backgroundColor: bg-gradient-to-b from-secondary-foreground to-secondary-background
         specialStyle: circle
         specialColor: cyan
       - title: Totally Unplugged
@@ -191,7 +191,7 @@ blocks:
           - badge: Rejuvenation
           - badge: Tranquility
           - badge: Car-Free
-        backgroundColor: bg-gradient-to-b from-background to-secondary-foreground
+        backgroundColor: bg-gradient-to-b from-secondary-foreground to-secondary-background
         specialStyle: circle
         specialColor: blue
       - title: Starlit Soirees
@@ -205,7 +205,7 @@ blocks:
           - badge: Unplug
           - badge: Stars
           - badge: Bonfire
-        backgroundColor: bg-gradient-to-b from-background to-secondary-foreground
+        backgroundColor: bg-gradient-to-b from-secondary-foreground to-secondary-background
         specialStyle: horizon
         specialColor: tealBlue
     _template: itinerary

@@ -34,7 +34,7 @@ export function TripPastHero(props: TrippastBlocksHero) {
         >
           <TextMD 
             content={props.message}
-            boldColor = "bg-gold-gradient"
+            boldColor = "bg-gradient-to-b from-primary-foreground to-secondary"
             />
 
         </div>
