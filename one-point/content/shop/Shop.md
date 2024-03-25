@@ -13,7 +13,7 @@ blocks:
         image: /assets/images/shop/2.jpg
         stripeLink: 'https://buy.stripe.com/test_14kbMvfPK1t5dCE5kk'
         soldOut: false
-      - title: Product Title
+      - title: Black Velvet
         description: Product Description
         price: 99
         image: /assets/images/shop/1.jpg
