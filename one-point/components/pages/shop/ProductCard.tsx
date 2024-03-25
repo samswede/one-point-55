@@ -30,10 +30,10 @@ const ProductCard: React.FC<ProductCardProps> = ({
     <Card 
       isPressable
       isFooterBlurred 
-      className="w-full sm:w-80 md:w-80 lg:w-64 xl:w-72 h-auto p-4 col-span-12 sm:col-span-6 md:col-span-4">
+      className="w-full sm:w-80 md:w-80 lg:w-64 xl:w-72 h-auto col-span-12 sm:col-span-6 md:col-span-4">
       <CardHeader className="absolute z-10 top-1 flex-col items-start">
         <p className="text-tiny text-white/60 uppercase font-bold">New</p>
-        <h4 className="text-black font-medium text-2xl bg-white/20 backdrop-blur-sm rounded-sm">Product Name</h4>
+        <h4 className="text-black font-medium text-2xl bg-white/20 backdrop-blur-sm rounded-sm">{title}</h4>
       </CardHeader>
       <Image
         removeWrapper
