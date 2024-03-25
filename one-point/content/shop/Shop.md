@@ -7,7 +7,7 @@ blocks:
         image: /assets/images/shop/7.jpg
         stripeLink: 'https://buy.stripe.com/test_14kbMvfPK1t5dCE5kk'
         soldOut: false
-      - title: Product Title
+      - title: Mocha Latte
         description: Mocha Latte
         price: 99
         image: /assets/images/shop/2.jpg
