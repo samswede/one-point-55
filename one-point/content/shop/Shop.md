@@ -19,11 +19,11 @@ blocks:
         image: /assets/images/shop/1.jpg
         stripeLink: 'https://buy.stripe.com/test_14kbMvfPK1t5dCE5kk'
         soldOut: true
-      - title: Product Title
+      - title: Dark Leather
         description: Product Description
         price: 99
         image: /assets/images/shop/8.jpg
-        stripeLink: /shop/3
+        stripeLink: 'https://buy.stripe.com/test_14kbMvfPK1t5dCE5kk'
         soldOut: false
       - title: Product Title
         description: Product Description
