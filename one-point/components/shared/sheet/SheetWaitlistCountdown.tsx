@@ -49,7 +49,7 @@ const SheetWaitlistCountdown: React.FC<{ targetDate: string, embeddedFormURL: st
           </h1>
           
           <p 
-            className="mx-auto mt-4 max-w-[700px] px-2 text-sm">
+            className="mx-auto mt-4 max-w-[700px] px-8 text-sm">
               Express your interest — limited spaces means a chance for an exclusive invite.
           </p>
           
