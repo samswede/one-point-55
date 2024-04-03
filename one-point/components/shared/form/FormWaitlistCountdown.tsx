@@ -60,13 +60,13 @@ const Countdown: React.FC<{ targetDate: string }> = ({ targetDate }) => {
 
 
         <div className="countdown-title text-primary-foreground mt-4" style={{ marginBottom: '20px' }}>
-          <h1 className="mx-auto text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl">
+          <h1 className="mx-auto lg:text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl sm:text-sm">
             Registration Closes in
           </h1> 
         </div>
         
 
-        <div className="countdown-timer text-primary-foreground mx-auto text-3xl font-extrabold leading-tight tracking-tighter md:text-5xl" style={{ display: 'flex', marginBottom: '20px' }}>
+        <div className="countdown-timer flex flex-row text-primary-foreground mx-auto text-3xl font-extrabold leading-tight tracking-tighter md:text-5xl sm:text-md" style={{ display: 'flex', marginBottom: '20px' }}>
           <div className="countdown-item flex-col mt-2" style={{ margin: '0 10px' }}>
             <div>{timeLeft.days}</div>
             <div> DAYS</div>

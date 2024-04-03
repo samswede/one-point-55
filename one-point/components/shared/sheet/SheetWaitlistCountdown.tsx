@@ -71,7 +71,7 @@ const SheetWaitlistCountdown: React.FC<{ targetDate: string, embeddedFormURL: st
         </div>
         
 
-        <div className="countdown-timer text-primary-foreground mx-auto text-3xl font-extrabold leading-tight tracking-tighter md:text-5xl" style={{ display: 'flex', marginBottom: '20px' }}>
+        <div className="countdown-timer flex-col sm:flex-row text-primary-foreground mx-auto text-3xl font-extrabold leading-tight tracking-tighter md:text-5xl" style={{ display: 'flex', marginBottom: '20px' }}>
           <div className="countdown-item flex-col mt-2" style={{ margin: '0 10px' }}>
             <div>{timeLeft.days}</div>
             <div> DAYS</div>
