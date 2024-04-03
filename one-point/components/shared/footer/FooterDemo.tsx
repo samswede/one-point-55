@@ -48,25 +48,21 @@ export function FooterDemo() {
             </h2>
             <ul className="mb-8 space-y-2 text-sm list-none">
               <li>
-                <Link href={"/"} className="text-primary">
+                <Link href={"/#concept"} className="text-primary">
                   Concept
                 </Link>
               </li>
               <li>
-                <Link href={"/"} className="text-primary">
+                <Link href={"/#upcomingtrips"} className="text-primary">
                   Upcoming Trips
                 </Link>
               </li>
               <li>
-                <Link href={"/"} className="text-primary">
+                <Link href={"/#pasttrips"} className="text-primary">
                   Recent Trips
                 </Link>
               </li>
-              <li>
-                <Link href={"/"} className="text-primary">
-                  Testimonials
-                </Link>
-              </li>
+              
             </ul>
           </div>
 
@@ -102,9 +98,14 @@ export function FooterDemo() {
         </div>
       </div>
       <div className="flex justify-center -mt-12">
-        <p className="text-center text-white pb-2">
-          @2024 All rights reserved by onepoint55.
-        </p>
+        {
+          /* 
+          <p className="text-center text-black pb-2">
+            @2024 All rights reserved by onepoint55.
+          </p>
+          */
+        }
+        
       </div>
     </footer>
   )

@@ -101,7 +101,7 @@ export function NavBarMenu() {
               <ListItem href="/" title="Upcoming Trips">
                 Sign up for the next adventure
               </ListItem>
-              <ListItem href="/#pasttrips" title="Past Trips">
+              <ListItem href="/#pasttrips" title="Recent Trips">
                 See where we have been before
               </ListItem>
 
@@ -128,7 +128,7 @@ export function NavBarMenu() {
         <NavigationMenuItem>
           <Link href="/shop" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Store / Shop / Merchandise
+              Shop
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
