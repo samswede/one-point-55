@@ -6,7 +6,7 @@ import { Gallery } from "react-grid-gallery";
 import CustomGallery from "@/components/shared/gallery/CustomGallery";
 
 
-export function GallerySection(props: AboutBlocksGallery) {
+export default function GallerySection(props: AboutBlocksGallery) {
   return (
     <section className="relative overflow-hidden">
 
