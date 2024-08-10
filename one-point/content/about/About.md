@@ -1,7 +1,7 @@
 ---
 blocks:
   - items:
-      - src: 'https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg'
+      - src: /assets/images/ibiza/food_ibiza_3.jpeg
         caption: example 1
         width: 320
         height: 174
