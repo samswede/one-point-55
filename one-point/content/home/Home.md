@@ -25,7 +25,7 @@ blocks:
       a getaway—it's **a chance to forge deeper connections and create lasting
       memories**.
     links:
-      - link: /
+      - link: /about#contact
         label: Contact
         style: dark
       - link: /info/#FAQ
