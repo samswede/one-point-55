@@ -28,7 +28,7 @@ blocks:
       - link: /about#contact
         label: Contact
         style: dark
-      - link: /info/#FAQ
+      - link: /about#FAQ
         label: FAQ
         style: light
     _template: content
