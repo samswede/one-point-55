@@ -24,14 +24,14 @@ import image from "@/public/assets/images/generated/wellness.webp"
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Contact",
-    href: "/about/#contact",
+    href: "/about#contact",
     description:
       "Need help? Reach out to us.",
   },
 
   {
     title: "FAQ",
-    href: "/about/#FAQ",
+    href: "/about#FAQ",
     description:
       "Answers to common questions.",
   },
@@ -39,14 +39,14 @@ const components: { title: string; href: string; description: string }[] = [
 
   {
     title: "Gallery",
-    href: "/about/#gallery",
+    href: "/about#gallery",
     description:
       "View our past trips and experiences.",
   },
 
   {
     title: "Impressum",
-    href: "/about/#legal",
+    href: "/about#legal",
     description: "Business details and legal disclaimers",
   },
   
