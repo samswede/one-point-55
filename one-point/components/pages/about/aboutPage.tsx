@@ -6,7 +6,7 @@ import { useTina } from "tinacms/dist/react";
 
 import ContactSection from "@/components/pages/about/contact/ContactSection";
 import FAQ from "@/components/pages/about/FAQ/FAQ";
-
+import GallerySection from "@/components/pages/about/gallery/AboutGallerySection";
 
 export default function AboutPage(props: {
     data: AboutQuery,
@@ -27,6 +27,9 @@ export default function AboutPage(props: {
             }
             case "AboutBlocksAccordion": {
               return <FAQ key={i} {...block} />
+            }
+            case "AboutBlocksGallery": {
+              return <GallerySection key={i} {...block} />
             }
           }
         })}
