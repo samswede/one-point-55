@@ -14,7 +14,7 @@ const socials = [
 	},
 	{
 		icon: <Instagram size={20} />,
-		href: "https://intagram.com/onepoint55",
+		href: "https://instagram.com/onepoint55",
 		label: "Instagram",
 		handle: "@onepoint55",
 	},
