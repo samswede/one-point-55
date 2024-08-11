@@ -6,7 +6,7 @@ import { TrippastBlocksTeam } from "@/tina/__generated__/types"
 
 
 export function TripPastTeamSectionV2(props: TrippastBlocksTeam) {
-  const [selectedCard, setSelectedCard] = useState(null)
+  const [selectedCard, setSelectedCard] = useState<string | null>(null)
   return (
     <section className="w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 grid md:px-6 lg:grid-cols-2 xl:gap-8 xl:grid-cols-4">
