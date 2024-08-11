@@ -9,6 +9,7 @@ import { TripPastOverviewSection } from "@/components/pages/trips/overview/TripP
 import { TripPastItinerarySection } from "@/components/pages/trips/itinerary/TripPastItinerarySection";
 import { GallerySection } from "@/components/pages/trips/gallery/TripPastGallerySection";
 import { TripPastTeamSection } from "@/components/pages/trips/team/TripPastTeamSection";
+import { TripPastTeamSectionV2 } from "@/components/pages/trips/team/TripPastTeamSectionV2";
 
 import Countdown from "@/components/shared/countdown/Countdown";
 
@@ -63,7 +64,8 @@ export default function PastTripPage(props: {
             }
 
             case "TrippastBlocksTeam": {
-              return <TripPastTeamSection key={i} {...block} />
+              //return <TripPastTeamSection key={i} {...block} />
+              return <TripPastTeamSectionV2 key={i} {...block} />
             }
 
             case "TrippastBlocksCountdown": {
