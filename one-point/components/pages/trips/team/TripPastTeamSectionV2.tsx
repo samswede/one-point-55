@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card"
 import { TrippastBlocksTeam } from "@/tina/__generated__/types"
 
 
-export default function TripPastTeamSectionV2(props: TrippastBlocksTeam) {
+export function TripPastTeamSectionV2(props: TrippastBlocksTeam) {
   const [selectedCard, setSelectedCard] = useState(null)
   return (
     <section className="w-full py-12 md:py-24 lg:py-32">
