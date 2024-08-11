@@ -27,7 +27,7 @@ export default function TripPastTeamSectionV2(props: TrippastBlocksTeam) {
               onClick={() => setSelectedCard(selectedCard === "alice" ? null : "alice")}
             >
               <img
-                src={props?.image || ""}
+                src="/placeholder.svg"
                 alt="Avatar"
                 width={120}
                 height={120}
